@@ -15,15 +15,28 @@ ion-item {
     border-bottom: 1px solid $white;
     transition: border-bottom-color 0.2s;
 
+
+
+    &.login-item {
+        @include border-radius-8;
+
+        --padding-start: 0;
+        --inner-padding-end: 0;
+    }
+
+    &.ion-untouched {
+        border-bottom: 1px solid transparent;
+    }
+
     &.invalid {
         border-bottom: 1px solid $invalid-color !important;
     }
 
-    &.login-item {
-        --padding-start: 0;
-        --inner-padding-end: 0;
-        border-bottom: 1px solid $light-gray3;
+    &.ion-valid {
+        border-bottom: 1px solid var(--ion-color-success) !important;
     }
+
+
     &.item-has-focus {
         .login__label {
             margin-left: 0;
@@ -35,7 +48,6 @@ ion-label {
     font-family: $font-family-montserrat!important;
     font-weight: 400;
     font-size: 12px!important;
-
 }
 
 .login__label {
@@ -46,7 +58,7 @@ ion-label {
 }
 
 .logo {
-    margin-top: 26vh;
+    margin-top: 24vh;
 
     &__text {
         margin-bottom: 12px;
@@ -66,14 +78,16 @@ ion-label {
 
 .login__btn {
     @include mt16();
+    height: 2.4em;
+
+    margin-bottom: 115px;
 
     &-text {
-        font-family: $font-family;
-        font-weight: 500;
+        font-family: $font-family-montserrat!important;
+        font-weight: 600;
         font-size: 12px;
-        line-height: 17px;
-        color: $ligth-black;
-        text-transform: uppercase;
+        line-height: 15px;
+        color: white;
     }
 
     ion-icon {
@@ -81,16 +95,17 @@ ion-label {
     }
 }
 .create-btn {
-    --ion-color-base: transparent!important;
+    width: 150px;
+    height: 2.4em;
+    // --ion-color-base: transparent!important;
     --box-shadow: none;
 }
 .create-btn-text {
-    font-family: $font-family;
-    font-weight: 500;
+    font-family: $font-family-montserrat!important;
+    font-weight: 600;
     font-size: 12px;
-    line-height: 17px;
-    color: $white;
-    text-transform: uppercase;
+    line-height: 15px;
+    color: white;
 }
 
 ion-footer ion-toolbar {
@@ -103,6 +118,8 @@ ion-footer ion-toolbar {
 }
 
 ion-input {
+    @include border-radius-8;
+
     --padding-start: 16px !important;
 
     font-family: $font-family-montserrat!important;
@@ -114,4 +131,12 @@ ion-input {
 
 .logo-col {
     padding-inline-start: 0;
+}
+
+.create-text {
+    font-family: $font-family-montserrat!important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $light-gray3;
 }
