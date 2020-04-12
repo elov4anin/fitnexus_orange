@@ -1,0 +1,31 @@
+<app-main-layout
+        [titlePage]="pageTitle"
+        [isAccount]="true"
+>
+    <app-button-layout [listBtnForLayout]="listBtnForLayout.ACCOUNT">
+        <div class="account ion-padding-start ion-padding-end">
+            <div class="account__row">
+                <ion-item lines="none">
+                    <ion-input placeholder="Weblink"></ion-input>
+                </ion-item>
+            </div>
+            <div class="account__row">
+                <ion-item lines="none">
+                    <ion-input placeholder="Marital status"></ion-input>
+                </ion-item>
+            </div>
+            <div class="account__row">
+                <ion-item lines="none" class="textarea">
+                    <ion-textarea placeholder="Bio..."></ion-textarea>
+                </ion-item>
+            </div>
+            <div class="account__row">
+                <ion-button color="secondary" expand="full" (click)="saveProfile()">
+                    <div class="account__btn">
+                        <span class="account__btn-text">Save profile</span>
+                    </div>
+                </ion-button>
+            </div>
+        </div>
+    </app-button-layout>
+</app-main-layout>

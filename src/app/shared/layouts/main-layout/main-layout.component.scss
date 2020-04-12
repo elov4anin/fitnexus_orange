@@ -1,0 +1,141 @@
+@import "variables";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: $gray;
+
+    ion-header {
+        position: absolute!important;
+        top: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        //margin-bottom: 20px;
+        background: $white;
+        box-shadow: 0 3px 6px 0 $light-gray1;
+
+        &.header-md:after {
+            display: none;
+        }
+        ion-toolbar {
+            --background: transparent;
+            --border-width: 0;
+
+
+            ion-button.barcode {
+                --background: transparent;
+                --ion-color-base: transparent;
+                --background-hover: #d7d8da;
+                --background-focused: #d7d8da;
+                --background-activated: #d7d8da;
+                --box-shadow: none;
+            }
+
+
+            ion-button.back-button {
+                margin-left: -9px;
+                --padding-start: 0;
+            }
+        }
+    }
+
+    ion-footer {
+        ion-toolbar {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            ion-button {
+                flex: 1 0 auto;
+                margin: auto;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    ion-text.page-title {
+        margin-left: 12px;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        color: $ligth-black;
+        text-transform: uppercase;
+    }
+
+    ion-content {
+        --background: transparent;
+        --padding-top: 60px;
+    }
+
+
+}
+
+
+
+.not-menu-button {
+    width: 23px;
+    height: 23px;
+    background-color: $ligth-black;
+    border-radius: 50%;
+}
+
+ion-menu-button {
+    width: 25px;
+    height: 25px;
+    //--background: url('/assets/images/no_photo.png') center no-repeat;
+    --border-radius: 50%;
+
+    &.menu-button-disabled {
+        width: 23px;
+        height: 23px;
+        --background: $ligth-black;
+        --border-radius: 50%;
+        opacity: 1;
+    }
+    img {
+        width: 23px !important;
+        height: 23px !important;
+        max-width: none !important;
+        padding: 0;
+        min-width: 23px;
+    }
+}
+
+.profile-header {
+    background: linear-gradient(89deg, rgba(0, 126, 191, 0.89) 0%, rgba(0, 211, 255, 0.89) 100%),
+    url("/assets/images/login_bg.png") center no-repeat  !important;
+
+
+    &__wrap {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 32px;
+    }
+
+    &__img {
+        width: 84px;
+        height: 84px;
+
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-top: 10px;
+
+        font-family: $font-family-oswald;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        color: $white;
+    }
+}
+
+
+.page-logo {
+    margin-left: 24px;
+    margin-top: 1px;
+}

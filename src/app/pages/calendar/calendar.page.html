@@ -1,0 +1,48 @@
+<app-main-layout
+        [titlePage]="pageTitle"
+>
+  <app-button-layout [listBtnForLayout]="listBtnForLayout.CALENDAR">
+    <div class="calendar">
+      <div class="calendar__block">
+        <div class="control">
+          <ion-button expand="full" (click)="prevSlide()" color="light" class="control__btn">
+            <div class="d-flex flex ion-justify-content-center ion-align-items-center">
+              <ion-icon name="arrow-back" color="secondary" slot="icon-only"></ion-icon>
+            </div>
+          </ion-button>
+          <span class="control__title">
+            {{viewTitle}}
+          </span>
+          <ion-button expand="full" (click)="nextSlide()" color="light"   class="control__btn">
+            <div class="d-flex flex ion-justify-content-center ion-align-items-center">
+              <ion-icon name="arrow-forward" color="secondary" slot="icon-only" ></ion-icon>
+            </div>
+          </ion-button>
+        </div>
+
+      </div>
+      <div class="calendar__block calendar__block--calendar">
+        <calendar [eventSource]="eventSource"
+                  [calendarMode]="calendar.mode"
+                  [currentDate]="calendar.currentDate"
+                  (onCurrentDateChanged)="onCurrentDateChanged($event)"
+                  (onEventSelected)="onEventSelected($event)"
+                  (onTitleChanged)="onViewTitleChanged($event)"
+                  (onTimeSelected)="onTimeSelected($event)"
+                  formatDayHeader="EEEEEE"
+                  step="30">
+
+
+        </calendar>
+      </div>
+      <div class="calendar__block flex-column">
+        <span class="calendar__day-title">Tuesday 2nd July</span>
+        <app-event-scheduler type="info"></app-event-scheduler>
+        <app-event-scheduler type="info"></app-event-scheduler>
+        <app-event-scheduler type="info"></app-event-scheduler>
+        <app-event-scheduler type="info"></app-event-scheduler>
+        <app-event-scheduler type="info"></app-event-scheduler>
+      </div>
+    </div>
+  </app-button-layout>
+</app-main-layout>

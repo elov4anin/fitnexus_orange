@@ -1,0 +1,185 @@
+@import "variables";
+
+:host {
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    ::ng-deep perfect-scrollbar .ps-content {
+        height: 100%;
+    }
+}
+
+
+.slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 54px;
+    // padding-left: 37px;
+    // padding-right: 37px;
+
+    background: $white;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    &__preview {
+        position: relative;
+        width: 146px;
+        height: 146px;
+        min-height: 146px;
+        background-color: $light-gray;
+        border-radius: 50%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 71px;
+            height: 53px;
+            margin: auto;
+
+            background-image: url("/assets/images/svg-icons/ios-camera.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+
+        &:after {
+            content: 'Upload profile picture';
+            position: absolute;
+            top: 68px;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            font-family: $font-family-oswald;
+            font-size: 14px;
+            line-height: 14px;
+            color: $white;
+
+        }
+        &--loaded:before, &--loaded:after {
+            display: none;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 238px;
+        height: 258px;
+        min-height: 258px;
+        // background-color: $light-gray;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    &__title {
+        margin-top: 17px;
+        font-family: $font-family-oswald;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: $ligth-black
+    }
+
+    &__text {
+        margin-top: 13px;
+        margin-bottom: 22px;
+
+        font-family: $font-family-helvetica;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: $dark-gray
+    }
+    &__btn {
+        margin-top: auto;
+        margin-bottom: 40px;
+        width: 100%;
+        min-height: 40px;
+        box-shadow: 0 3px 6px 0 $light-gray1;
+
+        ion-icon {
+            font-size: 18px;
+        }
+    }
+    &__btn-text {
+        font-family: $font-family-oswald;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: $white;
+        margin-right: 10px;
+    }
+}
+.slide__img--feed {
+    background-image: url("/assets/images/svg-icons/get-started-news.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+.slide__img--members {
+    background-image: url("/assets/images/svg-icons/get-started-members.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+
+.slide__img--tracking {
+    background-image: url("/assets/images/svg-icons/get-started-tracking.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+
+.slide__img--nutrition:before {
+    background-image: url("/assets/images/svg-icons/get-started-nutrition.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+
+.slide__img--classes:before {
+    background-image: url("/assets/images/svg-icons/get-started-classes.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+
+.slide__img--challenges:before {
+    background-image: url("/assets/images/svg-icons/get-started-challenges.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+
+.slide__img--prem:before {
+    background-image: url("/assets/images/svg-icons/get-started-prem.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+}
+

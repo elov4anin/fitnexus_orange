@@ -1,0 +1,44 @@
+<app-main-layout
+        [titlePage]="pageTitle"
+>
+    <app-button-layout [listBtnForLayout]="listBtnForLayout.LIBRARY">
+
+        <div class="library ion-padding-start ion-padding-end">
+            <ion-card>
+                <div class="card-program">
+                    <div class="card-program__wrapper">
+                        <span class="card-program__title">Strength</span>
+                        <span class="card-program__text">07/12/2019 </span>
+                        <span class="card-program__text">22:03</span>
+                    </div>
+
+                    <ion-button expand="full" (click)="start()" color="dark" class="library__btn">
+                        <div class="d-flex flex ion-justify-content-between ion-align-items-center">
+                            <div class="library__btn-text">Go</div>
+
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </div>
+                    </ion-button>
+                </div>
+            </ion-card>
+
+          <ion-card>
+            <div class="card-program">
+              <div class="card-program__wrapper">
+                <span class="card-program__title">Strength</span>
+                <span class="card-program__text">07/12/2019 </span>
+                <span class="card-program__text">22:03</span>
+              </div>
+
+              <ion-button expand="full" (click)="start()" color="dark" class="library__btn">
+                <div class="d-flex flex ion-justify-content-between ion-align-items-center">
+                  <div class="library__btn-text">Go</div>
+
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </div>
+              </ion-button>
+            </div>
+          </ion-card>
+        </div>
+    </app-button-layout>
+</app-main-layout>

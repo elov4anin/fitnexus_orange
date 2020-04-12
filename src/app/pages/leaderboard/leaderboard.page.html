@@ -1,0 +1,97 @@
+<app-main-layout
+        [titlePage]="pageTitle"
+>
+  <app-button-layout [listBtnForLayout]="listBtnForLayout.CHALLENGES">
+
+    <div class="library">
+      <div class="library__header">
+        <ion-item lines="none">
+          <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedStep">Steps</ion-label>
+          <ion-select placeholder="" [(ngModel)]="selectedStep">
+            <ion-select-option value="f">Steps</ion-select-option>
+            <ion-select-option value="m">Steps 1</ion-select-option>
+            <ion-select-option value="m">Steps 2</ion-select-option>
+          </ion-select>
+          <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedYear">Steps</ion-label>
+          <ion-select placeholder="" [(ngModel)]="selectedYear">
+            <ion-select-option value="f">Steps</ion-select-option>
+            <ion-select-option value="m">Steps 1</ion-select-option>
+            <ion-select-option value="m">Steps 2</ion-select-option>
+          </ion-select>
+          <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
+        </ion-item>
+        <ion-button (click)="openFilter()" expand="full" color="secondary" size="small"
+        >
+          <ion-icon src="/assets/images/svg-icons/ios-funnel.svg" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="library__list">
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">Emma Jogger</span>
+              <span class="card-program__test">8606 </span>
+            </div>
+          </div>
+        </ion-card>
+
+      </div>
+    </div>
+
+  </app-button-layout>
+</app-main-layout>

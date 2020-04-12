@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <div class="profile">
+            <div class="profile__img">
+            </div>
+            <span class="profile__name">
+              Richard Chestday
+            </span>
+          </div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list lines="full">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" detail="false">
+              <ion-label>
+                {{p.title}}
+               <div class="new"></div>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,88 @@
+<ion-content>
+
+    <ion-grid>
+        <ion-row class="ion-justify-content-center" >
+            <ion-col size="9">
+              <div class="logo">
+                  <div class="logo__text">Welcome to</div>
+                  <img src="../../../assets/images/FTX1014_LOGO@3x.png" alt="fitnexus" width="180" height="27">
+              </div>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="10.5">
+                <ion-list lines="none">
+                    <form class="login__form" autocomplete="off" [formGroup]="loginFrom" (ngSubmit)="login()">
+                        <ion-item [ngClass]="{'invalid': loginFrom.get('email').touched &&  loginFrom.get('email').invalid}">
+                            <ion-label
+                                    class="login__label"
+                                    position="floating"
+                                    [color]="loginFrom.get('email').touched && loginFrom.get('email').invalid ? 'danger' : 'light'"
+                            >
+                                Email
+                            </ion-label>
+                            <ion-input
+                                    formControlName="email"
+                                    type="email"
+                                    color="light"
+                                    autocomplete="off"
+                                    required
+                            ></ion-input>
+                        </ion-item>
+                        <ion-item  [ngClass]="{'invalid': loginFrom.get('password').touched &&  loginFrom.get('password').invalid}">
+                            <ion-label
+                                    class="login__label"
+                                    position="floating"
+                                    [color]="loginFrom.get('password').touched && loginFrom.get('password').invalid ? 'danger' : 'light'"
+                            >
+                                Password
+                            </ion-label>
+                            <ion-input
+                                    formControlName="password"
+                                    type="password"
+                                    color="dark"
+                                    autocomplete="off"
+                                    required
+                                    [minlength]="3"
+                            ></ion-input>
+                        </ion-item>
+                            <div class="d-flex flex ion-justify-content-end mt16">
+                                <ion-label class="remember" color="warning">Forgot password?</ion-label>
+                            </div>
+                        <ion-button
+                                type="submit"
+                                class="login__btn ion-justify-content-between"
+                                color="warning"
+                                expand="block"
+                                [disabled]="loginFrom.invalid"
+                        >
+                            <div class="d-flex flex ion-justify-content-between ion-align-items-center">
+                                <div class="login__btn-text">Sing in</div>
+                                <ion-icon name="arrow-forward"></ion-icon>
+                            </div>
+
+                        </ion-button>
+                    </form>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+  </ion-content>
+    <ion-footer  class="ion-no-border">
+        <ion-toolbar>
+            <ion-button
+                    type="submit"
+                    class="ion-padding-start ion-padding-end ion-justify-content-between create-btn"
+                    color="dark"
+                    expand="full"
+            >
+                <div class="d-flex flex ion-justify-content-between ion-align-items-center">
+                    <div class="create-btn-text">Create Account</div>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </div>
+            </ion-button>
+        </ion-toolbar>
+    </ion-footer>
