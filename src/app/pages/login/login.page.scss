@@ -16,19 +16,33 @@ ion-item {
     transition: border-bottom-color 0.2s;
 
     &.invalid {
-        border-bottom: 1px solid red;
+        border-bottom: 1px solid $invalid-color !important;
+    }
+
+    &.login-item {
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        border-bottom: 1px solid $light-gray3;
+    }
+    &.item-has-focus {
+        .login__label {
+            margin-left: 0;
+        }
     }
 }
 
 ion-label {
     font-family: $font-family-montserrat!important;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 12px!important;
 
 }
 
 .login__label {
+    @include ml16;
     font-weight: 500;
+    color: $light-gray3;
+    z-index: 10;
 }
 
 .logo {
@@ -86,4 +100,18 @@ ion-footer ion-toolbar {
 
 .remember {
     font-weight: 600;
+}
+
+ion-input {
+    --padding-start: 16px !important;
+
+    font-family: $font-family-montserrat!important;
+    font-weight: 600;
+    font-size: 12px;
+    color: $light-gray3!important;
+    background: $dark-gray;
+}
+
+.logo-col {
+    padding-inline-start: 0;
 }
