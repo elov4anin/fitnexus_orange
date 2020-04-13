@@ -29,20 +29,20 @@
     ::ng-deep ion-slides.custom-slides {
         height: 100%;
 
-        /*> .swiper-pagination-bullets {
-            top: 10px;
-            bottom: auto;
+        > .swiper-pagination-bullets {
+            bottom: 45px;
         }
         .swiper-pagination-bullet {
-            width: 16px;
-            height: 16px;
-            background: $ligth-black;
+            width: 30px;
+            height: 7px;
+            background: $dark-gray;
             opacity: 1;
-            margin: 0 8px;
+            margin: 0;
+            border-radius: unset;
         }
         .swiper-pagination-bullet-active {
-            background: $blue;
-        }*/
+            background: white;
+        }
     }
 }
 

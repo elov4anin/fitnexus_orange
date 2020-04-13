@@ -2,7 +2,7 @@
         [titlePage]="pageTitle"
 >
 <div class="title">Welcome to fitnexus</div>
-<ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
+<ion-slides #slider pager="true" [options]="slideOpts" class="custom-slides">
         <ion-slide *ngFor="let slide of slides">
             <app-slide [slide]="slide" (nextSlide$)="nextSlide()"></app-slide>
         </ion-slide>
