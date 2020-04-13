@@ -1,8 +1,10 @@
 @import "variables";
+@import "mixins";
+
 .swiper-container {
    // display: flex;
    // flex-direction: column-reverse;
-    padding-top: 50px;
+   // padding-top: 50px;
 }
 .custom-slides__wrapper {
     height: 100%;
@@ -10,16 +12,24 @@
 
 
 :host {
+    ::ng-deep app-main-layout {
+        ion-header {
+            display: none;
+        }
+        ion-footer {
+            display: none;
+        }
+    }
     ::ng-deep ion-content {
-        --background: $gray;
+        --background: #2C2F36!important;
         --overflow: hidden;
-        --padding-top: 75px!important;
+        --padding-top: 0!important;
     }
 
     ::ng-deep ion-slides.custom-slides {
         height: 100%;
 
-        > .swiper-pagination-bullets {
+        /*> .swiper-pagination-bullets {
             top: 10px;
             bottom: auto;
         }
@@ -32,7 +42,21 @@
         }
         .swiper-pagination-bullet-active {
             background: $blue;
-        }
+        }*/
     }
 }
 
+.title {
+    @include mt22;
+
+    margin-bottom: auto;
+
+    font-family: $font-family-semi;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $light-gray3;
+}

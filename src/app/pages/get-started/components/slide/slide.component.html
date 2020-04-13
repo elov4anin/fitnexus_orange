@@ -1,26 +1,44 @@
 <perfect-scrollbar>
-  <div class="slide ion-padding-start ion-padding-end">
+    <div class="slide ion-padding-start ion-padding-end">
 
 
-  <ng-container *ngIf="!slide.isPhotoSlide; else photoBlock">
-    <div class="slide__img slide__img--{{slide.icon}}">
+        <ng-container *ngIf="!slide.isPhotoSlide; else photoBlock">
+            <div class="slide__img slide__img--{{slide.icon}}">
+            </div>
+          <span class="slide__title">{{slide.title}}</span>
+        </ng-container>
+        <ng-template #photoBlock>
+            <div
+                    class="slide__preview"
+                    [ngClass]="{'slide__preview--loaded': !!imagePreview}"
+                    [ngStyle]="{'background-image':'url(' + imagePreview + ')'}"
+                    (click)="triggerUploadImage()"
+            >
+            </div>
+          <input type="file" #upload (change)="uploadImage($event)" #upload style="display: none">
+          <div class="slide__title-photo" (click)="triggerUploadImage()">{{slide.title}}</div>
+        </ng-template>
+
+        <span class="slide__text">{{slide.text}}</span>
+
+       <!-- <ion-button expand="full" (click)="nextSlide()" color="secondary" class="slide__btn">
+            <div class="d-flex flex ion-justify-content-center ion-align-items-center">
+                <div class="slide__btn-text"></div>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </div>
+        </ion-button>-->
+
+        <ion-button
+                class=" slide__btn"
+                color="warning"
+                (click)="nextSlide()"
+                [disabled]="slide.isPhotoSlide && !imagePreview"
+        >
+            <div class="d-flex flex ion-justify-content-between ion-align-items-center">
+                <div class="slide__btn-text">{{slide.isPhotoSlide ? 'Get started' : 'Next'}}</div>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </div>
+        </ion-button>
     </div>
-  </ng-container>
-  <ng-template #photoBlock>
-    <div class="slide__preview">
-    </div>
-  </ng-template>
-
-  <span class="slide__title">{{slide.title}}</span>
-
-  <span class="slide__text">{{slide.text}}</span>
-
-  <ion-button expand="full" (click)="nextSlide()" color="secondary" class="slide__btn">
-    <div class="d-flex flex ion-justify-content-center ion-align-items-center">
-      <div class="slide__btn-text">{{slide.isPhotoSlide ? 'Get started' : 'Next'}}</div>
-      <ion-icon name="arrow-forward"></ion-icon>
-    </div>
-  </ion-button>
-</div>
 
 </perfect-scrollbar>

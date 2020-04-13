@@ -16,8 +16,8 @@ export class GetStartedPage implements OnInit {
 
     slides: ISlideInfo[] = [
         {
-            title: 'Upload a photo',
-            text: 'App feature blurb to go here, try not to exceed three lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+            title: 'Pick a profile photo',
+            text: 'Tap to upload your profile picture',
             isPhotoSlide: true
         },
         {
