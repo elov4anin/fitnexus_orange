@@ -3,8 +3,10 @@
 
 
         <ng-container *ngIf="!slide.isPhotoSlide; else photoBlock">
-            <div class="slide__img slide__img--{{slide.icon}}">
+            <div *ngIf="!slide?.srcset" class="slide__img slide__img--{{slide.icon}}">
             </div>
+            <img *ngIf="slide?.srcset"  class="slide__img" [srcset]="slide.srcset.x1 + ',' + slide.srcset.x2 + ',' + slide.srcset.x3"
+                 [src]="slide.srcset.x3" alt="Elva dressed as a fairy">
           <span class="slide__title">{{slide.title}}</span>
         </ng-container>
         <ng-template #photoBlock>
