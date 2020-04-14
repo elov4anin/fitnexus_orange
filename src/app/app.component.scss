@@ -1,54 +1,67 @@
 @import "variables";
+@import "mixins";
 
 ion-menu {
-
     --ion-background-color: $black-menu;
     --ion-text-color: var(--ion-color-primary-contrast);
 
+
     ion-toolbar {
-        --background: $black-menu;
-        background: $black-menu;
+        --background: linear-gradient(89deg, rgba(44, 47, 54, 0.89) 0%, rgba(58, 62, 71, 0.89) 100%),
+        url("/assets/images/menu-bg.png") center no-repeat;
     }
 
     ion-content {
         --background: $black-menu;
         background: $black-menu;
-        border-top: 0.5px solid #B8B8B8!important;
+        border-top: 0.5px solid #434950!important;
     }
 
     ion-item {
         --border-color: #3B3B3B;
+        --background-activated: var(--ion-color-warning);
+        // --background-hover: var(--ion-color-warning);
 
         ion-label {
             display: flex;
-            padding-left: 20px;
-
+            align-items: center;
+            padding-left: 10px;
             padding-top: 10px;
             padding-bottom: 10px;
-            font-weight: 300;
+
+            font-family: $font-family-semi;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: $light-gray;
         }
     }
 
     .profile {
         display: flex;
-        flex-direction: column;
-        padding: 30px;
+        padding: 71px 24px;
 
 
         &__img {
-            width: 58px;
+            @include mr16();
+            @include mb16();
+
+            width: 64px;
             height: 58px;
-            margin-bottom: 15px;
             background: url('/assets/images/no_photo.png') center no-repeat;
             background-size: contain;
             border-radius: 50%;
         }
 
         &__name {
-            font-family: $font-family-oswald;
-            font-size: 40px;
-            line-height: 1.5em;
-
+            font-family: $font-family-semi;
+            font-size: 24px;
+            line-height: 1.3em;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--ion-color-warning);
         }
 
     }
@@ -57,8 +70,8 @@ ion-menu {
 .new {
     width: 9px;
     height: 9px;
-    margin-left: 9px;
-    background: $blue;
+    margin-right: 9px;
+    background: var(--ion-color-warning);
     border-radius: 50%;
 
 }

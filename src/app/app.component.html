@@ -7,7 +7,7 @@
             <div class="profile__img">
             </div>
             <span class="profile__name">
-              Richard Chestday
+             Janet Cooper
             </span>
           </div>
         </ion-toolbar>
@@ -15,10 +15,10 @@
       <ion-content>
         <ion-list lines="full">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" detail="false">
+            <ion-item [routerDirection]="'root'"  lines="none" [routerLink]="[p.url]" detail="false">
               <ion-label>
+                <div class="new"></div>
                 {{p.title}}
-               <div class="new"></div>
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
