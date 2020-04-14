@@ -14,11 +14,50 @@
     margin-right: 16px;
 }
 
+@mixin mb8 {
+    margin-bottom: 8px;
+}
 
 @mixin mb16 {
     margin-bottom: 16px;
 }
 
+@mixin mb32 {
+    margin-bottom: 32px;
+}
+
 @mixin border-radius-8 {
     border-radius: 8px;
+}
+
+@mixin titleSemi16 {
+    font-family: $font-family-semi;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.41px;
+    text-transform: uppercase;
+    color: $dark-gray;
+}
+
+@mixin textMonserat12 {
+    font-family: $font-family-montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    color: $dark-gray;
+}
+
+
+@mixin bthHeight {
+    height: 40px;
+}
+
+@mixin btnTextMonserat12 {
+    font-family: $font-family-montserrat;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: $white;
 }

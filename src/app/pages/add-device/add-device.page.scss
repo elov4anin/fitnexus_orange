@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 :host {
     ::ng-deep ion-content {
@@ -12,40 +13,31 @@
     flex-direction: column;
     height: calc(100% - 59px);
     padding-top: 0;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
     background: $white;
 
     &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
+        @include mb8;
+        @include titleSemi16;
     }
+
     &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+       @include mb32;
+       @include textMonserat12;
     }
 
     &__btn {
-       // margin-top: auto;
-       // margin-bottom: 28px;
-        width: 100%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        @include bthHeight;
+        width: 172px;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+        @include btnTextMonserat12;
     }
+}
+
+.add-device__img {
+    @include mb32;
+    width: 32px;
+    height: 56px;
+    background-color: gray;
 }

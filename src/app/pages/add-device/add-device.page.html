@@ -3,6 +3,10 @@
 >
   <app-button-layout  [listBtnForLayout]="listBtnForLayout.TRACKING">
       <div class="add-device ion-align-items-center ion-justify-content-center ion-padding-start ion-padding-end">
+
+          <div class="add-device__img">
+
+          </div>
           <div class="add-device__title">
               Welcome to your fitness tracker!
           </div>
@@ -10,7 +14,7 @@
               Connect a device or app
           </div>
 
-          <ion-button expand="full" (click)="openAddDeviceModal()" color="secondary" class="add-device__btn">
+          <ion-button expand="block" (click)="openAddDeviceModal()" color="warning" class="add-device__btn">
               <div class="d-flex flex ion-justify-content-center ion-align-items-center">
                   <ion-icon name="add"></ion-icon>
                   <div class="add-device__btn-text">Add device or app</div>
