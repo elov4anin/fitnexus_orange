@@ -1,8 +1,32 @@
 @import "variables";
+@import "mixins";
 
+:host {
+    ::ng-deep app-main-layout {
+        background-color: $white;
+    }
+}
 
 .videos {
     display: flex;
     flex-direction: column;
     background: $white;
 }
+
+.videos__header {
+    @include mb32;
+    margin-top: 12px;
+
+}
+
+.video__row {
+}
+
+.videos__title {
+    @include titleSemi20;
+}
+
+.brn-text-more {
+    @include btnTextSemi13;
+}
+

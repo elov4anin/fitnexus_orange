@@ -1,0 +1,24 @@
+<a (click)="slider.slideNext()" class="slide__arrow-back">
+  <ion-icon color="warning" size="large" name="arrow-back"></ion-icon>
+</a>
+
+<a (click)="slider.slidePrev()" class="slide__arrow-forward">
+  <ion-icon color="warning" size="large" name="arrow-forward"></ion-icon>
+</a>
+<ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
+  <ion-slide *ngFor =" let slide of sliders">
+    <div class="slide">
+      <div class="slide__img"  [ngStyle]="{'background-image':'url('+slide.imgSrc+')'}"></div>
+      <!--  <img src="{{slide.imgSrc}}">-->
+      <div class="slide__wrap">
+              <span class="slide__title">
+                {{slide.title}}
+              </span>
+        <div class="d-flex ion-align-items-center">
+          <ion-icon class="slide__icon" name="stopwatch"></ion-icon>
+          <span class="slide__text">39 min</span>
+        </div>
+      </div>
+    </div>
+  </ion-slide>
+</ion-slides>

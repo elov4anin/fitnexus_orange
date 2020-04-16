@@ -1,0 +1,8 @@
+<div class="list">
+  <div class="category" *ngFor="let c of list" [ngStyle]="{'background-image':'url('+c.imgSrc+')'}">
+    <div class="category__header">
+      <span class="category__title">{{c.title}}</span>
+
+    </div>
+  </div>
+</div>

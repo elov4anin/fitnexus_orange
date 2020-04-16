@@ -1,3 +1,7 @@
+@mixin mt8 {
+    margin-top: 8px;
+}
+
 @mixin mt16 {
     margin-top: 16px;
 }
@@ -6,6 +10,9 @@
     margin-top: 22px;
 }
 
+@mixin mt24 {
+    margin-top: 24px;
+}
 
 @mixin ml16 {
     margin-left: 16px;
@@ -22,6 +29,10 @@
     margin-bottom: 16px;
 }
 
+@mixin mb24 {
+    margin-bottom: 24px;
+}
+
 @mixin mb32 {
     margin-bottom: 32px;
 }
@@ -30,7 +41,11 @@
     border-radius: 8px;
 }
 
-@mixin titleSemi16 {
+@mixin border-radius-12 {
+    border-radius: 12px;
+}
+
+@mixin titleSemi16() {
     font-family: $font-family-semi;
     font-size: 16px;
     font-weight: 800;
@@ -40,12 +55,22 @@
     color: $dark-gray;
 }
 
-@mixin textMonserat12 {
+@mixin titleSemi20 {
+    font-family: $font-family-semi;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $dark-gray;
+}
+
+@mixin textMonserat12($color-value: $dark-gray) {
     font-family: $font-family-montserrat;
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
-    color: $dark-gray;
+    color: $color-value;
 }
 
 
@@ -60,6 +85,16 @@
     line-height: 15px;
     text-align: center;
     color: $white;
+}
+
+@mixin btnTextSemi13($color-value: var(--ion-color-warning)) {
+    font-family: $font-family-semi;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: $color-value;
+    text-transform: uppercase;
 }
 
 @mixin transparentBtn {
