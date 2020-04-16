@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {PagesEnum2RoutingMapping} from '../../../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-premium-slide',
@@ -15,7 +16,7 @@ export class PremiumSlideComponent implements OnInit {
     }
 
     openPage() {
-        this._router.navigate(['/', 'welcome-premium'])
+        this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEOS])
 
     }
 }

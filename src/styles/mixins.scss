@@ -61,3 +61,16 @@
     text-align: center;
     color: $white;
 }
+
+@mixin transparentBtn {
+    --background: transparent;
+    --ion-color-base: transparent;
+    --background-hover: #d7d8da;
+    --background-focused: #d7d8da;
+    --background-activated: #d7d8da;
+    --box-shadow: none;
+}
+
+@mixin box-shadow {
+    box-shadow: 0 2px 4px 0 $light-gray1;
+}

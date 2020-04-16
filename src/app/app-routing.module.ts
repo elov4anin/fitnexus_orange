@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {PagesEnum2RoutingMapping} from './shared/enums/pages.enum';
 
 const routes: Routes = [
   {
@@ -45,7 +46,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/food/food.module').then(m => m.FoodPageModule)
   },
   {
-    path: 'get-started',
+    path: PagesEnum2RoutingMapping.GET_STARTED,
     loadChildren: () => import('./pages/get-started/get-started.module').then(m => m.GetStartedPageModule)
   },
   {
@@ -147,6 +148,10 @@ const routes: Routes = [
   {
     path: 'albums',
     loadChildren: () => import('./pages/albums/albums.module').then( m => m.AlbumsPageModule)
+  },
+  {
+    path: PagesEnum2RoutingMapping.VIDEOS,
+    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
   },
 
 ];

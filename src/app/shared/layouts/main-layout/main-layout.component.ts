@@ -87,10 +87,8 @@ export class MainLayoutComponent implements OnInit {
         }
     }
 
-    async openQrCodeModal() {
-        const modal = await this._modalController.create({
-            component: ModalQrcodeComponent
-        });
-        return await modal.present();
+
+    openFilter() {
+
     }
 }
