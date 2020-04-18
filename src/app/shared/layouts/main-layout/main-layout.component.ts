@@ -24,6 +24,9 @@ export class MainLayoutComponent implements OnInit {
     @Input() isNeedLogo: boolean = false;
     @Input() backRoute: string;
 
+    @Input() isNeedFilter: boolean = true;
+    @Input() isHideBoxShadow: boolean = false;
+
     public readonly tabs = Object.keys(TabsEnum).map(
         (key) => TabsEnum[key]
     );

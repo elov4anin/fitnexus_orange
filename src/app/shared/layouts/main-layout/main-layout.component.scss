@@ -31,6 +31,7 @@
 
 
             ion-button.back-button {
+                height: 15px;
                 margin-left: -9px;
                 --padding-start: 0;
             }
@@ -50,13 +51,8 @@
     }
 
     ion-text.page-title {
-        margin-left: 12px;
-        font-family: $font-family;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 17px;
-        color: $ligth-black;
-        text-transform: uppercase;
+        @include btnTextSemi13($dark-gray);
+        letter-spacing: 0.9px;
     }
 
     ion-content {
@@ -132,4 +128,12 @@ ion-menu-button {
 
 .page-logo {
     margin: auto;
+}
+
+ion-header.box-shadow-none {
+    box-shadow: unset;
+}
+
+ion-content.pt53 {
+    --padding-top: 53px;
 }

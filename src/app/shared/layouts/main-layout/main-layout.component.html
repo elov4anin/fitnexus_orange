@@ -1,7 +1,7 @@
-<ion-header [ngClass]="{'profile-header': isAccount}">
+<ion-header [ngClass]="{'profile-header': isAccount, 'box-shadow-none': isHideBoxShadow}">
     <ion-toolbar class="ion-justify-content-start ">
         <ion-buttons slot="start" class="pl18">
-            <ion-button *ngIf="isNeedBack" color="dark" (click)="back()" class="back-button">
+            <ion-button *ngIf="isNeedBack" color="warning" (click)="back()" size="small" class="back-button">
                 <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
             </ion-button>
             <ion-menu-button *ngIf="!isNeedBack">
@@ -11,7 +11,7 @@
         <div class="d-flex ion-justify-content-between ion-align-items-center pr12" *ngIf="!isAccount">
             <ion-text class="page-title" *ngIf="!isNeedLogo">{{titlePage}}</ion-text>
             <img class="page-logo" *ngIf="isNeedLogo" src='/assets/images/fitnexus-text-logo-orange.svg' width="120" height="18"  alt="">
-            <ion-button class="barcode" size="small" (click)="openFilter()">
+            <ion-button class="barcode" size="small" *ngIf="isNeedFilter" (click)="openFilter()">
                 <ion-icon name="funnel" color="warning" slot="icon-only"></ion-icon>
             </ion-button>
         </div>
@@ -22,7 +22,7 @@
     </div>
 </ion-header>
 
-<ion-content class="mt20">
+<ion-content [ngClass]="{'pt53': isHideBoxShadow}">
     <ng-content></ng-content>
 </ion-content>
 <ion-footer>

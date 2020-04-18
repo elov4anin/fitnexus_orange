@@ -1,0 +1,32 @@
+<app-main-layout
+        [titlePage]="title"
+        [isNeedFilter]="false"
+        [isNeedBack]="true"
+        [isHideBoxShadow]="true"
+>
+    <div class="video__wrapper"></div>
+    <ion-grid>
+        <ion-row class="ion-align-items-center">
+            <ion-col size="10">
+                <div class="video__action">
+                    <ion-badge color="warning" class="mr16">Cardio</ion-badge>
+                    <app-duration class="mr16"></app-duration>
+                    <app-difficulty></app-difficulty>
+                </div>
+            </ion-col>
+            <ion-col size="2" class="ion-justify-content-end ion-align-items-center">
+                <ion-text color="warning">
+                     <span class="material-icons"   (click)="isHeartClicked = !isHeartClicked">
+                    {{isHeartClicked ? 'favorite_border' : 'favorite'}}
+                    </span>
+                </ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+</app-main-layout>

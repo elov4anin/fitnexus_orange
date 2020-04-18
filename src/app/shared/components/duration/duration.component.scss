@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+.duration {
+    &__text {
+        @include textMonserat12($light-gray2)
+    }
+
+    &__icon {
+        margin-right: 6px;
+        color: $light-gray2;
+    }
+}

@@ -16,6 +16,8 @@ import {ModalQrcodeComponent} from './modals/modal-qrcode/modal-qrcode.component
 import {QrCodeModule} from 'ng-qrcode';
 import {ModalConnectDevicesComponent} from './modals/modal-connect-devices/modal-connect-devices.component';
 import {ModalDayStatComponent} from './modals/modal-day-stat/modal-day-stat.component';
+import {DurationComponent} from './components/duration/duration.component';
+import {DifficultyComponent} from './components/difficulty/difficulty.component';
 
 const ANGULAR_MODULES = [
     CommonModule,
@@ -38,6 +40,8 @@ const COMPONENTS = [
     WeeklyStatComponent,
     CardChallengeComponent,
     EventSchedulerComponent,
+    DurationComponent,
+    DifficultyComponent
 
 ];
 

@@ -20,4 +20,8 @@ export class VideosPage implements OnInit {
     openFilter() {
 
     }
+
+    redirectTo() {
+
+    }
 }

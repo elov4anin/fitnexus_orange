@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+.text {
+    @include textMonserat12($light-gray2);
+
+    &--warning {
+        color: var(--ion-color-warning);
+    }
+}
+
+.img {
+    height: 5px;
+    width: auto;
+    margin-right: 5px;
+}
