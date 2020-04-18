@@ -37,7 +37,10 @@
 
 .add-device__img {
     @include mb32;
-    width: 32px;
+    width: 56px;
     height: 56px;
-    background-color: gray;
+    background-image: url("/assets/images/png-icons/add-device-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

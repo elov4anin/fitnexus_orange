@@ -5,7 +5,7 @@ import {ModalController} from '@ionic/angular';
 import {ModalConnectDevicesComponent} from '../../shared/modals/modal-connect-devices/modal-connect-devices.component';
 
 @Component({
-    selector: 'app-stats',
+    selector: 'app-device',
     templateUrl: './add-device.page.html',
     styleUrls: ['./add-device.page.scss'],
 })

@@ -30,7 +30,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/members/members.module').then(m => m.MembersPageModule)
   },
   {
-    path: 'add-device',
+    path: PagesEnum2RoutingMapping.ADD_DEVICE,
     loadChildren: () => import('./pages/add-device/add-device.module').then(m => m.AddDeviceModule)
   },
   {
