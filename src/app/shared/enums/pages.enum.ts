@@ -4,17 +4,19 @@ export enum PagesEnum {
     VIDEO_ITEM = 'VIDEO_ITEM',
     CHALLENGE = 'CHALLENGE',
     CHALLENGES = 'CHALLENGES',
-    ADD_DEVICE = 'ADD_DEVICE'
+    ADD_DEVICE = 'ADD_DEVICE',
+    CATEGORY = 'CATEGORY',
 }
 
-export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
+/*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
     VIDEOS: '',
     GET_STARTED: '',
     VIDEO_ITEM: '',
     CHALLENGE: '',
     CHALLENGES: '',
-    ADD_DEVICE: ''
-};
+    ADD_DEVICE: '',
+    CATEGORY: '',
+};*/
 
 
 export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
@@ -24,6 +26,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     CHALLENGE: ':id',
     CHALLENGES: 'challenges',
     ADD_DEVICE: 'add-device',
+    CATEGORY: 'category',
 };
 
 
@@ -34,4 +37,5 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     CHALLENGE: 'Challenge - run 5.5k',
     CHALLENGES: '',
     ADD_DEVICE: 'Tracking - wearables & apps',
+    CATEGORY: 'Cardio',
 };

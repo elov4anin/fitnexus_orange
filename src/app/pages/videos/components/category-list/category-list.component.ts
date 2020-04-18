@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ISlideInfo} from '../../../get-started/get-started.page';
+import {Router} from '@angular/router';
+import {PagesEnum2RoutingMapping} from '../../../../shared/enums/pages.enum';
 
 @Component({
   selector: 'app-category-list',
@@ -47,8 +49,11 @@ export class CategoryListComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {}
 
+  redirectTo() {
+    this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEOS, PagesEnum2RoutingMapping.CATEGORY])
+  }
 }

@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: PagesEnum2RoutingMapping.VIDEO_ITEM,
     loadChildren: () => import('./pages/video-item/video-item.module').then( m => m.VideoItemPageModule)
+  },
+  {
+    path: PagesEnum2RoutingMapping.CATEGORY,
+    loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
   }
 ];
 

@@ -1,12 +1,6 @@
 @import "variables";
 @import "mixins";
 
-:host {
-    ::ng-deep app-main-layout {
-        background-color: $white;
-    }
-}
-
 .videos {
     display: flex;
     flex-direction: column;
@@ -16,7 +10,6 @@
 .videos__header {
     @include mb32;
     margin-top: 12px;
-
 }
 
 .video__row {
