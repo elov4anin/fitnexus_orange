@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar class="ion-justify-content-start ">
+    <ion-buttons slot="start" class="pl18">
+      <ion-button color="warning" (click)="back()" size="small" class="back-button">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="d-flex ion-justify-content-between ion-align-items-center pr12">
+      <ion-text class="page-title" >{{title}}</ion-text>
+      <ion-button class="barcode" size="small"  (click)="clearFilter()">
+       <span class="btn-text">Clear</span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ng-container *ngFor="let item of checkboxes">
+      <ion-list-header>
+        {{item.group}}
+      </ion-list-header>
+      <ion-item lines="none" *ngFor="let ch of item.list">
+        <ion-label>{{ch.label}}</ion-label>
+        <ion-checkbox slot="start" color="warning" [(ngModel)]="ch.checked"></ion-checkbox>
+      </ion-item>
+    </ng-container>
+
+
+
+
+
+
+   <!-- <ion-list-header>
+      Category
+    </ion-list-header>
+
+    <ion-list-header>
+      Difficulty
+    </ion-list-header>
+
+    <ion-list-header>
+      Duration
+    </ion-list-header>
+
+    <ion-list-header>
+      Rating
+    </ion-list-header>-->
+  </ion-list>
+
+</ion-content>
+

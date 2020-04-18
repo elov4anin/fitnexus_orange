@@ -10,6 +10,7 @@ import {CategoryListComponent} from './components/category-list/category-list.co
 import {FocusListComponent} from './components/focus-list/focus-list.component';
 import {DurationListComponent} from './components/duration-list/duration-list.component';
 import {DifficultyListComponent} from './components/difficulty-list/difficulty-list.component';
+import {FilterComponent} from './modals/filter/filter.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,11 @@ import {DifficultyListComponent} from './components/difficulty-list/difficulty-l
         CategoryListComponent,
         FocusListComponent,
         DurationListComponent,
-        DifficultyListComponent
+        DifficultyListComponent,
+        FilterComponent
+    ],
+    entryComponents: [
+        FilterComponent
     ]
 })
 export class VideosPageModule {

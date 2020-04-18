@@ -10,6 +10,7 @@ import {
 } from "../../enums/tabs.enum";
 import {ModalController} from '@ionic/angular';
 import {ModalQrcodeComponent} from '../../modals/modal-qrcode/modal-qrcode.component';
+import {FilterComponent} from '../../../pages/videos/modals/filter/filter.component';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class MainLayoutComponent implements OnInit {
     @Input() isNeedLogo: boolean = false;
     @Input() backRoute: string;
 
-    @Input() isNeedFilter: boolean = true;
+    @Input() isNeedFilter: boolean = false;
     @Input() isHideBoxShadow: boolean = false;
     @Input() isNeedBgWhite: boolean = false;
 
@@ -35,7 +36,11 @@ export class MainLayoutComponent implements OnInit {
     public readonly TabsEnum2IconMapping = TabsEnum2IconMapping;
     public readonly TabsEnum2RoutingMapping = TabsEnum2RoutingMapping;
 
-    constructor(private _router: Router, private _location: Location, private _modalController: ModalController) {
+    constructor(
+        private _router: Router,
+        private _location: Location,
+        private _modalController: ModalController
+    ) {
     }
 
     ngOnInit(): void {
@@ -92,7 +97,10 @@ export class MainLayoutComponent implements OnInit {
     }
 
 
-    openFilter() {
-
+    async openFilter() {
+        const modal = await this._modalController.create({
+            component: FilterComponent
+        });
+        return await modal.present();
     }
 }
