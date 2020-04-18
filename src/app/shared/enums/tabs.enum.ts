@@ -1,37 +1,31 @@
+import {PagesEnum2RoutingMapping} from './pages.enum';
+
 export enum TabsEnum {
-    NEWS = 'NEWS',
+    VIDEO = 'VIDEO',
     STATS = 'STATS',
-    CALENDAR = 'CALENDAR',
-    RATING = 'RATING',
-    FOOD = 'FOOD'
+    MEALS = 'MEALS',
 }
 
 export const TabsEnum2IconMapping: Record<TabsEnum, string> = {
-    NEWS: 'ios-list-box-gray.svg',
-    STATS: 'ios-stats.svg',
-    CALENDAR: 'ios-calendar.svg',
-    RATING: 'ios-trophy.svg',
-    FOOD: 'ios-restaurant.svg'
+    STATS: 'stat.svg',
+    MEALS: 'food.svg',
+    VIDEO: 'video.svg',
 };
 export const TabsEnum2IconActiveMapping: Record<TabsEnum, string> = {
-    NEWS: 'ios-list-box-blue.svg',
-    STATS: 'ios-stats-blue.svg',
-    CALENDAR: 'ios-calendar-blue.svg',
-    RATING: 'ios-trophy-blue.svg',
-    FOOD: 'ios-restaurant-blue.svg'
+    STATS: 'stat-active.svg',
+    MEALS: 'food-active.svg',
+    VIDEO: 'video-active.svg',
 };
 
 
 export const TabsEnum2RoutingMapping: Record<TabsEnum, string> = {
-    NEWS: 'news-feed',
-    STATS: 'add-device',
-    CALENDAR: 'calendar',
-    RATING: 'challenges',
-    FOOD: 'food'
+    STATS: PagesEnum2RoutingMapping.ADD_DEVICE,
+    MEALS: PagesEnum2RoutingMapping.MEALS,
+    VIDEO: PagesEnum2RoutingMapping.VIDEOS,
 };
 
 export const TabsEnum2ActivePagesMapping: Record<TabsEnum, string[]> = {
-    NEWS: ['news-feed', 'members', 'members-connect'],
+    //NEWS: ['news-feed', 'members', 'members-connect'],
     STATS: [
         'stat-by-device',
         'add-device',
@@ -46,7 +40,9 @@ export const TabsEnum2ActivePagesMapping: Record<TabsEnum, string[]> = {
         'library-programs',
         'my-programs'
     ],
-    CALENDAR: ['calendar', 'my-bookings', 'class', 'feedback'],
-    RATING: ['challenges', 'leaderboard'],
-    FOOD: ['food', 'meal-planner'],
+  /*  CALENDAR: ['calendar', 'my-bookings', 'class', 'feedback'],
+    RATING: ['challenges', 'leaderboard'],*/
+    MEALS: [PagesEnum2RoutingMapping.MEALS, PagesEnum2RoutingMapping.MEAL_PLANNER],
+
+    VIDEO: [PagesEnum2RoutingMapping.VIDEOS]
 };

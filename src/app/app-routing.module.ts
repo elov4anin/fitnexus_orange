@@ -42,7 +42,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/challenges/challenges.module').then(m => m.ChallengesModule)
   },
   {
-    path: 'food',
+    path: PagesEnum2RoutingMapping.MEALS,
     loadChildren: () => import('./pages/food/food.module').then(m => m.FoodPageModule)
   },
   {
@@ -98,7 +98,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/leaderboard/leaderboard.module').then( m => m.LeaderboardPageModule)
   },
   {
-    path: 'meal-planner',
+    path: PagesEnum2RoutingMapping.MEAL_PLANNER,
     loadChildren: () => import('./pages/meal-planner/meal-planner.module').then( m => m.MealPlannerPageModule)
   },
   {

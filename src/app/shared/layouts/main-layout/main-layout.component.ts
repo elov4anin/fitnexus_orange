@@ -53,20 +53,28 @@ export class MainLayoutComponent implements OnInit {
     getActiveTabIcon(currentRoute: string): string {
         const url = this._router.url.includes('/') ? this._router.url.split('/')[1] : this._router.url;
         switch (currentRoute) {
-            case TabsEnum.NEWS:
+       /*     case TabsEnum.NEWS:
                 const activePages: string[] = ['news-feed'];
                 if (TabsEnum2ActivePagesMapping[currentRoute].includes(url)) {
                     return TabsEnum2IconActiveMapping[currentRoute]
                 } else {
                     return TabsEnum2IconMapping[currentRoute]
+                }*/
+
+            case TabsEnum.VIDEO:
+                if (TabsEnum2ActivePagesMapping[currentRoute].includes(url)) {
+                    return TabsEnum2IconActiveMapping[currentRoute]
+                } else {
+                    return TabsEnum2IconMapping[currentRoute]
                 }
+
             case TabsEnum.STATS:
                 if (TabsEnum2ActivePagesMapping[currentRoute].includes(url)) {
                     return TabsEnum2IconActiveMapping[currentRoute]
                 } else {
                     return TabsEnum2IconMapping[currentRoute]
                 }
-            case TabsEnum.CALENDAR:
+           /* case TabsEnum.CALENDAR:
                 if (TabsEnum2ActivePagesMapping[currentRoute].includes(url)) {
                     return TabsEnum2IconActiveMapping[currentRoute]
                 } else {
@@ -77,13 +85,14 @@ export class MainLayoutComponent implements OnInit {
                     return TabsEnum2IconActiveMapping[currentRoute]
                 } else {
                     return TabsEnum2IconMapping[currentRoute]
-                }
-            case TabsEnum.FOOD:
+                }*/
+            case TabsEnum.MEALS:
                 if (TabsEnum2ActivePagesMapping[currentRoute].includes(url)) {
                     return TabsEnum2IconActiveMapping[currentRoute]
                 } else {
                     return TabsEnum2IconMapping[currentRoute]
                 }
+
 
         }
     }
