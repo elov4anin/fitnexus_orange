@@ -23,3 +23,21 @@ ion-badge {
 .material-icons {
     font-size: 32px;
 }
+
+.video__title {
+    @include titleSemi20;
+    @include mb8;
+}
+
+.video__author {
+    @include textMonserat12;
+    @include mb24;
+}
+
+.video__text {
+    @include textMonserat14;
+}
+
+.video__text-wrap {
+    padding-top: 0;
+}
