@@ -37,6 +37,10 @@
     margin-bottom: 32px;
 }
 
+@mixin p12 {
+    padding: 12px;
+}
+
 @mixin border-radius-8 {
     border-radius: 8px;
 }
