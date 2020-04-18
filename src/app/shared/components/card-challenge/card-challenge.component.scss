@@ -1,15 +1,16 @@
 @import "variables";
+@import "mixins";
 
 ion-card.card__wrapper {
+    @include box-shadow;
     margin: 0;
     background: $white;
-    box-shadow: 0 3px 6px 1px #00000029;
     border-radius: 0;
 
-    ion-card-content {
-        padding-left: 46px;
-        padding-right: 46px;
-    }
+   /* ion-card-content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }*/
 
 }
 
@@ -20,9 +21,9 @@ ion-card.card__wrapper {
 
     &__img {
         position: relative;
-        height: 153px;
+        height: 200px;
         width: auto;
-        background-image: url("/assets/images/news.png");
+        background-image: url("/assets/images/run@2x.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -31,28 +32,15 @@ ion-card.card__wrapper {
     }
 
     &__title {
-        font-family: $font-family-oswald;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 20px;
-        color: $dark-gray1;
+       @include titleSemi16
     }
 
     &__text {
-        font-family: $font-family-oswald;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 20px;
-        color: $blue;
+       @include textMonserat12(var(--ion-color-warning));
     }
 
     &__desc {
-        display: none;
-        font-family: $font-family-helvetica;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 18px;
-        color: $dark-gray1;
+        @include textMonserat14();
     }
 
     &--vertical {

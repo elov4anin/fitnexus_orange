@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {IonSlides} from '@ionic/angular';
 import {ISlideInfo} from '../../../get-started/get-started.page';
+import {Router} from '@angular/router';
+import {PagesEnum2RoutingMapping} from '../../../../shared/enums/pages.enum';
 
 @Component({
   selector: 'app-favorite-slides',
@@ -41,8 +43,11 @@ export class FavoriteSlidesComponent implements OnInit {
       imgSrc: "/assets/images/new_video@2x.png"
     }
   ];
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {}
 
+  redirectTo() {
+    this._router.navigate(['/', PagesEnum2RoutingMapping.CHALLENGES, 1]);
+  }
 }

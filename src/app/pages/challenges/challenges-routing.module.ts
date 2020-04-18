@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ChallengesPage } from './challenges.page';
+import {PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 const routes: Routes = [
   {
@@ -9,7 +10,7 @@ const routes: Routes = [
     component: ChallengesPage
   },
   {
-    path: ':id',
+    path: PagesEnum2RoutingMapping.CHALLENGE,
     loadChildren: () => import('./challenge/challenge.module').then( m => m.ChallengePageModule)
   },
 ];

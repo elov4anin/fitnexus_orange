@@ -137,3 +137,7 @@ ion-header.box-shadow-none {
 ion-content.pt53 {
     --padding-top: 53px;
 }
+
+ion-content.white-bg {
+    --background: var(--ion-color-warning-contrast);
+}

@@ -49,24 +49,24 @@
     border-radius: 12px;
 }
 
-@mixin titleSemi16() {
+@mixin titleSemi16($color-value: $dark-gray) {
     font-family: $font-family-semi;
     font-size: 16px;
     font-weight: 800;
     line-height: 20px;
     letter-spacing: 0.41px;
     text-transform: uppercase;
-    color: $dark-gray;
+    color: $color-value;
 }
 
-@mixin titleSemi20 {
+@mixin titleSemi20($color-value: $dark-gray) {
     font-family: $font-family-semi;
     font-size: 20px;
     font-weight: 800;
     line-height: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: $dark-gray;
+    color: $color-value;
 }
 
 @mixin textMonserat12($color-value: $dark-gray) {
@@ -90,13 +90,13 @@
     height: 40px;
 }
 
-@mixin btnTextMonserat12 {
+@mixin btnTextMonserat12($color-value: $white) {
     font-family: $font-family-montserrat;
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-    color: $white;
+    color: $color-value;
 }
 
 @mixin btnTextSemi13($color-value: var(--ion-color-warning)) {

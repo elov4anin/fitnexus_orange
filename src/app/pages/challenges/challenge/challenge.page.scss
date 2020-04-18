@@ -1,8 +1,10 @@
 @import "variables";
+@import "mixins";
+
 :host {
-    ::ng-deep ion-content {
+   /* ::ng-deep ion-content {
         --background: $gray;
-    }
+    }*/
     ::ng-deep .news__card > ion-card.card__wrapper {
         box-shadow: none;
     }
@@ -18,26 +20,30 @@
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
 
-    &__block {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5px;
+    .material-icons {
+        margin-right: 5px;
     }
 
-    &__title {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+    }
+
+    /*&__title {
         font-family: $font-family-helvetica;
         font-size: 12px;
         line-height: 15px;
         font-weight: 300;
         color: $dark-gray1;
-    }
+    }*/
 
     &__text {
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $blue2;
+        @include btnTextMonserat12($dark-gray)
+    }
+
+    &__goal {
+        @include titleSemi16(var(--ion-color-warning));
     }
 
     &__buttons {
@@ -45,10 +51,9 @@
         justify-content: space-between;
 
         ion-button {
-            width: 42%;
-            height: 40px;
-            box-shadow: 0 3px 6px 0 $light-gray1;
-
+            margin: 0;
+            max-width: 145px;
+            @include bthHeight;
         }
     }
 
@@ -61,10 +66,7 @@
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
+        @include btnTextMonserat12()
     }
 
 }
@@ -78,3 +80,10 @@
     background: #B8B8B8;
 }
 
+.gray {
+    color: $dark-gray;
+}
+
+.warning {
+    color: var(--ion-color-warning);
+}

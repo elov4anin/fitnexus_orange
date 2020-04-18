@@ -38,7 +38,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/calendar/calendar.module').then(m => m.CalendarPageModule)
   },
   {
-    path: 'challenges',
+    path: PagesEnum2RoutingMapping.CHALLENGES,
     loadChildren: () => import('./pages/challenges/challenges.module').then(m => m.ChallengesModule)
   },
   {
