@@ -8,6 +8,8 @@ import {NewSlidesComponent} from './components/new-slides/new-slides.component';
 import {FavoriteSlidesComponent} from './components/favorite-slides/favorite-slides.component';
 import {CategoryListComponent} from './components/category-list/category-list.component';
 import {FocusListComponent} from './components/focus-list/focus-list.component';
+import {DurationListComponent} from './components/duration-list/duration-list.component';
+import {DifficultyListComponent} from './components/difficulty-list/difficulty-list.component';
 
 @NgModule({
     imports: [
@@ -19,7 +21,9 @@ import {FocusListComponent} from './components/focus-list/focus-list.component';
         NewSlidesComponent,
         FavoriteSlidesComponent,
         CategoryListComponent,
-        FocusListComponent
+        FocusListComponent,
+        DurationListComponent,
+        DifficultyListComponent
     ]
 })
 export class VideosPageModule {
