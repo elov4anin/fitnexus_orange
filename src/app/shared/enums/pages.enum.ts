@@ -6,6 +6,7 @@ export enum PagesEnum {
     CHALLENGES = 'CHALLENGES',
     ADD_DEVICE = 'ADD_DEVICE',
     CATEGORY = 'CATEGORY',
+    ACCOUNT = 'ACCOUNT',
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -27,6 +28,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     CHALLENGES: 'challenges',
     ADD_DEVICE: 'add-device',
     CATEGORY: 'category',
+    ACCOUNT: 'account'
 };
 
 
@@ -38,4 +40,5 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     CHALLENGES: '',
     ADD_DEVICE: 'Tracking - wearables & apps',
     CATEGORY: 'Cardio',
+    ACCOUNT: ''
 };

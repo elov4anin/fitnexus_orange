@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {PagesEnum2RoutingMapping} from './shared/enums/pages.enum';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +22,11 @@ export class AppComponent {
     },
     {
       title: 'Account',
-      url: 'account',
+      url:  PagesEnum2RoutingMapping.ACCOUNT,
     },
     {
       title: 'Get-started',
-      url: 'get-started',
+      url: PagesEnum2RoutingMapping.GET_STARTED,
     },
     {
       title: 'Login',

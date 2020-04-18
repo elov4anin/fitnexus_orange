@@ -95,8 +95,8 @@ ion-menu-button {
 }
 
 .profile-header {
-    background: linear-gradient(89deg, rgba(0, 126, 191, 0.89) 0%, rgba(0, 211, 255, 0.89) 100%),
-    url("/assets/images/login_bg.png") center no-repeat  !important;
+    background: linear-gradient(89deg, rgba(44, 47, 54, 0.89) 0%, rgba(58, 62, 71, 0.89) 100%),
+    url("/assets/images/account@2x.png") center no-repeat  !important;
 
 
     &__wrap {
@@ -115,13 +115,9 @@ ion-menu-button {
     }
 
     &__name {
-        margin-top: 10px;
-
-        font-family: $font-family-oswald;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 36px;
-        color: $white;
+        @include mt8;
+        @include titleSemi24();
+        text-align: center;
     }
 }
 

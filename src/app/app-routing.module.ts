@@ -118,7 +118,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/measurement-detail/measurement-detail.module').then( m => m.MeasurementDetailPageModule)
   },
   {
-    path: 'account',
+    path: PagesEnum2RoutingMapping.ACCOUNT,
     loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
   },
   {
