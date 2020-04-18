@@ -46,5 +46,5 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     CATEGORY: 'Cardio',
     ACCOUNT: '',
     MEALS: 'Meals',
-    MEAL_PLANNER: 'Meal-planner',
+    MEAL_PLANNER: 'Meal planner',
 };

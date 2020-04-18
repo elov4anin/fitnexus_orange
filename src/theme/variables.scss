@@ -93,7 +93,7 @@ ion-searchbar {
     padding-right: 0!important;
 
     .searchbar-input-container {
-        @include box-shadow;
+       // @include box-shadow;
         @include border-radius-8;
 
 
@@ -137,13 +137,9 @@ rating {
 }
 
 .select-white-placeholder {
-    margin-top: -2px;
+    margin-top: -4px;
     margin-right: 0;
-    font-weight: 300 !important;
-    font-family: $font-family-helvetica !important;
-    color: $dark-gray1 !important;
-    font-size: 12px !important;
-    line-height: 15px;
+    @include btnTextMonserat12($dark-gray);
     overflow: visible !important;
 }
 

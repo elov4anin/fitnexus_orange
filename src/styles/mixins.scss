@@ -17,6 +17,11 @@
 @mixin ml16 {
     margin-left: 16px;
 }
+
+@mixin mr8 {
+    margin-right: 8px;
+}
+
 @mixin mr16 {
     margin-right: 16px;
 }
@@ -101,12 +106,12 @@
 }
 
 @mixin btnTextMonserat12($color-value: $white) {
-    font-family: $font-family-montserrat;
+    font-family: $font-family-montserrat!important;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12px!important;
     line-height: 15px;
     text-align: center;
-    color: $color-value;
+    color: $color-value!important;
 }
 
 @mixin btnTextSemi13($color-value: var(--ion-color-warning)) {

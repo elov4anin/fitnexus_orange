@@ -3,6 +3,8 @@ import {NavigationEnd, Router} from "@angular/router";
 import {ICommon} from "../../interfaces/common.interfaces";
 import ITopButton = ICommon.ITopButton;
 import {LayoutsEnum} from "../../enums/layouts.enum";
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../enums/pages.enum';
+import {TabsEnum2IconActiveMapping, TabsEnum2IconMapping} from '../../enums/tabs.enum';
 
 @Component({
     selector: 'app-button-layout',
@@ -218,18 +220,20 @@ export class ButtonLayoutComponent implements OnInit {
             case LayoutsEnum.MEALS: {
                 this.buttons =  [
                     {
-                        text: 'Meals',
-                        icon: 'ios-restaurant-white.svg',
-                        redirectTo: 'food',
+                        text:  PagesEnum2NamesMapping.MEALS,
+                        icon: 'tabs/food.svg',
+                        activeIcon: 'tabs/food-active.svg',
+                        redirectTo: PagesEnum2RoutingMapping.MEALS,
                         active: true,
-                        activePages: ['food'],
+                        activePages: [PagesEnum2RoutingMapping.MEALS],
                     },
                     {
-                        text: 'Meal Planner',
-                        icon: 'ios-checkbox.svg',
-                        redirectTo: 'meal-planner',
+                        text: PagesEnum2NamesMapping.MEAL_PLANNER,
+                        icon: 'planner@2x.png',
+                        activeIcon: 'planner-active@2x.png',
+                        redirectTo: PagesEnum2RoutingMapping.MEAL_PLANNER,
                         active: false,
-                        activePages: ['meal-planner'],
+                        activePages: [PagesEnum2RoutingMapping.MEAL_PLANNER],
                     }
                 ];
                 this.template = 1;

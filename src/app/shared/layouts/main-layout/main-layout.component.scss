@@ -73,6 +73,8 @@
 }
 
 ion-menu-button {
+    @include mr8;
+
     width: 25px;
     height: 25px;
     //--background: url('/assets/images/no_photo.png') center no-repeat;
