@@ -1,4 +1,11 @@
 @import "variables";
+@import "mixins";
+
+:host {
+    ::ng-deep app-main-layout {
+        height: calc(100% - 225px);
+    }
+}
 
 .library {
     display: flex;
@@ -13,7 +20,6 @@
     &__header {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         padding: 22px 32px;
         margin-bottom: 23px;
@@ -22,6 +28,7 @@
         ion-button {
             height: 36px;
             width: 44px;
+
         }
         ion-icon {
             font-size: 14px;
@@ -44,17 +51,15 @@
         align-items: center;
         padding: 0px 32px;
 
-        font-family: $font-family-oswald;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 20px;
-        color: $dark-gray1;
+       @include titleSemi16();
 
         ion-button {
+            --border-radius: 8px;
             height: 40px;
             width: 40px;
             margin-left: 14px;
-            box-shadow: 0 3px 6px 0 $light-gray1;
+            box-shadow: none;
+            --box-shadow: none;
         }
 
         ion-icon {
@@ -96,10 +101,7 @@
         margin: 0;
         padding-top: 15px;
         padding-bottom: 15px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        font-weight: 300;
-        color: $dark-gray1;
+        @include btnTextSemi13($dark-gray)
     }
 }
 
@@ -127,17 +129,21 @@ ion-card {
 }
 
 .card-program {
+    @include border-radius-8;
+
     display: flex;
-    width: 231px;
+   // width: 231px;
     height: 84px;
-    box-shadow: 0 3px 6px 0 $light-gray1;
     border-radius: 2px;
     margin-right: 5px;
     margin-left: 5px;
 
+    border: 1px solid $gray;
+
     &__img {
         width: 80px;
-        height: 84px;
+        height: 80px;
+
         background-color: $gray1;
         background-repeat: no-repeat;
         background-size: cover;
@@ -164,11 +170,7 @@ ion-card {
     }
 
     &__test {
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 15px;
-        color: $blue2;
+        @include textMonserat12()
     }
 
     &__delete {
@@ -185,41 +187,14 @@ ion-card {
 
 }
 
-.stat {
-    &__table {
-        display: table;
-    }
+app-calories {
+    @include mb24;
+}
 
-    &__row {
-        display: table-row;
-    }
+.divisor {
+    @include mb24;
+    width: 100%;
+    height: 1px;
 
-    &__cell {
-        display: table-cell;
-        padding: 5px 14px;
-
-        &:first-of-type {
-            font-family: $font-family-oswald;
-            font-size: 20px;
-            line-height: 20px;
-            font-weight: 300;
-            padding-left: 0;
-
-        }
-
-        &:nth-of-type(2) {
-            font-family: $font-family-helvetica;
-            font-size: 12px;
-            font-weight: 500;
-            color: $dark-gray1;
-        }
-
-        &:nth-of-type(3) {
-            padding-right: 6px;
-            font-family: $font-family-helvetica;
-            font-size: 12px;
-            font-weight: 300;
-            color: $light-gray3;
-        }
-    }
+    background: $light-gray2;
 }

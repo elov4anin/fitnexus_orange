@@ -84,6 +84,14 @@
     color: $color-value;
 }
 
+@mixin textMonserat10($color-value: $light-gray2) {
+    font-family: $font-family-montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13px;
+    color: $color-value;
+}
+
 @mixin textMonserat12($color-value: $dark-gray) {
     font-family: $font-family-montserrat;
     font-size: 12px;

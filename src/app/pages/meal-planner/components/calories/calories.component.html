@@ -1,0 +1,43 @@
+<ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
+  <ion-slide *ngFor ="let slide of sliders">
+    <div class="slide" [ngClass]="slide.type">
+      <div class="slide__row">
+        <span class="slide__title">{{slide.name}}</span>
+        <span class="slide__progress">{{slide.progress}} %</span>
+      </div>
+      <div class="slide__row">
+        <span class="slide__fact">{{slide.fact}} g</span>
+      </div>
+    </div>
+  </ion-slide>
+</ion-slides>
+<!--
+
+<div class="stat__wrapper">
+  <div class="stat__row">
+    <div class="stat__cell"><ion-text color="secondary">Protein</ion-text></div>
+    <div class="stat__cell">700g</div>
+    <div class="stat__cell">85%</div>
+  </div>
+  <div class="stat__row">
+    <div class="stat__cell"><ion-text color="primary">Carbs</ion-text></div>
+    <div class="stat__cell">700g</div>
+    <div class="stat__cell">90%</div>
+  </div>
+  <div class="stat__row">
+    <div class="stat__cell"><ion-text color="dark">Fat</ion-text> </div>
+    <div class="stat__cell">700g</div>
+    <div class="stat__cell">50%</div>
+  </div>
+  <div class="stat__row">
+    <div class="stat__cell"><ion-text color="medium">Saturates</ion-text> </div>
+    <div class="stat__cell">700g</div>
+    <div class="stat__cell">85%</div>
+  </div>
+  <div class="stat__row">
+    <div class="stat__cell"><ion-text color="medium">Sugar</ion-text></div>
+    <div class="stat__cell">700g</div>
+    <div class="stat__cell">85%</div>
+  </div>
+</div>
+-->
