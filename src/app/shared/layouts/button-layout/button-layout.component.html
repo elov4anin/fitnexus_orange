@@ -13,6 +13,8 @@
 <div class="submenu-transparent__buttons ion-padding-start ion-padding-end" *ngIf="template === 2">
   <ion-button *ngFor="let button of buttons"
               (click)="toggleButton(button.redirectTo)"
+              [color]="button.active ? 'warning': 'light'"
+              [ngClass]="{'transparent': !button.active}"
   >
     <ion-icon src="/assets/images/svg-icons/{{button.active ? button.activeIcon: button.icon}}" slot="icon-only"></ion-icon>
   </ion-button>

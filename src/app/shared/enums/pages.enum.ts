@@ -8,7 +8,9 @@ export enum PagesEnum {
     CATEGORY = 'CATEGORY',
     ACCOUNT = 'ACCOUNT',
     MEALS = 'MEALS',
-    MEAL_PLANNER = 'MEAL_PLANNER'
+    MEAL_PLANNER = 'MEAL_PLANNER',
+    WELCOME_PROGRAMMES = 'WELCOME_PROGRAMMES',
+    ADD_BODY_COMP = 'ADD_BODY_COMP'
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -33,12 +35,14 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     ACCOUNT: 'account',
     MEALS: 'meals',
     MEAL_PLANNER: 'meal-planner',
+    WELCOME_PROGRAMMES: 'welcome-programs',
+    ADD_BODY_COMP: 'add-body-comp'
 };
 
 
 export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     VIDEOS: '',
-    GET_STARTED: '',
+    GET_STARTED: 'Welcome to fitnexus',
     VIDEO_ITEM: 'Core yoga for beginners',
     CHALLENGE: 'Challenge - run 5.5k',
     CHALLENGES: '',
@@ -47,4 +51,6 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     ACCOUNT: '',
     MEALS: 'Meals',
     MEAL_PLANNER: 'Meal planner',
+    WELCOME_PROGRAMMES: 'Tracking - Programmes',
+    ADD_BODY_COMP: 'Tracking - body comp'
 };

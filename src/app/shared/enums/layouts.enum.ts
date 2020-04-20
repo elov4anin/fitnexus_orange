@@ -1,6 +1,6 @@
 export enum LayoutsEnum {
     ACCOUNT = 'ACCOUNT',
-    NEWS = 'NEWS',
+    NEWS = 'NEWS',// @deprecated
     TRACKING = 'TRACKING',
     CALENDAR = 'CALENDAR',
     CHALLENGES = 'CHALLENGES',
@@ -9,7 +9,7 @@ export enum LayoutsEnum {
     MESSAGES ='MESSAGES',
     CLASSES = 'CLASSES',
     NOTIFICATIONS = 'NOTIFICATIONS',
-    ALBUMS = 'ALBUMS',
+    ALBUMS = 'ALBUMS',// @deprecated
 
     MESSAGES_INTO ='MESSAGES_INTO',
     BODY ='BODY',

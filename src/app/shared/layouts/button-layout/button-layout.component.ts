@@ -127,7 +127,7 @@ export class ButtonLayoutComponent implements OnInit {
                 this.template = 1;
                 break;
             }
-            case LayoutsEnum.NEWS: {
+         /*   case LayoutsEnum.NEWS: {
                 this.buttons = [
                     {
                         text: 'Feed',
@@ -146,33 +146,41 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break
-            }
+            }*/
             case LayoutsEnum.TRACKING: {
                 this.buttons = [
                     {
                         text: 'trackers',
                         icon: 'md-watch-black.svg',
-                        activeIcon: 'md-watch-blue.svg',
-                        redirectTo: 'stat-by-device',
+                        activeIcon: 'md-watch-white.svg',
+                        redirectTo: PagesEnum2RoutingMapping.ADD_DEVICE,
                         active: true,
-                        activePages: ['stat-by-device', 'add-device'],
+                        activePages: ['stat-by-device', PagesEnum2RoutingMapping.ADD_DEVICE],
                     },
                     {
                         text: 'fitness',
-                        icon: 'ios-fitness.svg',
-                        activeIcon: 'ios-fitness-blue.svg',
-                        redirectTo: 'welcome-programs',
+                        icon: 'ios-fitness-black.svg',
+                        activeIcon: 'ios-fitness-white.svg',
+                        redirectTo: PagesEnum2RoutingMapping.WELCOME_PROGRAMMES,
                         active: false,
-                        activePages: ['welcome-programs', 'training', 'stat-program'],
+                        activePages: [PagesEnum2RoutingMapping.WELCOME_PROGRAMMES, 'training', 'stat-program'],
                     },
                     {
                         text: 'body-comp',
-                        icon: 'ios-man.svg',
-                        activeIcon: 'ios-man-blue.svg',
-                        redirectTo: 'add-body-comp',
+                        icon: 'ios-man-black.svg',
+                        activeIcon: 'ios-man-white.svg',
+                        redirectTo: PagesEnum2RoutingMapping.ADD_BODY_COMP,
                         active: false,
-                        activePages: ['add-body-comp', 'before-after', 'new-measurements', 'stat-measurements', 'measurement-detail'],
-                    }
+                        activePages: [PagesEnum2RoutingMapping.ADD_BODY_COMP, 'before-after', 'new-measurements', 'stat-measurements', 'measurement-detail'],
+                    },
+                    {
+                        text: 'Challenges',
+                        icon: 'ios-trophy-black.svg',
+                        activeIcon: 'ios-trophy-orange.svg',
+                        redirectTo: PagesEnum2RoutingMapping.CHALLENGES,
+                        active: true,
+                        activePages: [PagesEnum2RoutingMapping.CHALLENGES],
+                    },
                 ];
                 this.template = 2;
                 break

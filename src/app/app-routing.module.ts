@@ -62,7 +62,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/stat-by-device/stat-by-device.module').then( m => m.StatByDevicePageModule)
   },
   {
-    path: 'welcome-programs',
+    path: PagesEnum2RoutingMapping.WELCOME_PROGRAMMES,
     loadChildren: () => import('./pages/welcome-programmes/welcome-programmes.module').then( m => m.WelcomeProgrammesPageModule)
   },
   {
@@ -78,7 +78,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/training/training.module').then( m => m.TrainingPageModule)
   },
   {
-    path: 'add-body-comp',
+    path: PagesEnum2RoutingMapping.ADD_BODY_COMP,
     loadChildren: () => import('./pages/add-body-comp/add-body-comp.module').then( m => m.AddBodyCompPageModule)
   },
   {
