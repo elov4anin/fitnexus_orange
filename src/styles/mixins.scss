@@ -121,6 +121,15 @@
     text-align: center;
     color: $color-value!important;
 }
+@mixin btnTextMonserat13($color-value: $white) {
+    font-family: $font-family-montserrat!important;
+    font-weight: 600;
+    font-size: 13px!important;
+    line-height: 16px;
+    text-align: center;
+    color: $color-value!important;
+}
+
 
 @mixin btnTextSemi13($color-value: var(--ion-color-warning)) {
     font-family: $font-family-semi;
@@ -133,12 +142,22 @@
 }
 
 @mixin transparentBtn {
-    --background: transparent;
-    --ion-color-base: transparent;
+    --background: transparent!important;
+    --ion-color-base: transparent!important;
     --background-hover: #d7d8da;
     --background-focused: #d7d8da;
     --background-activated: #d7d8da;
     --box-shadow: none;
+}
+
+@mixin lightBtn {
+    @include border-radius-8;
+    --background: #FFFFFF;
+    --ion-color-base: #FFFFFF!important;
+    --background-hover: #d7d8da;
+    --background-focused: #d7d8da;
+    --background-activated: #d7d8da;
+    --box-shadow: 0 2px 4px 0 $light-gray1;
 }
 
 @mixin box-shadow {

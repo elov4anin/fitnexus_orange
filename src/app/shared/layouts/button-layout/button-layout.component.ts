@@ -229,8 +229,8 @@ export class ButtonLayoutComponent implements OnInit {
                     },
                     {
                         text: PagesEnum2NamesMapping.MEAL_PLANNER,
-                        icon: 'planner@2x.png',
-                        activeIcon: 'planner-active@2x.png',
+                        icon: 'ios-calendar-black.svg',
+                        activeIcon: 'ios-calendar-orange.svg',
                         redirectTo: PagesEnum2RoutingMapping.MEAL_PLANNER,
                         active: false,
                         activePages: [PagesEnum2RoutingMapping.MEAL_PLANNER],

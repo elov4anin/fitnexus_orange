@@ -1,11 +1,11 @@
 <div class="submenu__buttons ion-padding-start ion-padding-end" *ngIf="template === 1">
   <ion-button *ngFor="let button of buttons"
-              [color]="button.active ? 'secondary': 'dark'"
-              expand="full"
+              [color]="'light'"
+              expand="block"
               (click)="toggleButton(button.redirectTo)"
-              [ngClass]="{'once': buttons.length ===1 }"
+              [ngClass]="{'once': buttons.length ===1, 'active-btn': button.active}"
   >
-    <ion-icon src="/assets/images/svg-icons/{{button.icon}}"></ion-icon>
+    <ion-icon src="/assets/images/svg-icons/{{button.active ? button.activeIcon : button.icon}}"></ion-icon>
     <span class="submenu__btn-text">{{button.text}}</span>
   </ion-button>
 </div>
