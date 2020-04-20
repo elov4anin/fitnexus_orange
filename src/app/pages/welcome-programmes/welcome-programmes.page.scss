@@ -1,12 +1,6 @@
 @import "variables";
+@import "mixins";
 
-:host {
-    ::ng-deep {
-        app-button-layout .layout-content {
-            height: calc(100% - 51px);
-        }
-    }
-}
 
 .add-device {
     display: flex;
@@ -15,35 +9,34 @@
 
 
     &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
+        @include mb8;
+        @include titleSemi16;
     }
+
     &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+        @include mb32;
+        @include textMonserat12;
+        text-align: center;
     }
 
     &__btn {
         // margin-top: auto;
         // margin-bottom: 28px;
-        width: 100%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        width: 165px;
+        @include bthHeight;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+        @include btnTextMonserat12;
     }
+}
+
+.add-device__img {
+    @include mb32;
+    width: 56px;
+    height: 56px;
+    background-image: url("/assets/images/png-icons/welcome-programmes@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

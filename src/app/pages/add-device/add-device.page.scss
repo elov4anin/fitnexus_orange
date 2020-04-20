@@ -1,17 +1,11 @@
 @import "variables";
 @import "mixins";
 
-:host {
-    ::ng-deep ion-content {
-        --background: $gray;
-    }
-}
-
 
 .add-device {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 59px);
+    height: 100%;
     padding-top: 0;
     background: $white;
 
