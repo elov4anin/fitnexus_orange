@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-welcome-programmes',
@@ -8,7 +9,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
     styleUrls: ['./welcome-programmes.page.scss'],
 })
 export class WelcomeProgrammesPage extends PageBaseComponent implements OnInit {
-  pageTitle: string = 'TRACKING - PROGRAMMES';
+    pageTitle: string = PagesEnum2NamesMapping.WELCOME_PROGRAMMES;
 
     constructor(private _router: Router) {
         super();

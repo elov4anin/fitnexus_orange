@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-add-body-comp',
@@ -8,7 +9,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
     styleUrls: ['./add-body-comp.page.scss'],
 })
 export class AddBodyCompPage extends PageBaseComponent  implements OnInit {
-    pageTitle: string = 'TRACKING - BODY COMP';
+    pageTitle: string = PagesEnum2NamesMapping.ADD_BODY_COMP;
 
     constructor(private _router: Router) {
         super();
