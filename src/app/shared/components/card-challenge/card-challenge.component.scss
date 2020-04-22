@@ -1,10 +1,9 @@
-@import "variables";
 @import "mixins";
 
 ion-card.card__wrapper {
-    @include box-shadow;
+    box-shadow: none;
     margin: 0;
-    background: $white;
+    background: var(--white);
     border-radius: 0;
 
    /* ion-card-content {
@@ -14,6 +13,18 @@ ion-card.card__wrapper {
 
 }
 
+ion-card.list {
+    @include border-radius-8;
+    @include border1;
+
+    .card__img {
+        height: 160px;
+    }
+
+    ion-card-content {
+        padding: 12px 16px;
+    }
+}
 
 .card {
     display: flex;
@@ -56,27 +67,30 @@ ion-card.card__wrapper {
 }
 
 .connect {
+    @include border-radius-8;
+
     position: absolute;
-    left: 47px;
-    top: 41px;
+    left: 16px;
+    bottom: 16px;
     display: none;
-    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    padding: 12px 8px;
+    background-color: transparentize(#3A3E47, 0.3);
 
     &--show {
-        display: block;
+        display: flex;
     }
 
     &__img {
         width: 18px;
         height: 26px;
-        margin-bottom: 8px;
+        margin-right: 8px;
     }
 
     &__text {
-        font-family: $font-family-helvetica;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 18px;
-        color: $white;
+       @include btnTextMonserat12();
+        text-align: left;
     }
 }

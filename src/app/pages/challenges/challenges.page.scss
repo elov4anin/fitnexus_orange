@@ -1,11 +1,18 @@
-@import "variables";
+@import "mixins";
 
 :host {
     ::ng-deep app-button-layout .layout-content {
-        background: transparent;
+        background: var(--white);
     }
 }
 
+.challenges {
+    @include m24;
+
+    display: flex;
+    flex-direction: column;
+}
+
 .card-item {
-    margin-bottom: 11px;
+    @include mb24;
 }

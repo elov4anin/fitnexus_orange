@@ -3,7 +3,7 @@ export enum LayoutsEnum {
     NEWS = 'NEWS',// @deprecated
     TRACKING = 'TRACKING',
     CALENDAR = 'CALENDAR',
-    CHALLENGES = 'CHALLENGES',
+    CHALLENGES = 'CHALLENGES',// @deprecated
     MEALS = 'MEALS',
     LIBRARY = 'LIBRARY',
     MESSAGES ='MESSAGES',

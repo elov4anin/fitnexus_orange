@@ -1,14 +1,6 @@
 @import "variables";
 @import "mixins";
 
-:host {
-   /* ::ng-deep ion-content {
-        --background: $gray;
-    }*/
-    ::ng-deep .news__card > ion-card.card__wrapper {
-        box-shadow: none;
-    }
-}
 
 .challenge {
         display: flex;

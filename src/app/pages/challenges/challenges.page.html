@@ -1,9 +1,13 @@
 <app-main-layout
         [titlePage]="pageTitle"
 >
-  <app-button-layout [listBtnForLayout]="listBtnForLayout.CHALLENGES">
-    <div class="card-item" *ngFor="let item of repeat">
-      <app-card-challenge (click)="openNewsPage()"></app-card-challenge>
+  <app-button-layout [listBtnForLayout]="listBtnForLayout.TRACKING">
+    <div class="challenges">
+      <div class="card-item" *ngFor="let item of repeat">
+        <app-card-challenge (click)="openNewsPage()"></app-card-challenge>
+      </div>
     </div>
   </app-button-layout>
+
+
 </app-main-layout>

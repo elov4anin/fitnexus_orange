@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
-import {PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-rating',
@@ -9,7 +9,7 @@ import {PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
     styleUrls: ['./challenges.page.scss'],
 })
 export class ChallengesPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'Rankings - Challenges';
+    pageTitle: string =  PagesEnum2NamesMapping.CHALLENGES;
 
     repeat: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
 

@@ -176,7 +176,7 @@ export class ButtonLayoutComponent implements OnInit {
                     {
                         text: 'Challenges',
                         icon: 'ios-trophy-black.svg',
-                        activeIcon: 'ios-trophy-orange.svg',
+                        activeIcon: 'ios-trophy-white.svg',
                         redirectTo: PagesEnum2RoutingMapping.CHALLENGES,
                         active: true,
                         activePages: [PagesEnum2RoutingMapping.CHALLENGES],
@@ -205,7 +205,7 @@ export class ButtonLayoutComponent implements OnInit {
                 this.template = 1;
                 break
             }
-            case LayoutsEnum.CHALLENGES: {
+            /*case LayoutsEnum.CHALLENGES: {
                 this.buttons =  [
                     {
                         text: 'Challenges',
@@ -224,7 +224,7 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break
-            }
+            }*/
             case LayoutsEnum.MEALS: {
                 this.buttons =  [
                     {

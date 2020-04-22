@@ -49,7 +49,7 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     GET_STARTED: 'Welcome to fitnexus',
     VIDEO_ITEM: 'Core yoga for beginners',
     CHALLENGE: 'Challenge - run 5.5k',
-    CHALLENGES: '',
+    CHALLENGES: 'Tracking - Challenges',
     ADD_DEVICE: 'Tracking - wearables & apps',
     CATEGORY: 'Cardio',
     ACCOUNT: '',
