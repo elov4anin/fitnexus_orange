@@ -102,11 +102,11 @@ export class ButtonLayoutComponent implements OnInit {
                 this.buttons = [
                     {
                         text: 'Notifications',
-                        icon: 'notifications-outline.svg',
-                        activeIcon: 'notifications-outline.svg',
-                        redirectTo: 'notifications',
+                        icon: 'notifications.svg',
+                        activeIcon: 'notifications.svg',
+                        redirectTo: PagesEnum2RoutingMapping.NOTIFICATIONS,
                         active: true,
-                        activePages: ['notifications'],
+                        activePages: [PagesEnum2RoutingMapping.NOTIFICATIONS],
                     },
                 ];
                 this.template = 1;
@@ -280,9 +280,9 @@ export class ButtonLayoutComponent implements OnInit {
                     {
                         text: 'Feedback',
                         icon: 'ios-journal.svg',
-                        redirectTo: 'feedback',
+                        redirectTo: PagesEnum2RoutingMapping.FEEDBACK,
                         active: false,
-                        activePages: ['feedback'],
+                        activePages: [PagesEnum2RoutingMapping.FEEDBACK],
                     },
                 ];
                 this.template = 1;

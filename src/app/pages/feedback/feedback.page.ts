@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-feedback',
@@ -7,7 +8,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
     styleUrls: ['./feedback.page.scss'],
 })
 export class FeedbackPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'Feedback';
+    pageTitle: string = PagesEnum2NamesMapping.FEEDBACK;
     rate: any;
 
     constructor() {

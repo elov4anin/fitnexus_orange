@@ -17,6 +17,10 @@ ion-menu {
         border-top: 0.5px solid #434950!important;
     }
 
+    ion-list {
+        margin-top: 40px;
+    }
+
     ion-item {
         --border-color: #3B3B3B;
         --background-activated: var(--ion-color-warning);

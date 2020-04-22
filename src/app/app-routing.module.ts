@@ -110,7 +110,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/class/class.module').then( m => m.ClassPageModule)
   },
   {
-    path: 'feedback',
+    path: PagesEnum2RoutingMapping.FEEDBACK,
     loadChildren: () => import('./pages/feedback/feedback.module').then( m => m.FeedbackPageModule)
   },
   {
@@ -138,7 +138,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/stat-program/stat-program.module').then( m => m.StatProgramPageModule)
   },
   {
-    path: 'notifications',
+    path: PagesEnum2RoutingMapping.NOTIFICATIONS,
     loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
   {

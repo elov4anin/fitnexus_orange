@@ -14,10 +14,10 @@
       </ion-header>
       <ion-content>
         <ion-list lines="full">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let idx = index">
             <ion-item [routerDirection]="'root'"  lines="none" [routerLink]="[p.url]" detail="false">
               <ion-label>
-                <div class="new"></div>
+                <div class="new" *ngIf="idx === 0"></div>
                 {{p.title}}
               </ion-label>
             </ion-item>

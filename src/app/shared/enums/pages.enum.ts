@@ -10,7 +10,9 @@ export enum PagesEnum {
     MEALS = 'MEALS',
     MEAL_PLANNER = 'MEAL_PLANNER',
     WELCOME_PROGRAMMES = 'WELCOME_PROGRAMMES',
-    ADD_BODY_COMP = 'ADD_BODY_COMP'
+    ADD_BODY_COMP = 'ADD_BODY_COMP',
+    NOTIFICATIONS = 'NOTIFICATIONS',
+    FEEDBACK = 'FEEDBACK',
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -36,7 +38,9 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     MEALS: 'meals',
     MEAL_PLANNER: 'meal-planner',
     WELCOME_PROGRAMMES: 'welcome-programs',
-    ADD_BODY_COMP: 'add-body-comp'
+    ADD_BODY_COMP: 'add-body-comp',
+    NOTIFICATIONS: 'notifications',
+    FEEDBACK: 'feedback'
 };
 
 
@@ -52,5 +56,7 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     MEALS: 'Meals',
     MEAL_PLANNER: 'Meal planner',
     WELCOME_PROGRAMMES: 'Tracking - Programmes',
-    ADD_BODY_COMP: 'Tracking - body comp'
+    ADD_BODY_COMP: 'Tracking - body comp',
+    NOTIFICATIONS: 'Notifications',
+    FEEDBACK: 'Feedback'
 };

@@ -14,24 +14,28 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Notifications',
-      url: 'notifications',
+      url: PagesEnum2RoutingMapping.NOTIFICATIONS,
     },
     {
+      title: 'Feedback/Support',
+      url: PagesEnum2RoutingMapping.FEEDBACK,
+    },
+   /* {
       title: 'Messages',
       url: 'messages',
-    },
+    },*/
     {
       title: 'Account',
       url:  PagesEnum2RoutingMapping.ACCOUNT,
     },
-    {
+   /* {
       title: 'Get-started',
       url: PagesEnum2RoutingMapping.GET_STARTED,
-    },
-    {
+    },*/
+   /* {
       title: 'Login',
       url: 'login',
-    }
+    }*/
   ];
 
   constructor(
