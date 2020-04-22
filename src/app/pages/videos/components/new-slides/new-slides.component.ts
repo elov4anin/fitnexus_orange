@@ -16,6 +16,8 @@ export class NewSlidesComponent implements OnInit {
     speed: 400,
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 16,
+    width: 287
   };
   sliders: ISlideInfo[] = [
     {

@@ -1,10 +1,10 @@
-<a (click)="slider.slideNext()" class="slide__arrow-back">
+<!--<a (click)="slider.slideNext()" class="slide__arrow-back">
   <ion-icon color="warning" size="large" name="arrow-back"></ion-icon>
 </a>
 
 <a (click)="slider.slidePrev()" class="slide__arrow-forward">
   <ion-icon color="warning" size="large" name="arrow-forward"></ion-icon>
-</a>
+</a>-->
 <ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
   <ion-slide *ngFor =" let slide of sliders">
     <div class="slide" (click)="openSlide()">

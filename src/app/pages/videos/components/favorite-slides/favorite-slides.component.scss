@@ -6,9 +6,9 @@
 
     position: relative;
     //width: 162px!important;
-    min-width: 160px;
+    min-width: 196px;
     height: 109px;
-    margin: auto 10px;
+   // margin: auto 10px;
     background-repeat: no-repeat;
 
     &:before {
@@ -43,6 +43,7 @@
         position: absolute;
         left: 16px;
         bottom: 16px;
+        right: 16px;
     }
 
     &__title {

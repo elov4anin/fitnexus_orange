@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 .slide {
@@ -8,11 +7,11 @@
     position: relative;
     //width: 162px!important;
     min-width: 287px;
-    margin: auto 10px;
-    border-bottom: 0.5px solid $gray;
+    // margin: auto 10px;
     background-repeat: no-repeat;
 
     &:before {
+        @include border-radius-12;
         content: '';
         position: absolute;
         top: 0;
@@ -29,12 +28,13 @@
     }
 
     &__img {
+        @include border-radius-12;
         height: 230px;
         width: auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-color: $gray1;
+        background-color: var(--gray);
     }
 
     &__wrap {
@@ -44,7 +44,7 @@
     }
 
     &__title {
-        @include btnTextSemi13($white);
+        @include btnTextSemi13(var(--white));
     }
 
     /*&__text {
@@ -56,7 +56,7 @@
         color: $light-gray2;
     }*/
 
-    &__arrow-forward {
+   /* &__arrow-forward {
         position: absolute;
         top: 0;
         right: -5px;
@@ -78,5 +78,5 @@
         z-index: 10;
         display: flex;
         align-items: center;
-    }
+    }*/
 }

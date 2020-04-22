@@ -15,7 +15,9 @@ export class FavoriteSlidesComponent implements OnInit {
     initialSlide: 0,
     speed: 400,
     loop: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
+    width: 196,
+    spaceBetween: 16,
   };
   sliders: ISlideInfo[] = [
     {
