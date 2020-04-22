@@ -165,7 +165,7 @@ ion-select {
     font-size: 12px;
     line-height: 15px;
 }
-
+/*remove*/
 ion-select.select-blue {
     font-weight: 300;
     font-family: $font-family-oswald;
@@ -174,7 +174,7 @@ ion-select.select-blue {
     line-height: 15px;
 }
 .alert-button.sc-ion-alert-ios {
-    color: $blue;
+    color: var(--ion-color-warning);
 }
 
 .visually-hidden {
