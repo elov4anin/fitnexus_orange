@@ -2,6 +2,8 @@
 @import "mixins";
 
 .video__wrapper {
+    position: relative;
+
     height: 256px;
     width: 100%;
 
@@ -9,6 +11,24 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.video__play {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    width: 56px;
+    height: 56px;
+
+    background: url("/assets/images/svg-icons/play_icon.svg");
+    background-position: center;
+    // background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
 .video__action {
