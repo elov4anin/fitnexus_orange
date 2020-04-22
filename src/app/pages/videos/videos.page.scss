@@ -1,10 +1,9 @@
-@import "variables";
 @import "mixins";
 
 .videos {
     display: flex;
     flex-direction: column;
-    background: $white;
+    background: var(--white);
 }
 
 .videos__header {

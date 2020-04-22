@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 .slide {
@@ -10,10 +9,11 @@
     min-width: 160px;
     height: 109px;
     margin: auto 10px;
-    border-bottom: 0.5px solid $gray;
     background-repeat: no-repeat;
 
     &:before {
+        @include border-radius-8;
+
         content: '';
         position: absolute;
         top: 0;
@@ -30,12 +30,13 @@
     }
 
     &__img {
-        height: 230px;
+        @include border-radius-8;
+        height: 109px;
         width: auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-color: $gray1;
+        background-color: var(--light-gray2);
     }
 
     &__wrap {
@@ -45,12 +46,12 @@
     }
 
     &__title {
-        @include textMonserat12($white);
+        @include textMonserat12(var(--white));
         font-weight: 600;
     }
 
     &__text {
-        @include textMonserat12($light-gray2);
+        @include textMonserat12(var(--light-gray2));
 
         &--warning {
             color: var(--ion-color-warning);
@@ -59,6 +60,6 @@
 
     &__icon {
         margin-right: 6px;
-        color: $light-gray2;
+        color: var(--light-gray2);
     }
 }
