@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-food',
@@ -7,7 +8,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
     styleUrls: ['./food.page.scss'],
 })
 export class FoodPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'Meals';
+    pageTitle: string = PagesEnum2NamesMapping.MEALS;
     selectedType: any;
     selectedMeal: any;
 

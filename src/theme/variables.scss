@@ -6,6 +6,21 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+    /* custom*/
+    --white: #ffffff;
+
+    --light-gray: #F2F2F2;
+    --light-gray1: #0000001F;
+    --light-gray2: #C4C9CF;
+    --dark-gray: #3A3E47;
+    --gray: #DDDDDD;
+
+    /*fonts*/
+    --font-family-semi: "Encode Sans Semi Condensed", sans-serif;
+    --font-family-montserrat: "Montserrat", sans-serif;
+
+
     /** primary **/
     --ion-color-primary: #00D3FF;
     --ion-color-primary-rgb: 56, 128, 255;
