@@ -50,6 +50,6 @@ export class FavoriteSlidesComponent implements OnInit {
   ngOnInit() {}
 
   redirectTo() {
-    this._router.navigate(['/', PagesEnum2RoutingMapping.CHALLENGES, 1]);
+    this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEO_ITEM, 1]);
   }
 }
