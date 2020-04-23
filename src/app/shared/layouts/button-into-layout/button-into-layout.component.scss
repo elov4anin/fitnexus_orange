@@ -1,23 +1,35 @@
-@import "variables";
-
+@import "mixins";
 
 .submenu {
     &__buttons {
-        flex: 1 0 auto;
+        @include border-radius-8;
 
+        flex: 1 0 auto;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
-
         justify-content: space-between;
+        padding-right: 1px;
+        padding-left: 1px;
+
+        background-color: var(--light-gray);
 
         ion-button {
-            width: 42%;
-            height: 40px;
-            box-shadow: 0 3px 6px 0 $light-gray1;
+            @include transparentBtn();
 
-            &:last-of-type {
-                width: 53%;
+            width: 150px;
+            height: 40px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+
+            --border-radius: 8px;
+
+            &.active-btn {
+                @include lightBtn();
+
+                .submenu__btn-text {
+                    @include btnTextMonserat13(var(--ion-color-warning));
+                }
             }
         }
     }
@@ -27,14 +39,10 @@
         flex: 1 0 auto;
         flex-direction: column;
         margin: 11px;
-
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
+        @include btnTextMonserat13(var(--dark-gray));
     }
 
 
@@ -55,11 +63,11 @@ ion-icon {
     padding-top: 0;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    background: $white;
+    background: var(--white);
 
     ion-item {
         height: 40px;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        box-shadow: 0 3px 6px 0 var(--light-gray1);
     }
 
     ion-select {
@@ -74,6 +82,6 @@ ion-icon {
         width: 100%;
         align-items: center;
         padding: 22px 32px;
-        border-bottom: 0.5px solid $gray;
+        border-bottom: 0.5px solid var(--gray);
     }
 }

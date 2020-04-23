@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 
@@ -7,7 +6,6 @@
     flex-direction: column;
     height: 100%;
     padding-top: 0;
-    background: $white;
 
     &__title {
         @include mb8;

@@ -13,6 +13,10 @@ export enum PagesEnum {
     ADD_BODY_COMP = 'ADD_BODY_COMP',
     NOTIFICATIONS = 'NOTIFICATIONS',
     FEEDBACK = 'FEEDBACK',
+    MEASUREMENTS = 'MEASUREMENTS',
+    ADD_MEASUREMENTS = 'ADD_MEASUREMENTS',
+    BEFORE_AFTER = 'BEFORE_AFTER',
+
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -40,7 +44,12 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     WELCOME_PROGRAMMES: 'welcome-programs',
     ADD_BODY_COMP: 'add-body-comp',
     NOTIFICATIONS: 'notifications',
-    FEEDBACK: 'feedback'
+    FEEDBACK: 'feedback',
+    MEASUREMENTS: 'stat-measurements',
+    ADD_MEASUREMENTS: 'new-measurements',
+    BEFORE_AFTER: 'before-after',
+
+
 };
 
 
@@ -58,5 +67,8 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     WELCOME_PROGRAMMES: 'Tracking - Programmes',
     ADD_BODY_COMP: 'Tracking - body comp',
     NOTIFICATIONS: 'Notifications',
-    FEEDBACK: 'Feedback'
+    FEEDBACK: 'Feedback',
+    MEASUREMENTS: 'Measurements',
+    ADD_MEASUREMENTS: 'New measurement',
+    BEFORE_AFTER: 'Tracking - body comp',
 };

@@ -82,15 +82,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/add-body-comp/add-body-comp.module').then( m => m.AddBodyCompPageModule)
   },
   {
-    path: 'new-measurements',
+    path: PagesEnum2RoutingMapping.ADD_MEASUREMENTS,
     loadChildren: () => import('./pages/new-measurements/new-measurements.module').then( m => m.NewMeasurementsPageModule)
   },
   {
-    path: 'before-after',
+    path: PagesEnum2RoutingMapping.BEFORE_AFTER,
     loadChildren: () => import('./pages/before-after/before-after.module').then( m => m.BeforeAfterPageModule)
   },
   {
-    path: 'stat-measurements',
+    path: PagesEnum2RoutingMapping.MEASUREMENTS,
     loadChildren: () => import('./pages/stat-measurements/stat-measurements.module').then( m => m.StatMeasurementsPageModule)
   },
   {

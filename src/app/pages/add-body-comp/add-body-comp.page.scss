@@ -1,54 +1,42 @@
-@import "variables";
-:host {
-    ::ng-deep {
-        app-button-layout .layout-content {
-            height: calc(100% - 51px);
-        }
-        app-button-into-layout .body-comp-layout {
-            height: 100%;
-        }
-    }
-}
+@import "mixins";
 
 .add-body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:100%;
+    height: 100%;
     padding-top: 0;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: var(--ion-padding);
+    padding-right: var(--ion-padding);
 
     &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
+        @include mb8;
+        @include titleSemi16()
     }
+
     &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+        @include mb32;
+        @include textMonserat12();
     }
 
     &__btn {
-        width: 100%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
-        border-radius: 2px;
-        --border-radius: 2px;
+        @include bthHeight;
+        @include border-radius-8;
+
+        width: 201px;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+        @include btnTextMonserat12()
     }
+}
+
+.add-body__img {
+    @include mb32;
+    width: 56px;
+    height: 56px;
+    background-image: url("/assets/images/png-icons/add-body@3x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

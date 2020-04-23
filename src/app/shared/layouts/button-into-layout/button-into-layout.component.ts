@@ -3,6 +3,7 @@ import {NavigationEnd, Router} from "@angular/router";
 import {LayoutsEnum} from "../../enums/layouts.enum";
 import {ICommon} from "../../interfaces/common.interfaces";
 import ITopButton = ICommon.ITopButton;
+import {PagesEnum2RoutingMapping} from '../../enums/pages.enum';
 
 @Component({
   selector: 'app-button-into-layout',
@@ -72,19 +73,22 @@ export class ButtonIntoLayoutComponent implements OnInit {
       case LayoutsEnum.BODY: {
         this.buttons =  [
           {
-            text: 'Before & after',
-            icon: 'ios-photos.svg',
-            redirectTo: 'before-after',
+            text: 'Measurements',
+            icon: 'ios-body-black.svg',
+            activeIcon: 'ios-body-orange.svg',
+            redirectTo: PagesEnum2RoutingMapping.ADD_BODY_COMP,
             active: false,
-            activePages: ['before-after'],
+            activePages: [PagesEnum2RoutingMapping.ADD_BODY_COMP],
           },
           {
-            text: 'New measurements',
-            icon: 'ios-body.svg',
-            redirectTo: 'new-measurements',
+            text: 'Before & after',
+            icon: 'ios-camera-black.svg',
+            activeIcon: 'ios-camera-orange.svg',
+            redirectTo: PagesEnum2RoutingMapping.BEFORE_AFTER,
             active: false,
-            activePages: ['new-measurements'],
+            activePages: [PagesEnum2RoutingMapping.BEFORE_AFTER],
           },
+
         ];
         this.template = 1;
         break

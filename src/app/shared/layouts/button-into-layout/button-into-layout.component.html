@@ -2,11 +2,12 @@
   <div class="body-comp-layout__header ">
     <div class="submenu__buttons">
       <ion-button *ngFor="let button of buttons"
-                  [color]="button.active ? 'secondary': 'dark'"
-                  expand="full"
+                  [color]="'light'"
+                  expand="block"
                   (click)="toggleButton(button.redirectTo)"
+                  [ngClass]="{'once': buttons.length ===1, 'active-btn': button.active}"
       >
-        <ion-icon *ngIf="button.icon" src="/assets/images/svg-icons/{{button.icon}}"></ion-icon>
+        <ion-icon src="/assets/images/svg-icons/{{button.active ? button.activeIcon : button.icon}}"></ion-icon>
         <span class="submenu__btn-text">{{button.text}}</span>
       </ion-button>
     </div>

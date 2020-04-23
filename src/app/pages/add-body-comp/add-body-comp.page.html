@@ -5,6 +5,10 @@
       <app-button-into-layout style="height: 100%" [listBtnForLayout]="listBtnForLayout.BODY">
 
           <div class="add-body ion-align-items-center ion-justify-content-center">
+
+              <div class="add-body__img">
+
+              </div>
               <div class="add-body__title">
                   Add your body composition
               </div>
@@ -12,8 +16,9 @@
                   Record your body composition for the first time!
               </div>
 
-              <ion-button expand="block" (click)="addBodyComp()" color="secondary" class="add-body__btn">
+              <ion-button expand="block" (click)="addBodyComp()" color="warning" class="add-body__btn">
                   <div class="d-flex flex ion-justify-content-center ion-align-items-center">
+                      <ion-icon name="add"></ion-icon>
                       <div class="add-body__btn-text">Add body composition</div>
                   </div>
               </ion-button>
