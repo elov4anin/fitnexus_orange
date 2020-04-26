@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-before-after',
@@ -10,7 +11,7 @@ import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 export class BeforeAfterPage extends PageBaseComponent  implements OnInit {
     pageTitle: string = PagesEnum2NamesMapping.BEFORE_AFTER;
 
-    constructor() {
+    constructor(private _router: Router) {
         super();
     }
 
@@ -18,6 +19,7 @@ export class BeforeAfterPage extends PageBaseComponent  implements OnInit {
     }
 
     addNewPicture() {
+        this._router.navigate(['/', PagesEnum2RoutingMapping.BEFORE_AFTER_LIST])
 
     }
 }

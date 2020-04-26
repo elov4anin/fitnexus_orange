@@ -1,0 +1,29 @@
+@import "mixins";
+
+.list-photos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--ion-padding);
+
+    &__title {
+        @include mb8;
+        @include titleSemi16()
+    }
+
+    &__text {
+        @include mb32;
+        @include textMonserat12();
+    }
+
+    &__btn {
+        @include bthHeight;
+        @include border-radius-8;
+
+        width: 201px;
+    }
+
+    &__btn-text {
+        @include btnTextMonserat12()
+    }
+}

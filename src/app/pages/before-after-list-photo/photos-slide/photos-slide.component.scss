@@ -1,0 +1,107 @@
+@import "mixins";
+
+.slide {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    //width: 162px!important;
+    min-width: 136px;
+    // margin: auto 10px;
+
+   /* &:before {
+        @include border-radius-12;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 33%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 0.7) 65%, #000000 100%);
+    }*/
+
+    &__img {
+        @include border-radius-8;
+        height: 264px;
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        // background-color: var(--gray);
+    }
+
+    &__wrap {
+        margin-top: 24px;
+
+    }
+
+    &__title {
+        @include btnTextSemi13(var(--light-gray2));
+    }
+
+    /*&__text {
+        @include textMonserat12($light-gray2)
+    }
+
+    &__icon {
+        margin-right: 6px;
+        color: $light-gray2;
+    }*/
+
+    /* &__arrow-forward {
+         position: absolute;
+         top: 0;
+         right: -5px;
+         bottom: 0;
+         margin-top: auto;
+         margin-bottom: auto;
+         z-index: 10;
+         display: flex;
+         align-items: center;
+     }
+
+     &__arrow-back {
+         position: absolute;
+         top: 0;
+         left: -5px;
+         bottom: 0;
+         margin-top: auto;
+         margin-bottom: auto;
+         z-index: 10;
+         display: flex;
+         align-items: center;
+     }*/
+}
+
+/*ion-slide:nth-of-type(even) {
+    .slide {
+        min-width: 192px;
+    }
+    .slide__img {
+        @include box-shadow;
+        width: 192px;
+        height: 300px;
+    }
+    .slide__title {
+        @include btnTextSemi13(var(--dark-gray));
+    }
+}*/
+/*ion-slide.swiper-slide-active {
+    .slide {
+        min-width: 192px;
+    }
+    .slide__img {
+        @include box-shadow;
+        height: 300px;
+        width: 192px;
+    }
+    .slide__title {
+        @include btnTextSemi13(var(--dark-gray));
+    }
+}*/

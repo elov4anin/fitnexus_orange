@@ -1,6 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ISlideInfo} from '../get-started/get-started.page';
-import {IonSlides} from '@ionic/angular';
 
 @Component({
     selector: 'app-videos',
@@ -15,10 +13,6 @@ export class VideosPage implements OnInit {
     }
 
     ngOnInit() {
-    }
-
-    openFilter() {
-
     }
 
     redirectTo() {

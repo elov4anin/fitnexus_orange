@@ -171,7 +171,14 @@ export class ButtonLayoutComponent implements OnInit {
                         activeIcon: 'ios-man-white.svg',
                         redirectTo: PagesEnum2RoutingMapping.ADD_BODY_COMP,
                         active: false,
-                        activePages: [PagesEnum2RoutingMapping.ADD_BODY_COMP, 'before-after', 'new-measurements', 'stat-measurements', 'measurement-detail'],
+                        activePages: [
+                            PagesEnum2RoutingMapping.ADD_BODY_COMP,
+                            PagesEnum2RoutingMapping.BEFORE_AFTER,
+                            PagesEnum2RoutingMapping.BEFORE_AFTER_LIST,
+                            'new-measurements',
+                            'stat-measurements',
+                            'measurement-detail'
+                        ],
                     },
                     {
                         text: 'Challenges',

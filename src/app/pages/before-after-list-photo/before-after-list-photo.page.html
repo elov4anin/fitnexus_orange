@@ -1,0 +1,20 @@
+<app-main-layout
+        [titlePage]="pageTitle"
+>
+  <app-button-layout [listBtnForLayout]="listBtnForLayout.TRACKING">
+    <app-button-into-layout  style="height: 100%"  [listBtnForLayout]="listBtnForLayout.BODY">
+
+      <div class="list-photos ion-align-items-center ion-justify-content-center">
+        <ion-button expand="block" (click)="addNewPicture()" color="warning" class="list-photos__btn">
+          <div class="d-flex flex ion-justify-content-center ion-align-items-center">
+            <ion-icon name="add"></ion-icon>
+            <div class="list-photos__btn-text">Add new picture</div>
+          </div>
+        </ion-button>
+
+
+      </div>
+      <app-photos-slide></app-photos-slide>
+    </app-button-into-layout>
+  </app-button-layout>
+</app-main-layout>

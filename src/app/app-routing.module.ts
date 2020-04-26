@@ -153,6 +153,10 @@ const routes: Routes = [
     path: PagesEnum2RoutingMapping.VIDEOS,
     loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
   },
+  {
+    path: PagesEnum2RoutingMapping.BEFORE_AFTER_LIST,
+    loadChildren: () => import('./pages/before-after-list-photo/before-after-list-photo.module').then( m => m.BeforeAfterListPhotoPageModule)
+  },
 
 ];
 

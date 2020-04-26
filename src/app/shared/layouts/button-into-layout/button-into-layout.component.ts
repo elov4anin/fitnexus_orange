@@ -86,7 +86,7 @@ export class ButtonIntoLayoutComponent implements OnInit {
             activeIcon: 'ios-camera-orange.svg',
             redirectTo: PagesEnum2RoutingMapping.BEFORE_AFTER,
             active: false,
-            activePages: [PagesEnum2RoutingMapping.BEFORE_AFTER],
+            activePages: [PagesEnum2RoutingMapping.BEFORE_AFTER, PagesEnum2RoutingMapping.BEFORE_AFTER_LIST],
           },
 
         ];
