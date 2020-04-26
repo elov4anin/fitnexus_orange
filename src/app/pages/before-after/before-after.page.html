@@ -2,31 +2,26 @@
         [titlePage]="pageTitle"
 >
   <app-button-layout [listBtnForLayout]="listBtnForLayout.TRACKING">
-    <app-button-into-layout [listBtnForLayout]="listBtnForLayout.BODY">
+    <app-button-into-layout  style="height: 100%"  [listBtnForLayout]="listBtnForLayout.BODY">
 
       <div class="add-body ion-align-items-center ion-justify-content-center">
-        <ion-button expand="full" (click)="addNewPicture()" color="secondary" class="add-body__btn">
+
+        <div class="add-body__img">
+
+        </div>
+        <div class="add-body__title">
+          add your first picture
+        </div>
+        <div class="add-body__text">
+          See your body changes over time!
+        </div>
+
+        <ion-button expand="block" (click)="addNewPicture()" color="warning" class="add-body__btn">
           <div class="d-flex flex ion-justify-content-center ion-align-items-center">
-            <ion-icon name="add" size="lagre"></ion-icon>
-            <div class="add-body__btn-text">Add new picture</div>
+            <ion-icon name="add"></ion-icon>
+            <div class="add-body__btn-text">Add first picture</div>
           </div>
         </ion-button>
-        <ion-card>
-          <ion-img src="/assets/images/news.png" alt=""></ion-img>
-          <span class="card__title">20/01/2019</span>
-        </ion-card>
-
-        <ion-card>
-          <ion-img src="/assets/images/news.png" alt=""></ion-img>
-          <span class="card__title">20/01/2019</span>
-        </ion-card>
-
-        <ion-card>
-          <ion-img src="/assets/images/news.png" alt=""></ion-img>
-          <span class="card__title">20/01/2019</span>
-        </ion-card>
-
-
       </div>
 
     </app-button-into-layout>

@@ -1,80 +1,42 @@
-@import "variables";
-
-:host {
-    ::ng-deep {
-        ion-content {
-            --background: $gray;
-        }
-
-        app-button-into-layout .body-comp-layout {
-            height: auto;
-        }
-    }
-}
+@import "mixins";
 
 .add-body {
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 100%;
-    padding-top: 25px;
-
-
+    padding-top: 0;
+    padding-left: var(--ion-padding);
+    padding-right: var(--ion-padding);
 
     &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
+        @include mb8;
+        @include titleSemi16()
     }
+
     &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+        @include mb32;
+        @include textMonserat12();
     }
 
     &__btn {
-        // margin-top: auto;
-        // margin-bottom: 28px;
-        width: 95%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        @include bthHeight;
+        @include border-radius-8;
+
+        width: 201px;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+        @include btnTextMonserat12()
     }
+}
 
-    ion-img {
-        width: 260px;
-        height: 251px;
-        margin-right: 10px;
-        margin-left: 10px;
-        background: #D8CFC1;
-    }
-
-    ion-card {
-        border-radius: 0;
-    }
-
-    .card__title {
-        display: block;
-        margin-top: 22px;
-        margin-bottom: 22px;
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 18px;
-        color: $dark-gray;
-        text-align: center;
-
-    }
+.add-body__img {
+    @include mb32;
+    width: 47px;
+    height: 42px;
+    background-image: url("/assets/images/png-icons/add-photo@3x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

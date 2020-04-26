@@ -4,11 +4,11 @@
     &__buttons {
         @include border-radius-8;
 
-        flex: 1 0 auto;
+        // flex: 1 0 auto;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
-        justify-content: space-between;
+        justify-content: center;
         padding-right: 1px;
         padding-left: 1px;
 
@@ -17,8 +17,8 @@
         ion-button {
             @include transparentBtn();
 
-            width: 150px;
-            height: 40px;
+            width: 157px;
+            height: 32px;
             margin-top: 3px;
             margin-bottom: 3px;
 
@@ -61,8 +61,8 @@ ion-icon {
     height: calc(100% - 59px);
     min-height: 100%;
     padding-top: 0;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    /*border-top-right-radius: 15px;
+    border-top-left-radius: 15px;*/
     background: var(--white);
 
     ion-item {
@@ -81,7 +81,7 @@ ion-icon {
         justify-content: space-between;
         width: 100%;
         align-items: center;
-        padding: 22px 32px;
-        border-bottom: 0.5px solid var(--gray);
+        padding: var(--ion-padding);
+        // border-bottom: 0.5px solid var(--gray);
     }
 }
