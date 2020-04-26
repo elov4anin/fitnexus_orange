@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-add-body-comp',
@@ -19,7 +19,7 @@ export class AddBodyCompPage extends PageBaseComponent  implements OnInit {
     }
 
     addBodyComp(): void {
-        this._router.navigate(["/new-measurements"])
+        this._router.navigate(["/", PagesEnum2RoutingMapping.ADD_MEASUREMENTS])
 
     }
 }

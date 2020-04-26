@@ -1,30 +1,41 @@
 @import "variables";
-
+@import "mixins";
 
 .measurements {
     display: flex;
     flex-direction: column;
     width: 100%;
 
+    background-color: var(--white);
+
     &__btn {
         width: 100%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
         margin-bottom: 16px;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+       @include btnTextMonserat12()
     }
+
     ion-card {
+        @include border1;
+
+        background-color: var(--light-gray);
+
         width: 100%;
         margin-bottom: 0;
+        box-shadow: none;
+
         &:last-of-type {
             margin-bottom: 16px;
+        }
+
+        &.focused {
+            background-color: var(--white);
+
+            input {
+                background-color: var(--white);
+            }
         }
     }
 
@@ -33,40 +44,53 @@
         padding: 17px 23px 23px 23px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__col {
-        flex: 1 0 200px;
+        // flex: 1 0 200px;
         display: flex;
         align-items: center;
-        &:first-of-type {
-            flex: 1 0 100px;
+        &:last-of-type {
+            align-items: flex-start;
         }
     }
 
     &__label {
-        font-family: $font-family-helvetica;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: 300;
-        color: $blue2;
+       @include btnTextMonserat12(--dark-gray)
     }
 
+
     &__count {
-        font-family: $font-family-oswald;
-        font-size: 60px;
-        line-height: 60px;
-        font-weight: 300;
-        color: $dark-gray1;
-        margin-right: 11px;
+        @include titleSemi44();
     }
 
     &__text {
-        font-family: $font-family-oswald;
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 300;
-        color: $light-gray3;
+        @include btnTextSemi13(var(--light-gray2));
+        margin-top: 9px;
+        //margin-left: 2px
+    }
+
+    input.measurements__count {
+        width: 80px;
+        @include titleSemi44();
+        background-color: var(--light-gray);
+        border: 0;
+
+
+    }
+    input::placeholder {
+        @include titleSemi44();
+    }
+
+    input::-webkit-input-placeholder {
+        @include titleSemi44();
+    }
+
+    input:focus {
+        border: 0;
+        outline: 0;
+        caret-color: var(--ion-color-warning);
     }
 }
 

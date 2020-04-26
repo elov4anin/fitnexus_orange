@@ -92,6 +92,14 @@
     color: $color-value;
 }
 
+@mixin titleSemi44($color-value: var(--dark-gray)) {
+    font-family: var(--font-family-semi);
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 55px;
+    color: $color-value;
+}
+
 @mixin textMonserat10($color-value: var(--light-gray2)) {
     font-family: var(--font-family-montserrat);
     font-size: 12px;
