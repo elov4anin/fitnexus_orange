@@ -78,7 +78,7 @@ export class ButtonIntoLayoutComponent implements OnInit {
             activeIcon: 'ios-body-orange.svg',
             redirectTo: PagesEnum2RoutingMapping.ADD_BODY_COMP,
             active: false,
-            activePages: [PagesEnum2RoutingMapping.ADD_BODY_COMP],
+            activePages: [PagesEnum2RoutingMapping.ADD_BODY_COMP, PagesEnum2RoutingMapping.MEASUREMENTS],
           },
           {
             text: 'Before & after',

@@ -175,8 +175,8 @@ export class ButtonLayoutComponent implements OnInit {
                             PagesEnum2RoutingMapping.ADD_BODY_COMP,
                             PagesEnum2RoutingMapping.BEFORE_AFTER,
                             PagesEnum2RoutingMapping.BEFORE_AFTER_LIST,
-                            'new-measurements',
-                            'stat-measurements',
+                            PagesEnum2RoutingMapping.ADD_MEASUREMENTS,
+                            PagesEnum2RoutingMapping.MEASUREMENTS,
                             'measurement-detail'
                         ],
                     },

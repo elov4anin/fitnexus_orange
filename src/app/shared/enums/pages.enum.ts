@@ -48,8 +48,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     MEASUREMENTS: 'stat-measurements',
     ADD_MEASUREMENTS: 'new-measurements',
     BEFORE_AFTER: 'before-after',
-    BEFORE_AFTER_LIST: 'before-after-list-photo'
-
+    BEFORE_AFTER_LIST: 'before-after-list-photo',
 
 };
 
@@ -69,8 +68,8 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     ADD_BODY_COMP: 'Tracking - body comp',
     NOTIFICATIONS: 'Notifications',
     FEEDBACK: 'Feedback',
-    MEASUREMENTS: 'Measurements',
+    MEASUREMENTS: 'Body comp - new measurements',
     ADD_MEASUREMENTS: 'New measurement',
     BEFORE_AFTER: 'Tracking - body comp',
-    BEFORE_AFTER_LIST: 'Tracking - body comp'
+    BEFORE_AFTER_LIST: 'Tracking - body comp',
 };

@@ -1,11 +1,22 @@
 @import "variables";
+@import "mixins";
 
 
 .measurements {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 22px;
+    // padding-top: 22px;
+
+    &__btn {
+        @include border-radius-8;
+        @include bthHeight;
+        width: 185px;
+    }
+
+    &__btn-text {
+        @include btnTextMonserat12()
+    }
 
     ion-item {
         height: 40px;
@@ -29,7 +40,16 @@
     ion-card {
         width: 100%;
         margin-bottom: 0;
-        border-radius: 2px;
+        @include border-radius-8;
+
+        @include border1;
+
+        background-color: var(--white);
+        box-shadow: none;
+
+        &:first-of-type {
+            margin-top: 12px;
+        }
         &:last-of-type {
             margin-bottom: 23px;
         }
@@ -40,73 +60,101 @@
         padding: 17px 23px 23px 23px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__col {
-        flex: 1 0 165px;
+        // flex: 1 0 200px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         &:first-of-type {
-            flex: 1 0 100px;
+            flex-direction: column;
+        }
+        &:last-of-type {
+
         }
     }
 
     &__label {
-        font-family: $font-family-helvetica;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: 300;
-        color: $blue2;
+        @include btnTextMonserat12(--dark-gray)
     }
 
+
     &__count {
-        font-family: $font-family-oswald;
-        font-size: 60px;
-        line-height: 60px;
-        font-weight: 300;
-        color: $dark-gray1;
-        margin-right: 11px;
+        @include titleSemi44();
     }
 
     &__text {
-        font-family: $font-family-oswald;
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 300;
-        color: $light-gray3;
+        @include btnTextSemi13(var(--light-gray2));
+        margin-top: 9px;
+        //margin-left: 2px
     }
+
 
     &__changed {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
+
         margin-top: 6px;
 
         ion-icon {
-            width: 28px;
-            font-size: 16px;
+            width: 12px;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-left: 4px;
         }
 
-        .equal {
-            width: 26px;
-            height: 5px;
-            background: $blue2;
+        &--equal {
+            .measurements__text {
+                @include textMonserat12(var(--dark-gray));
+                text-transform: none;
+            }
         }
 
         &--up {
             .measurements__text {
-                color: $blue2;
-
+                @include textMonserat12(var(--ion-color-warning));
+                text-transform: none;
             }
         }
 
         &--down {
             .measurements__text {
-                color: $dark-gray1;
-
+                @include textMonserat12(var(--ion-color-secondary));
+                text-transform: none;
             }
         }
+    }
+
+
+
+
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid var(--light-gray2);
+    padding-top: var(--ion-padding);
+    padding-bottom: var(--ion-padding);
+}
+
+.month {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        @include btnTextMonserat12(var(--dark-gray));
+        display: block;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+    ion-icon {
+        color: var(--light-gray2);
     }
 }
 

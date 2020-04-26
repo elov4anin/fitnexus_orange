@@ -4,6 +4,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
 import {CalendarComponentOptions, CalendarModal, CalendarModalOptions} from "ion2-calendar";
 import * as moment from "moment";
 import {ModalController} from "@ionic/angular";
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-stat-measurements',
@@ -11,7 +12,7 @@ import {ModalController} from "@ionic/angular";
     styleUrls: ['./stat-measurements.page.scss'],
 })
 export class StatMeasurementsPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'TRACKING - BODY COMP';
+    pageTitle: string = PagesEnum2NamesMapping.MEASUREMENTS;
     selectedDate: any;
     type: 'string'; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
     optionsRange: CalendarComponentOptions = {
@@ -53,5 +54,9 @@ export class StatMeasurementsPage extends PageBaseComponent implements OnInit {
         this.selectedDate = date;
         this.dateLabel =  moment([date.years, date.months, date.date]).format('DD/MM/YYYY');
         console.log(date);
+    }
+
+    newMeasurements() {
+        this._router.navigate(['/', PagesEnum2RoutingMapping.ADD_MEASUREMENTS]);
     }
 }
