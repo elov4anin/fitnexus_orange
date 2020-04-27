@@ -17,20 +17,23 @@ export class LibraryProgramsPage extends PageBaseComponent implements OnInit, Af
         initialSlide: 0,
         speed: 400,
         loop: true,
-        slidesPerView: 2,
+        slidesPerView: 1,
+        width: 279,
+        spaceBetween: 24,
+        centeredSlides: true,
     };
     sliders: ISlideInfo[] = [
         {
             title: "Cardio Basic 1",
-            imgSrc: "/assets/images/news@2x.png"
+            imgSrc: "/assets/images/library/slide1.png"
         },
         {
             title: "Cardio Basic 2",
-            imgSrc: "/assets/images/news@2x.png"
+            imgSrc: "/assets/images/library/slide2.png"
         },
         {
             title: "Cardio Basic 3",
-            imgSrc: "/assets/images/news@2x.png"
+            imgSrc: "/assets/images/library/slide3.png"
         },
         {
             title: "Cardio Basic 4",

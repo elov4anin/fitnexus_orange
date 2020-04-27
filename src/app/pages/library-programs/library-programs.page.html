@@ -8,54 +8,55 @@
     <div class="library">
       <div class="library__header">
         <ion-searchbar color="light"></ion-searchbar>
-        <ion-button (click)="openFilter()" expand="full" color="secondary" size="small"
+        <ion-button (click)="openFilter()" expand="block" color="warning" size="small"
         >
           <ion-icon src="/assets/images/svg-icons/ios-funnel.svg" slot="icon-only"></ion-icon>
         </ion-button>
       </div>
       <div class="library__header">
-        <ion-item lines="none">
+        <ion-item lines="none" class="select-filter-item">
           <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedBodyFilter">Body Filter</ion-label>
           <ion-select placeholder="" [(ngModel)]="selectedBodyFilter">
             <ion-select-option value="f">Body Filter 1</ion-select-option>
             <ion-select-option value="m">Body Filter 2</ion-select-option>
             <ion-select-option value="m">Body Filter 3</ion-select-option>
           </ion-select>
-          <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
+          <span class="material-icons"  slot="end">
+              arrow_drop_down
+              </span>
         </ion-item>
-          <ion-item lines="none">
+          <ion-item lines="none" class="select-filter-item">
             <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedDiffFilter">Difficulty filter</ion-label>
             <ion-select placeholder="" [(ngModel)]="selectedDiffFilter">
               <ion-select-option value="f">Steps</ion-select-option>
               <ion-select-option value="m">Steps 1</ion-select-option>
               <ion-select-option value="m">Steps 2</ion-select-option>
             </ion-select>
-            <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
+            <span class="material-icons"  slot="end">
+              arrow_drop_down
+              </span>
           </ion-item>
       </div>
       <div class="library__title">Newest</div>
-      <div class="library__header library__header--pt">
-        <ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
-          <ion-slide *ngFor =" let slide of sliders">
-            <div class="slide">
-              <div class="slide__img"  [ngStyle]="{'background-image':'url('+slide.imgSrc+')'}"></div>
+      <ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
+        <ion-slide *ngFor =" let slide of sliders">
+          <div class="slide">
+            <div class="slide__img"  [ngStyle]="{'background-image':'url('+slide.imgSrc+')'}"></div>
             <!--  <img src="{{slide.imgSrc}}">-->
-              <h2 class="slide__title">
-                <span class="block">{{slide.title}}</span>
-              </h2>
+            <div class="slide__title">
+              <span class="block">{{slide.title}}</span>
             </div>
-          </ion-slide>
-        </ion-slides>
-
-      </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
       <div class="library__list">
         <ion-card>
           <div class="card-program">
-            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/news@2x.png)'}"></div>
+            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/library/69bf4e9ccace69acb5d8c6313dddf5c6@2x.png)'}"></div>
             <div class="card-program__wrapper">
               <span class="card-program__title">Cardio Basic</span>
-              <span class="card-program__test">07/12/2019 </span>
-              <span class="card-program__test">311 people using</span>
+              <span class="card-program__text">311 people using</span>
+              <span class="card-program__date">07/12/2019 </span>
             </div>
 
           </div>
@@ -63,22 +64,34 @@
         <ion-card>
           <div class="card-program">
            <!-- <ion-img src="/assets/images/news@2x.png" class="card-program__img"></ion-img>-->
-            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/news@2x.png)'}"></div>
+            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/library/b6548f28d3c9e2ee76dd00418323aaea@2x.png)'}"></div>
             <div class="card-program__wrapper">
-              <span class="card-program__title">Cardio Basic</span>
-              <span class="card-program__test">07/12/2019 </span>
-              <span class="card-program__test">311 people using</span>
+              <span class="card-program__title">Cardio advanced</span>
+              <span class="card-program__text">311 people using</span>
+              <span class="card-program__date">07/12/2019 </span>
             </div>
 
           </div>
         </ion-card>
         <ion-card>
           <div class="card-program">
-            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/news@2x.png)'}"></div>
+            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/library/250abc6da389f2f1f34156e7b9bca9a2@2x.png)'}"></div>
             <div class="card-program__wrapper">
-              <span class="card-program__title">Cardio Basic</span>
-              <span class="card-program__test">07/12/2019 </span>
-              <span class="card-program__test">311 people using</span>
+              <span class="card-program__title">Strength</span>
+              <span class="card-program__text">311 people using</span>
+              <span class="card-program__date">07/12/2019 </span>
+            </div>
+
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <div class="card-program">
+            <div class="card-program__img" [ngStyle]="{'background-image':'url(/assets/images/library/3393454b3e16d4b5fdd7649ff0bfac77@2x.png)'}"></div>
+            <div class="card-program__wrapper">
+              <span class="card-program__title">spinning basic</span>
+              <span class="card-program__text">311 people using</span>
+              <span class="card-program__date">07/12/2019 </span>
             </div>
 
           </div>

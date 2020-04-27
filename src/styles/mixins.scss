@@ -62,6 +62,14 @@
     border: 1px solid $color-value;
 }
 
+@mixin borderTop1($color-value: var(--light-gray2)) {
+    border-top: 1px solid $color-value;
+}
+
+@mixin borderBottom1($color-value: var(--light-gray2)) {
+    border-bottom: 1px solid $color-value;
+}
+
 @mixin titleSemi16($color-value: var(--dark-gray)) {
     font-family: var(--font-family-semi);
     font-size: 16px;
