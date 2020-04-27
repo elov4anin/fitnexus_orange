@@ -2,6 +2,7 @@ import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core'
 import {ISlideInfo} from "../get-started/get-started.page";
 import {IonSlides} from "@ionic/angular";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-library-programs',
@@ -10,7 +11,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
 })
 export class LibraryProgramsPage extends PageBaseComponent implements OnInit, AfterViewInit {
 
-    pageTitle: string = "TRACKING - PROGRAMMES";
+    pageTitle: string = PagesEnum2NamesMapping.LIBRARY_PROGRAMMES;
     @ViewChild('slider', {static: false}) slider: IonSlides;
     slideOpts = {
         initialSlide: 0,

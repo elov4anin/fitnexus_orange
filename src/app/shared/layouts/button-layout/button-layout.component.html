@@ -3,9 +3,9 @@
               [color]="'light'"
               expand="block"
               (click)="toggleButton(button.redirectTo)"
-              [ngClass]="{'once': buttons.length ===1, 'active-btn': button.active}"
+              [ngClass]="{'once': buttons.length ===1, 'active-btn': button.active, 'my-lib': button.redirectTo === PagesEnum2RoutingMapping.MY_PROGRAMMES}"
   >
-    <ion-icon src="/assets/images/svg-icons/{{button.active ? button.activeIcon : button.icon}}"></ion-icon>
+    <ion-icon [ngClass]="{'my-lib': button.redirectTo === PagesEnum2RoutingMapping.MY_PROGRAMMES}" src="/assets/images/svg-icons/{{button.active ? button.activeIcon : button.icon}}"></ion-icon>
     <span class="submenu__btn-text">{{button.text}}</span>
   </ion-button>
 </div>

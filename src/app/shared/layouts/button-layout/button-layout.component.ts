@@ -18,7 +18,7 @@ export class ButtonLayoutComponent implements OnInit {
     buttons: ITopButton[] = [];
 
     template: number = 1;
-
+    PagesEnum2RoutingMapping = PagesEnum2RoutingMapping;
     constructor(private _router: Router) {
     }
 
@@ -258,17 +258,19 @@ export class ButtonLayoutComponent implements OnInit {
                 this.buttons =  [
                     {
                         text: 'Library',
-                        icon: 'ios-journal.svg',
-                        redirectTo: 'library-programs',
+                        icon: 'ios-journal-black.svg',
+                        activeIcon: 'ios-journal-orange.svg',
+                        redirectTo: PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES,
                         active: true,
-                        activePages: ['library-programs'],
+                        activePages: [PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES],
                     },
                     {
                         text: 'My programmes',
-                        icon: 'ios-person-white.svg',
-                        redirectTo: 'my-programs',
+                        icon: 'ios-person-black.svg',
+                        activeIcon: 'ios-person-orange.svg',
+                        redirectTo: PagesEnum2RoutingMapping.MY_PROGRAMMES,
                         active: false,
-                        activePages: ['my-programs'],
+                        activePages: [PagesEnum2RoutingMapping.MY_PROGRAMMES],
                     },
 
                 ];

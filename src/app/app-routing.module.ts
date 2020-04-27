@@ -66,11 +66,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/welcome-programmes/welcome-programmes.module').then( m => m.WelcomeProgrammesPageModule)
   },
   {
-    path: 'library-programs',
+    path: PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES,
     loadChildren: () => import('./pages/library-programs/library-programs.module').then( m => m.LibraryProgramsPageModule)
   },
   {
-    path: 'my-programs',
+    path: PagesEnum2RoutingMapping.MY_PROGRAMMES,
     loadChildren: () => import('./pages/my-programs/my-programs.module').then( m => m.MyProgramsPageModule)
   },
   {

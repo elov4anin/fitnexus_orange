@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-welcome-programmes',
@@ -23,7 +23,7 @@ export class WelcomeProgrammesPage extends PageBaseComponent implements OnInit {
     }
 
     openProgramLibrary() {
-        this._router.navigate(["/library-programs"])
+        this._router.navigate(["/", PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES])
 
     }
 }

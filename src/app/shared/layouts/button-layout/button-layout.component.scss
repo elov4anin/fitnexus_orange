@@ -12,7 +12,7 @@
 
         ion-button {
             width: 150px;
-            height: 40px;
+            height: 32px;
 
             @include transparentBtn();
 
@@ -24,6 +24,11 @@
                     @include btnTextMonserat13(var(--ion-color-warning));
                 }
             }
+
+            &.my-lib {
+                width: 160px;
+            }
+
 
         }
         ion-button.once {
@@ -54,6 +59,11 @@
 ion-icon {
     font-size: 16px;
     margin-right: 10px;
+
+    &.my-lib {
+        width: 23px;
+        height: 23px;
+    }
 }
 // template 2
 .submenu-transparent {
