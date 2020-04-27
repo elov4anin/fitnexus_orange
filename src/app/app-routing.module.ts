@@ -74,7 +74,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/my-programs/my-programs.module').then( m => m.MyProgramsPageModule)
   },
   {
-    path: 'training',
+    path: PagesEnum2RoutingMapping.NEW_PROGRAMME,
     loadChildren: () => import('./pages/training/training.module').then( m => m.TrainingPageModule)
   },
   {

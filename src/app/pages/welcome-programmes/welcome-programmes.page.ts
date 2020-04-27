@@ -19,7 +19,7 @@ export class WelcomeProgrammesPage extends PageBaseComponent implements OnInit {
     }
 
     addNewProgram() {
-        this._router.navigate(["/training"])
+        this._router.navigate(["/", PagesEnum2RoutingMapping.NEW_PROGRAMME])
     }
 
     openProgramLibrary() {

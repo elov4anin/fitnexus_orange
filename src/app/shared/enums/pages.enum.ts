@@ -19,6 +19,7 @@ export enum PagesEnum {
     BEFORE_AFTER_LIST = 'BEFORE_AFTER_LIST',
     LIBRARY_PROGRAMMES = 'LIBRARY_PROGRAMMES',
     MY_PROGRAMMES = 'MY_PROGRAMMES',
+    NEW_PROGRAMME = 'NEW_PROGRAMME'
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -53,6 +54,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     BEFORE_AFTER_LIST: 'before-after-list-photo',
     LIBRARY_PROGRAMMES: 'library-programmes',
     MY_PROGRAMMES: 'my-programmes',
+    NEW_PROGRAMME: 'new-programme',
 };
 
 
@@ -77,4 +79,5 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     BEFORE_AFTER_LIST: 'Tracking - body comp',
     LIBRARY_PROGRAMMES: 'Programme library',
     MY_PROGRAMMES: 'Programme library',
+    NEW_PROGRAMME: 'new programme',
 };

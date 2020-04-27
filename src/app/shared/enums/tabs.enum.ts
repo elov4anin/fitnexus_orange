@@ -32,14 +32,16 @@ export const TabsEnum2ActivePagesMapping: Record<TabsEnum, string[]> = {
         PagesEnum2RoutingMapping.ADD_BODY_COMP,
         PagesEnum2RoutingMapping.WELCOME_PROGRAMMES,
         PagesEnum2RoutingMapping.CHALLENGES,
-        'training',
+        PagesEnum2RoutingMapping.NEW_PROGRAMME,
         'stat-program',
-        'before-after',
-        'new-measurements',
+        PagesEnum2RoutingMapping.BEFORE_AFTER,
+        PagesEnum2RoutingMapping.BEFORE_AFTER,
+        PagesEnum2RoutingMapping.ADD_MEASUREMENTS,
+        PagesEnum2RoutingMapping.MEASUREMENTS,
         'stat-measurements',
         'measurement-detail',
-        'library-programs',
-        'my-programs'
+        PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES,
+        PagesEnum2RoutingMapping.MY_PROGRAMMES
     ],
   /*  CALENDAR: ['calendar', 'my-bookings', 'class', 'feedback'],
     RATING: ['challenges', 'leaderboard'],*/
