@@ -127,14 +127,14 @@
         justify-content: space-between;
 
         ion-button {
+            @include bthHeight;
             width: 47%;
-            height: auto;
             margin-left: 0;
 
-            &:nth-of-type(3) {
+           /* &:nth-of-type(3) {
                 margin-top: 18px;
                 width: 100%;
-            }
+            }*/
         }
     }
 
@@ -142,15 +142,12 @@
         display: flex;
         flex: 1 0 auto;
         flex-direction: column;
-        margin: 11px;
+        //margin: 11px;
 
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
+        @include btnTextMonserat12();
     }
 
     .table {
