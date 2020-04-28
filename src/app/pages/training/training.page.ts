@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
 import {Router} from "@angular/router";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-training',
@@ -8,7 +9,7 @@ import {Router} from "@angular/router";
     styleUrls: ['./training.page.scss'],
 })
 export class TrainingPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = ' ';
+    pageTitle: string = PagesEnum2NamesMapping.NEW_PROGRAMME;
     selectedExercises: any;
     selectedWeight: any;
     selectedReps: any;

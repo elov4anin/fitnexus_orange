@@ -146,7 +146,7 @@ rating {
         height: 18px;
     }
 }
-
+/*remove*/
 .select-blue-placeholder {
     margin-top: -1px;
     font-weight: 300 !important;
@@ -160,18 +160,25 @@ rating {
 .select-white-placeholder {
     margin-top: -4px;
     margin-right: 0;
-    @include btnTextMonserat12($dark-gray);
+    @include btnTextMonserat12(var(--dark-gray));
     overflow: visible !important;
 }
 
-ion-select {
-    font-weight: 300;
-    font-family: $font-family-helvetica;
-    color: $dark-gray1 !important;
-    font-size: 12px;
-    line-height: 15px;
+.select-orange-placeholder {
+    margin-top: -1px;
+    @include btnTextMonserat12();
+    overflow: visible !important;
+    text-align: left;
 }
-
+ion-select {
+    @include btnTextMonserat12(var(--dark-gray));
+    --border-radius: 8px;
+    text-align: left;
+}
+ion-select.select-orange {
+    @include btnTextMonserat12();
+    text-align: left;
+}
 /*remove*/
 ion-select.select-blue {
     font-weight: 300;
@@ -203,10 +210,6 @@ ion-input {
 }
 
 input::placeholder {
-    font-weight: 300 !important;
-    font-family: $font-family-helvetica !important;
-    color: $dark-gray1 !important;
-    font-size: 12px !important;
-    line-height: 15px;
+    @include textMonserat12;
     opacity: 1;
 }
