@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 :host {
@@ -26,9 +25,9 @@
             flex: 1 1 auto;
             height: 44px;
             @include border-radius-8;
-           // box-shadow: 0 3px 6px 0 $light-gray1;
+            // box-shadow: 0 3px 6px 0 $light-gray1;
 
-            >  ion-icon {
+            > ion-icon {
                 margin-top: 3px;
                 margin-right: 0;
             }
@@ -45,7 +44,7 @@
                 }
 
                 .material-icons {
-                    color: var(--dark-gray) ;
+                    color: var(--dark-gray);
                     margin-top: -3px;
                     font-size: 30px;
                     margin-inline-end: 0
@@ -103,6 +102,7 @@
 
     .training__row--wrap {
         flex-wrap: wrap;
+        margin-bottom: 0;
 
         .training__label {
             @include mb16;
@@ -111,6 +111,7 @@
             flex: 1 0 auto;
             width: 100%;
         }
+
         ion-item:first-of-type {
             margin-right: 15px;
         }
@@ -131,10 +132,10 @@
             width: 47%;
             margin-left: 0;
 
-           /* &:nth-of-type(3) {
-                margin-top: 18px;
-                width: 100%;
-            }*/
+            /* &:nth-of-type(3) {
+                 margin-top: 18px;
+                 width: 100%;
+             }*/
         }
     }
 
@@ -151,78 +152,60 @@
     }
 
     .table {
-        display: table;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        box-shadow: 0 3px 6px 0 $light-gray1;
 
         &__tr {
-            display: table-row;
+            display: flex;
+            justify-content: space-between;
+            @include border1;
+            @include mb16;
+            @include border-radius-8;
 
             &:first-of-type {
-                >div {
-                    background: $dark-gray1;
-                    color: $white;
-                    border: 1px solid $dark-gray1!important;
-                }
-            }
+                border: 0;
+                margin-bottom: 0;
 
-            &:nth-of-type(2) {
-                background: $blue;
-                box-shadow: 0 3px 6px 0 $light-gray1;
                 > div {
-                   // border-bottom: 1px solid $blue!important;
-                    &:first-of-type {
-                        border-left: 1px solid $blue ;
-                    }
-                    &:last-of-type {
-                        border-right: 1px solid $blue ;
-                    }
+                    @include btnTextMonserat12(var(--light-gray2));
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    text-align: left;
+                    border: 0;
                 }
             }
-
-            &--selected {
-                opacity: 0.7;
-                div:last-of-type {
-                    position: relative;
-                    .actions {
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        display: block;
-                        margin: auto;
-                        right: -28px;
-                        width: 28px;
-                        height: 28px;
-
-                        ion-icon {
-                            font-size: 28px;
-                        }
-                    }
-                }
-            }
-
-
         }
 
         &__td {
-           display: table-cell;
-            font-family: $font-family-oswald;
-            font-weight: 300;
-            font-size: 12px;
-            line-height: 15px;
-            color: $dark-gray1;
-            height: 39px;
-            vertical-align: middle;
-            text-align: center;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            @include textMonserat12;
 
-            border-bottom: 1px solid $light-gray ;
-            border-left: 1px solid $light-gray ;
-
-            &:last-of-type {
-                border-right: 1px solid $light-gray ;
+            &:nth-of-type(1) {
+                padding-right: 8px;
+                flex: 1 0 125px;
             }
-            .actions {
-                display: none;
+
+            &:nth-of-type(2) {
+                padding-left: 0;
+                padding-right: 8px;
+                flex: 1 0 100px;
+            }
+
+            &:nth-of-type(3) {
+                padding-left: 0;
+                padding-right: 8px;
+                flex: 1 0 50px;
+            }
+
+            &.name {
+                @include btnTextSemi13(var(--dark-gray));
+            }
+
+            ion-icon {
+                font-size: 20px;
             }
         }
     }
