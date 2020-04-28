@@ -92,29 +92,25 @@
                             <ion-icon name="close" color="warning" style="opacity: 0"></ion-icon>
                         </div>
                     </div>
-                    <div class="table__tr">
-                        <div class="table__td name">Goal</div>
-                        <div class="table__td">150</div>
-                        <div class="table__td">3</div>
-                        <div class="table__td">
-                            <ion-icon name="close" color="warning"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="table__tr">
-                        <div class="table__td name">1</div>
-                        <div class="table__td">90</div>
-                        <div class="table__td">3</div>
-                        <div class="table__td">
-                            <ion-icon name="close" color="warning"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="table__tr table__tr--selected">
-                        <div class="table__td name">2</div>
-                        <div class="table__td">100</div>
-                        <div class="table__td">3</div>
-                        <div class="table__td">
-                            <ion-icon name="close" color="warning"></ion-icon>
-                        </div>
+                    <div class="table__tr" *ngFor="let s of sets">
+                        <ng-container *ngIf="!s.deleted; else deletedBlock">
+                            <div class="table__td name">{{s.name}}</div>
+                            <div class="table__td">{{s.weight}}</div>
+                            <div class="table__td">{{s.reps}}</div>
+                            <div class="table__td">
+                                <ion-icon name="close" color="warning" (click)="s.deleted = !s.deleted"></ion-icon>
+                            </div>
+                        </ng-container>
+                        <ng-template #deletedBlock>
+                            <div class="table__td italic bold">Set deleted</div>
+                            <div class="table__td italic bold">
+                                <ion-text color="warning" (click)="s.deleted = !s.deleted">Restore</ion-text>
+                            </div>
+                            <div class="table__td italic bold">
+                                <ion-text color="warning" (click)="deleteSet(s)">Dismiss</ion-text>
+                            </div>
+                        </ng-template>
+
                     </div>
                 </div>
             </div>

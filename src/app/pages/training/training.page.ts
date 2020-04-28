@@ -14,6 +14,30 @@ export class TrainingPage extends PageBaseComponent implements OnInit {
     selectedWeight: any;
     selectedReps: any;
 
+    sets: ISet[] = [
+        {
+            id: 1,
+            name: 'goal',
+            weight: 150,
+            reps: 3,
+            deleted: false
+        },
+        {
+            id: 2,
+            name: '1',
+            weight: 150,
+            reps: 3,
+            deleted: false
+        },
+        {
+            id: 3,
+            name: '2',
+            weight: 150,
+            reps: 3,
+            deleted: false
+        },
+    ];
+
     constructor(private _router: Router) {
         super();
     }
@@ -51,4 +75,16 @@ export class TrainingPage extends PageBaseComponent implements OnInit {
     saveExercise() {
 
     }
+
+    deleteSet(s: ISet) {
+        this.sets = this.sets.filter(i => i.id !== s.id);
+    }
+}
+
+export interface ISet {
+    id: number;
+    name: string;
+    weight: number;
+    reps: number;
+    deleted: boolean;
 }
