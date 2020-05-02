@@ -7,12 +7,10 @@ import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
     templateUrl: './feedback.page.html',
     styleUrls: ['./feedback.page.scss'],
 })
-export class FeedbackPage extends PageBaseComponent implements OnInit {
+export class FeedbackPage implements OnInit {
     pageTitle: string = PagesEnum2NamesMapping.FEEDBACK;
-    rate: any;
 
     constructor() {
-        super();
     }
 
     ngOnInit() {

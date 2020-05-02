@@ -99,6 +99,7 @@ ion-menu-button {
 .profile-header {
     background: linear-gradient(89deg, rgba(44, 47, 54, 0.89) 0%, rgba(58, 62, 71, 0.89) 100%),
     url("/assets/images/account@2x.png") center no-repeat  !important;
+    box-shadow: none!important;
 
 
     &__wrap {

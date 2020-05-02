@@ -54,7 +54,7 @@ export class ButtonLayoutComponent implements OnInit {
 
     private setButtons() {
         switch (this.listBtnForLayout) {
-            case LayoutsEnum.ACCOUNT: {
+          /*  case LayoutsEnum.ACCOUNT: {
                 this.buttons = [
                     {
                         text: 'account',
@@ -83,8 +83,8 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 2;
                 break;
-            }
-            case LayoutsEnum.MESSAGES: {
+            }*/
+           /* case LayoutsEnum.MESSAGES: {
                 this.buttons = [
                     {
                         text: 'New message',
@@ -97,7 +97,7 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break;
-            }
+            }*/
             case LayoutsEnum.NOTIFICATIONS: {
                 this.buttons = [
                     {
@@ -113,7 +113,7 @@ export class ButtonLayoutComponent implements OnInit {
                 break;
             }
 
-            case LayoutsEnum.ALBUMS: {
+          /*  case LayoutsEnum.ALBUMS: {
                 this.buttons = [
                     {
                         text: 'Albums',
@@ -126,7 +126,7 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break;
-            }
+            }*/
          /*   case LayoutsEnum.NEWS: {
                 this.buttons = [
                     {
@@ -192,7 +192,7 @@ export class ButtonLayoutComponent implements OnInit {
                 this.template = 2;
                 break
             }
-            case LayoutsEnum.CALENDAR: {
+           /* case LayoutsEnum.CALENDAR: {
                 this.buttons =  [
                     {
                         text: 'Upcoming',
@@ -211,7 +211,7 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break
-            }
+            }*/
             /*case LayoutsEnum.CHALLENGES: {
                 this.buttons =  [
                     {
@@ -277,7 +277,7 @@ export class ButtonLayoutComponent implements OnInit {
                 this.template = 1;
                 break
             }
-            case LayoutsEnum.CLASSES: {
+            /*case LayoutsEnum.CLASSES: {
                 this.buttons =  [
                     {
                         text: 'Class',
@@ -296,7 +296,7 @@ export class ButtonLayoutComponent implements OnInit {
                 ];
                 this.template = 1;
                 break
-            }
+            }*/
         }
     }
 }

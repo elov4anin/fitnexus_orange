@@ -76,7 +76,7 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     WELCOME_PROGRAMMES: 'Tracking - Programmes',
     ADD_BODY_COMP: 'Tracking - body comp',
     NOTIFICATIONS: 'Notifications',
-    FEEDBACK: 'Feedback',
+    FEEDBACK: 'Feedback/Support',
     MEASUREMENTS: 'Body comp - new measurements',
     ADD_MEASUREMENTS: 'New measurement',
     BEFORE_AFTER: 'Tracking - body comp',
