@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {PagesEnum2RoutingMapping} from '../../../../shared/enums/pages.enum';
 
 @Component({
   selector: 'app-duration-list',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DurationListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {}
 
+  redirectTo() {
+    this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEOS, PagesEnum2RoutingMapping.CATEGORY]);
+  }
 }

@@ -1,5 +1,5 @@
 <ul class="list">
-  <li class="item" *ngFor="let key of difficulties">
+  <li class="item" *ngFor="let key of difficulties" (click)="redirectTo()">
     <img [src]="'/assets/images/png-icons/' + DifficultyEnum2IconMapping[key]" alt="" class="img">
     <span class="text">{{DifficultyEnum2LabelMapping[key]}}</span>
   </li>
