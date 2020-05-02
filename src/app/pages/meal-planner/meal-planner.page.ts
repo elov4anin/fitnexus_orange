@@ -18,6 +18,8 @@ export class MealPlannerPage extends PageBaseComponent implements OnInit {
     speed: 400,
     loop: true,
     slidesPerView: 1,
+    width: 242,
+    spaceBetween: 16,
   };
   sliders: ISlideInfo[] = [
     {
