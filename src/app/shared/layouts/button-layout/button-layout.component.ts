@@ -155,7 +155,7 @@ export class ButtonLayoutComponent implements OnInit {
                         activeIcon: 'md-watch-white.svg',
                         redirectTo: PagesEnum2RoutingMapping.ADD_DEVICE,
                         active: true,
-                        activePages: ['stat-by-device', PagesEnum2RoutingMapping.ADD_DEVICE],
+                        activePages: [PagesEnum2RoutingMapping.STAT_BY_DEVICE, PagesEnum2RoutingMapping.ADD_DEVICE],
                     },
                     {
                         text: 'fitness',

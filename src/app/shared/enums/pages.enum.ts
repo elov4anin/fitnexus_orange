@@ -20,7 +20,8 @@ export enum PagesEnum {
     LIBRARY_PROGRAMMES = 'LIBRARY_PROGRAMMES',
     MY_PROGRAMMES = 'MY_PROGRAMMES',
     NEW_PROGRAMME = 'NEW_PROGRAMME',
-    STAT_PROGRAMME = 'STAT_PROGRAMME'
+    STAT_PROGRAMME = 'STAT_PROGRAMME',
+    STAT_BY_DEVICE = 'STAT_BY_DEVICE',
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -56,7 +57,8 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     LIBRARY_PROGRAMMES: 'library-programmes',
     MY_PROGRAMMES: 'my-programmes',
     NEW_PROGRAMME: 'new-programme',
-    STAT_PROGRAMME: 'stat-programme'
+    STAT_PROGRAMME: 'stat-programme',
+    STAT_BY_DEVICE: 'stat-by-device'
 };
 
 
@@ -82,5 +84,6 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     LIBRARY_PROGRAMMES: 'Programme library',
     MY_PROGRAMMES: 'Programme library',
     NEW_PROGRAMME: 'new programme',
-    STAT_PROGRAMME: 'Tracking - Programmes'
+    STAT_PROGRAMME: 'Tracking - Programmes',
+    STAT_BY_DEVICE:'Tracking - Wearables & Apps'
 };

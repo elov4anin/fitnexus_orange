@@ -4,6 +4,7 @@ import {IonSelect, ModalController} from "@ionic/angular";
 import {CalendarComponentOptions, CalendarModal, CalendarModalOptions, CalendarResult} from "ion2-calendar";
 import * as moment from "moment";
 import {ModalConnectDevicesComponent} from '../../shared/modals/modal-connect-devices/modal-connect-devices.component';
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-stat-by-device',
@@ -11,7 +12,7 @@ import {ModalConnectDevicesComponent} from '../../shared/modals/modal-connect-de
     styleUrls: ['./stat-by-device.page.scss'],
 })
 export class StatByDevicePage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'Tracking - Wearables & Apps';
+    pageTitle: string = PagesEnum2NamesMapping.STAT_BY_DEVICE;
     selectedDevice: any;
     @ViewChildren('ion-select') selectsRef: QueryList<IonSelect>;
     selectedStep: any;

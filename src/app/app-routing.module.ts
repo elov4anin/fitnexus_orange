@@ -58,7 +58,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/connect-tracker/connect-tracker.module').then( m => m.ConnectTrackerPageModule)
   },
   {
-    path: 'stat-by-device',
+    path: PagesEnum2RoutingMapping.STAT_BY_DEVICE,
     loadChildren: () => import('./pages/stat-by-device/stat-by-device.module').then( m => m.StatByDevicePageModule)
   },
   {
