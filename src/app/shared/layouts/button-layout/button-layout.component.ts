@@ -163,7 +163,7 @@ export class ButtonLayoutComponent implements OnInit {
                         activeIcon: 'ios-fitness-white.svg',
                         redirectTo: PagesEnum2RoutingMapping.WELCOME_PROGRAMMES,
                         active: false,
-                        activePages: [PagesEnum2RoutingMapping.WELCOME_PROGRAMMES, 'training', 'stat-program'],
+                        activePages: [PagesEnum2RoutingMapping.WELCOME_PROGRAMMES, PagesEnum2RoutingMapping.NEW_PROGRAMME, PagesEnum2RoutingMapping.STAT_PROGRAMME],
                     },
                     {
                         text: 'body-comp',

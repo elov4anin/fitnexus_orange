@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
 import {Router} from "@angular/router";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-training',
@@ -68,7 +68,7 @@ export class TrainingPage extends PageBaseComponent implements OnInit {
     }
 
     saveProgram() {
-        this._router.navigate(['/stat-program'])
+        this._router.navigate(['/',  PagesEnum2RoutingMapping.STAT_PROGRAMME])
 
     }
 

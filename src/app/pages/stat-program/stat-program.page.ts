@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {CalendarComponentOptions, CalendarModal, CalendarModalOptions} from "ion2-calendar";
 import {ModalController} from "@ionic/angular";
 import * as moment from "moment";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-stat-program',
@@ -11,7 +12,7 @@ import * as moment from "moment";
     styleUrls: ['./stat-program.page.scss'],
 })
 export class StatProgramPage extends PageBaseComponent implements OnInit {
-    pageTitle: string = 'TRACKING - PROGRAMMES';
+    pageTitle: string = PagesEnum2NamesMapping.STAT_PROGRAMME;
     selectedProgram: any;
     selectedSquats: any;
 

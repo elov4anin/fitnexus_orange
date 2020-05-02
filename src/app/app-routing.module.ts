@@ -134,7 +134,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/members-connect/members-connect.module').then( m => m.MembersConnectPageModule)
   },
   {
-    path: 'stat-program',
+    path: PagesEnum2RoutingMapping.STAT_PROGRAMME,
     loadChildren: () => import('./pages/stat-program/stat-program.module').then( m => m.StatProgramPageModule)
   },
   {
