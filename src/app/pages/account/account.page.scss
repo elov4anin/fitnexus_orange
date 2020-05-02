@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 :host{
@@ -38,7 +37,7 @@
 
             @include border-radius-8;
             @include textMonserat12;
-            background-color: $light-gray!important;
+            background-color: var(--light-gray)!important;
         }
 
         ion-textarea {
@@ -50,7 +49,7 @@
 
             @include border-radius-8;
             @include textMonserat12;
-            background-color: $light-gray!important;
+            background-color: var(--light-gray)!important;
         }
     }
 

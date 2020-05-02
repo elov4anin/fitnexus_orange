@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './leave-feedback.component.html',
   styleUrls: ['./leave-feedback.component.scss'],
 })
+/**
+ * @deprecated
+ */
 export class LeaveFeedbackComponent implements OnInit {
   rate: any;
 

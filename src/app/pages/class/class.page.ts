@@ -6,6 +6,9 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
     templateUrl: './class.page.html',
     styleUrls: ['./class.page.scss'],
 })
+/**
+ * @deprecated
+ */
 export class ClassPage extends PageBaseComponent implements OnInit {
     pageTitle: string = ' ';
     rate: any;

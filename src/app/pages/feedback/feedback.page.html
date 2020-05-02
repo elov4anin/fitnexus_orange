@@ -1,156 +1,32 @@
 <app-main-layout
         [titlePage]="pageTitle"
 >
-    <app-button-layout [listBtnForLayout]="listBtnForLayout.CLASSES">
-        <div class="class">
-
-            <div class="class__block">
-                <ion-card class="person-card">
-                    <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                    <div class="person-card__wrapper">
-                      <div class="person-card-rating">
-                        <rating [rate]="rate"
-                                readonly="false"
-                                size="small"
-                                (rateChange)="onRateChange($event)">
-                        </rating>
-                      </div>
-                      <span class="person-card__name">Emma Jogger</span>
-                        <span class="person-card__text">Greatest class of all time</span>
-                    </div>
-                </ion-card>
+<div class="feedback">
+    <div class="feedback__row">
+        <ion-item lines="none">
+            <ion-label position="stacked">E-mail</ion-label>
+            <ion-input placeholder="E-mail"></ion-input>
+        </ion-item>
+    </div>
+    <div class="feedback__row">
+        <ion-item lines="none">
+            <ion-label position="stacked">Subject</ion-label>
+            <ion-input placeholder="Subject"></ion-input>
+        </ion-item>
+    </div>
+    <div class="feedback__row">
+        <ion-item lines="none" class="textarea">
+            <ion-label position="stacked">Text</ion-label>
+            <ion-textarea placeholder="Text..." rows="10"></ion-textarea>
+        </ion-item>
+    </div>
+    <div class="feedback__row d-flex ion-justify-content-end">
+        <ion-button color="warning">
+            <div class="feedback__btn">
+                <span class="feedback__btn-text">Send message</span>
             </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-              <ion-card class="person-card">
-                <ion-img src="assets/images/news.png" class="person-card__img"></ion-img>
-                <div class="person-card__wrapper">
-                  <div class="person-card-rating">
-                    <rating [rate]="rate"
-                            readonly="false"
-                            size="small"
-                            (rateChange)="onRateChange($event)">
-                    </rating>
-                  </div>
-                  <span class="person-card__name">Emma Jogger</span>
-                  <span class="person-card__text">Greatest class of all time</span>
-                </div>
-              </ion-card>
-            </div>
-            <div class="class__block">
-                <app-leave-feedback></app-leave-feedback>
-            </div>
-        </div>
-    </app-button-layout>
+        </ion-button>
+    </div>
+    
+</div>
 </app-main-layout>
