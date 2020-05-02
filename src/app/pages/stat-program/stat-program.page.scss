@@ -18,6 +18,7 @@
         }
 
         .material-icons {
+            margin-top: -2px;
             color: var(--dark-gray);
             font-size: 30px;
             margin-inline-end: 0
@@ -60,24 +61,6 @@
                 width: 60%;
             }*/
         }
-    }
-
-    &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
-    }
-
-    &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
     }
 
     &__btn {
@@ -143,6 +126,7 @@
 
 
 .month {
+    @include mt24;
     display: flex;
     align-items: center;
 

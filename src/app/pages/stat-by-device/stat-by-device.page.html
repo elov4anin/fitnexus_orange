@@ -3,47 +3,45 @@
 >
   <app-button-layout  [listBtnForLayout]="listBtnForLayout.TRACKING">
     <div class="stat-by-device ion-align-items-center ">
-      <div class="stat-by-device__header ">
-        <div class="stat-by-device__title">
-          Select your device
+
+      <div class="stat-by-device__select-block d-flex ion-align-items-center ion-justify-content-between ion-padding-start ion-padding-end">
+        <div class="d-flex flex-column">
+           <span class="stat-by-device__label">
+            Device
+          </span>
+          <ion-item  color="warning">
+            <ion-label class="select-orange-placeholder" slot="start" *ngIf="!selectedDevice">Select One</ion-label>
+            <ion-select placeholder="" [(ngModel)]="selectedDevice" class="select-orange">
+              <ion-select-option value="f">Fitbit</ion-select-option>
+              <ion-select-option value="m">Xaomi Mi band 4</ion-select-option>
+              <ion-select-option value="m">Honor band 3</ion-select-option>
+            </ion-select>
+            <span class="material-icons"  slot="end">
+                      arrow_drop_down
+                      </span>
+          </ion-item>
         </div>
-
-        <ion-item  color="secondary">
-          <ion-label class="select-blue-placeholder" slot="start" *ngIf="!selectedDevice">Select One</ion-label>
-          <ion-select placeholder="" [(ngModel)]="selectedDevice" class="select-blue">
-            <ion-select-option value="f">Fitbit</ion-select-option>
-            <ion-select-option value="m">Xaomi Mi band 4</ion-select-option>
-            <ion-select-option value="m">Honor band 3</ion-select-option>
-          </ion-select>
-          <ion-icon color="light" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
-        </ion-item>
-
-
-      </div>
-        <div class="stat-by-device__select-block d-flex ion-align-items-center ion-justify-content-between ion-padding-start ion-padding-end">
-          <ion-item lines="none">
-            <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedStep">Steps</ion-label>
+        <div class="d-flex flex-column">
+           <span class="stat-by-device__label">
+            Measurement
+          </span>
+          <ion-item  color="light">
+            <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedDevice">Select One</ion-label>
             <ion-select placeholder="" [(ngModel)]="selectedStep">
               <ion-select-option value="f">Steps</ion-select-option>
               <ion-select-option value="m">Steps 1</ion-select-option>
               <ion-select-option value="m">Steps 2</ion-select-option>
             </ion-select>
-            <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
+            <span class="material-icons"  slot="end">
+                      arrow_drop_down
+                      </span>
           </ion-item>
-          <ion-item lines="none" (click)="openCalendar()">
-            <ion-label class="select-white-placeholder" slot="start" >{{dateRangeLabel}}</ion-label>
-              <ion-calendar [(ngModel)]="dateRange"
-                            [type]="type"
-                            [format]="'YYYY-MM-DD'"
-                            (click)="openCalendar()"
-                            class="visually-hidden"
-              >
-              </ion-calendar>
-            <ion-icon color="secondary" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>
-          </ion-item>
+
         </div>
-      <div class="d-flex ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
-        <ion-icon src="assets/images/svg-icons/ios-walk.svg"></ion-icon>
+      </div>
+      
+       <div class="d-flex ion-align-self-start ion-padding-start ion-padding-end steps">
+        <ion-icon src="assets/images/svg-icons/ios-walk-gray.svg" class="steps__icon-walk"></ion-icon>
         <div class="steps__info">
           <span class="steps__count">
             3,221
@@ -55,12 +53,17 @@
 
 
       </div>
-      <div class="d-flex ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
+      <div class="d-flex flex-column ion-align-items-center ion-justify-content-center ion-padding-start ion-padding-end steps">
+        <div class="month">
+          <ion-icon name="arrow-back"></ion-icon>
+          <span class="month__text">March 22 2020</span>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
         <app-weekly-stat></app-weekly-stat>
       </div>
 
       <div class="d-flex ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
-        <ion-button expand="full" (click)="openAddDeviceModal()" color="secondary" class="stat-by-device__btn">
+        <ion-button expand="block" (click)="openAddDeviceModal()" color="warning" class="stat-by-device__btn">
           <div class="d-flex flex ion-justify-content-center ion-align-items-center">
             <ion-icon name="add"></ion-icon>
             <div class="stat-by-device__btn-text">Add device or app</div>

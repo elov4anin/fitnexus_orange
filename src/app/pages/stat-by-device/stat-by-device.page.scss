@@ -1,21 +1,32 @@
-@import "variables";
+@import "mixins";
 
 .stat-by-device {
     display: flex;
     flex-direction: column;
     padding-bottom: 22px;
-    background-color: $white;
-
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    background-color: var(--white);
 
     ion-item {
-        height: 40px;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        height: 43px;
+        width: 155px;
+        @include border-radius-8;
 
         >  ion-icon {
-            margin-top: 3px;
             margin-right: 0;
+        }
+
+        .material-icons {
+            margin-top: -2px;
+            color: var(--dark-gray);
+            font-size: 30px;
+            margin-inline-end: 0
+        }
+    }
+
+    ion-item[color='warning'] {
+
+        .material-icons {
+            color: var(--white);
         }
     }
 
@@ -24,14 +35,6 @@
         --padding-start: 0px;
         width: 100%;
     }
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        padding: 22px 32px;
-        border-bottom: 0.5px solid $gray;
-    }
 
     &__select-block {
         width: 100%;
@@ -39,87 +42,80 @@
         padding-bottom: 22px;
 
         ion-item {
-            border: 1px solid $gray;
             --padding-start: 10px;
 
-            &:first-of-type {
+           /* &:first-of-type {
                 width: 35%
             }
             &:last-of-type {
                 width: 60%;
-            }
+            }*/
         }
     }
 
-    &__title {
-        margin-bottom: 8px;
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        color: $ligth-black;
-        line-height: 24px;
-
-    }
-
-    &__text {
-        margin-bottom: 29px;
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
-    }
-
     &__btn {
-        // margin-top: auto;
-        // margin-bottom: 28px;
+        @include bthHeight;
         margin-top: 45px;
-        width: 100%;
-        --border-radius: 2px;
-        border-radius: 2px;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        width: 172px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
+       @include btnTextMonserat12();
         margin-left: 10px;
+    }
+
+    &__label {
+        @include textMonserat12();
+        @include mb4;
     }
 }
 
 .steps {
     width: 100%;
-    margin-bottom: 15px;
+    @include mb16;
 
-    ion-icon {
-        width: 27px;
-        font-size: 48px;
+    &__icon-walk {
+        margin-top: 8px;
+        width: 20px;
+        font-size: 44px;
     }
 
     &__info {
+        @include ml12;
         display: flex;
         flex-direction: column;
-        margin-left: 21px;
         justify-content: space-between;
         height: 100%;
     }
 
     &__count {
-        font-family: $font-family-oswald;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 30px;
-        color: $dark-gray1;
-        margin-bottom: 8px;
+        @include titleSemi44;
+
+        margin-bottom: 6px;
     }
 
     &__text {
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+        @include textMonserat12(var(--ion-color-warning))
+    }
+}
+
+.month {
+    @include mt24;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        @include btnTextMonserat12(var(--dark-gray));
+        display: block;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+    ion-icon {
+        color: var(--light-gray2);
+        width: 27px;
+        font-size: 48px;
     }
 }
