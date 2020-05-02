@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-login',
@@ -20,6 +21,6 @@ export class LoginPage implements OnInit {
     }
 
     login(): void {
-        this._router.navigate(['/get-started']);
+        this._router.navigate(['/', PagesEnum2RoutingMapping.GET_STARTED]);
     }
 }

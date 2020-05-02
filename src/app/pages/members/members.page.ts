@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
 import {Router} from "@angular/router";
 
+/**
+ * @deprecated
+ */
 @Component({
     selector: 'app-members',
     templateUrl: './members.page.html',

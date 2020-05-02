@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
 
+/**
+ * @deprecated
+ */
 @Component({
     selector: 'app-messages',
     templateUrl: './messages.page.html',

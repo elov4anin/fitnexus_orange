@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-new-measurements',
@@ -19,6 +19,6 @@ export class NewMeasurementsPage extends PageBaseComponent  implements OnInit {
     }
 
     save(): void {
-        this._router.navigate(["/stat-measurements"]);
+        this._router.navigate(["/", PagesEnum2RoutingMapping.MEASUREMENTS]);
     }
 }

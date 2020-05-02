@@ -6,6 +6,9 @@ import {Router} from "@angular/router";
   templateUrl: './event-scheduler.component.html',
   styleUrls: ['./event-scheduler.component.scss'],
 })
+/**
+ * @deprecated
+ */
 export class EventSchedulerComponent implements OnInit {
   @Input() type: 'info' | 'cancel' = 'cancel';
 
