@@ -1,4 +1,6 @@
 <div class="weekly">
+
+
     <div class="day" *ngFor="let d of days" [ngClass]="{'day--selected': d.isSelect, 'day--current': d.isCurrent}" (click)="selectDay(d)">
         <div class="day__scale" [style.height]="d.height + 'px'"></div>
          <div class="day__name">{{d.day}}</div>

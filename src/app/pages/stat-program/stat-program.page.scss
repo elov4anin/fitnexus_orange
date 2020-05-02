@@ -1,13 +1,12 @@
 @import "variables";
+@import "mixins";
 
 .stat-by-device {
     display: flex;
     flex-direction: column;
     padding-bottom: 22px;
-    background-color: $white;
+    background-color: var(--white);
 
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
 
     ion-item {
         height: 40px;
@@ -76,10 +75,7 @@
         margin: 11px;
         width: 40%;
         height: 40px;
-        box-shadow: 0 3px 6px 0 $light-gray1;
         margin-top: 45px;
-        --border-radius: 2px;
-        border-radius: 2px;
 
         &:nth-of-type(2) {
             width: 47%;
@@ -87,11 +83,7 @@
     }
 
     &__btn-text {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
+       @include btnTextMonserat12();
         margin-left: 10px;
     }
 
@@ -118,19 +110,33 @@
     }
 
     &__count {
-        font-family: $font-family-oswald;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 30px;
-        color: $dark-gray1;
-        margin-bottom: 3px;
+       @include titleSemi44;
+
+        margin-bottom: 6px;
+
+        span {
+            color: var(--light-gray2)
+        }
     }
 
     &__text {
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 300;
-        color: $ligth-black;
+       @include textMonserat12(var(--ion-color-warning))
+    }
+}
+
+
+.month {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        @include btnTextMonserat12(var(--dark-gray));
+        display: block;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+    ion-icon {
+        color: var(--light-gray2);
     }
 }

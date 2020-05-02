@@ -47,16 +47,22 @@
       <div class="d-flex ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
         <div class="steps__info">
           <span class="steps__count">
-           100kg
+           100 <span>kg</span>
           </span>
           <span class="steps__text">
+           <img src="/assets/images/png-icons/crown@2x.png" width="17" height="12" alt="">
             Highest record on Saturday 28th December
           </span>
         </div>
 
 
       </div>
-      <div class="d-flex ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
+      <div class="d-flex  flex-column ion-align-self-start ion-align-items-center ion-padding-start ion-padding-end steps">
+        <div class="month">
+          <ion-icon name="arrow-back"></ion-icon>
+          <span class="month__text">March 22 2020</span>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </div>
         <app-weekly-stat></app-weekly-stat>
       </div>
 
@@ -65,15 +71,15 @@
         <ion-button
                 class="stat-by-device__btn"
                 [color]="'dark'"
-                expand="full"
+                expand="block"
                 (click)="openPrograms()"
         >
           <span class="stat-by-device__btn-text">Programmes</span>
         </ion-button>
         <ion-button
                 class="stat-by-device__btn"
-                [color]="'secondary'"
-                expand="full"
+                [color]="'warning'"
+                expand="block"
                 (click)="addProgram()"
         >
           <ion-icon name="add"></ion-icon>

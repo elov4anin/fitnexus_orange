@@ -1,4 +1,4 @@
-@import "variables";
+@import "mixins";
 
 :host {
     width: 100%;
@@ -20,29 +20,25 @@
 
         &__scale {
             height: 40px;
-            width: 19px;
+            width: 8px;
             margin-bottom: 6px;
             border-radius: 10px;
-            background: $light-gray2;
+            background: var(--light-gray2);
             transition: all 0.2s;
         }
 
         &__name {
             display: table-cell;
-            font-family: $font-family-oswald;
-            font-size: 16px;
-            font-weight: 300;
-            color: $light-gray2;
-            transition: all 0.2s;
+            @include textMonserat8;
         }
 
         &--current {
             .day__scale {
-                background: $dark-gray1
+                background: var(--ion-color-warning)
             }
 
             .day__name {
-                color: $dark-gray1
+                color: var(--ion-color-warning)
             }
 
         }
@@ -50,15 +46,15 @@
         &--selected {
 
             .day__scale {
-                background: $blue;
-                box-shadow: 0 3px 6px 0 $light-gray1;
+                background: var(--dark-gray);
             }
 
             .day__name {
-                color: $blue;
+                color: var(--dark-gray);
                 font-weight: 500;
             }
         }
     }
 }
+
 
