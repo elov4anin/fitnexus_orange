@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {CalendarComponentOptions, CalendarModal, CalendarModalOptions} from "ion2-calendar";
 import {ModalController} from "@ionic/angular";
 import * as moment from "moment";
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-stat-program',
@@ -31,11 +31,11 @@ export class StatProgramPage extends PageBaseComponent implements OnInit {
     }
 
     openPrograms(): void {
-        this._router.navigate(['/library-programs'])
+        this._router.navigate(['/' , PagesEnum2RoutingMapping.LIBRARY_PROGRAMMES])
     }
 
     addProgram(): void {
-        this._router.navigate(['/training'])
+        this._router.navigate(['/', PagesEnum2RoutingMapping.NEW_PROGRAMME])
     }
 
     ionViewDidEnter() {
