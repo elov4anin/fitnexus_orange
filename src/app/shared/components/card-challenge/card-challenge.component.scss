@@ -14,15 +14,13 @@ ion-card.card__wrapper {
 }
 
 ion-card.list {
-    @include border-radius-8;
-    @include border1;
-
     .card__img {
+        @include border-radius-12;
         height: 160px;
     }
 
     ion-card-content {
-        padding: 12px 16px;
+        padding: 12px 0;
     }
 }
 
@@ -47,6 +45,7 @@ ion-card.list {
     }
 
     &__text {
+        @include mt4;
        @include textMonserat12(var(--ion-color-warning));
     }
 
@@ -60,7 +59,7 @@ ion-card.list {
             display: block;
 
         }
-        span {
+        span:last-of-type {
             margin-bottom: 10px;
         }
     }
