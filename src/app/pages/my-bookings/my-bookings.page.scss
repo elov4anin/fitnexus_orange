@@ -1,4 +1,4 @@
-@import "variables";
+@import "mixins";
 
 :host {
     ::ng-deep {
@@ -12,31 +12,21 @@
 .calendar {
     display: flex;
     flex-direction: column;
-    // height: calc(100% - 66px);
-    padding-top: 10px;
-
 
     &__block {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 22px 32px 0 32px;
+        padding: 24px 24px 0 24px;
        // border-bottom: 0.5px solid $gray;
-
         &:last-of-type {
-            padding-bottom: 22px;
+            padding-bottom: 24px;
         }
     }
 
     &__day-title {
-        align-self: flex-start;
-        margin-left: 12px;
-        margin-bottom: 25px;
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 18px;
-        color: $blue2;
+        @include mb24;
+        @include btnTextMonserat12(var(--ion-color-warning));
     }
 }
