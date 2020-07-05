@@ -34,7 +34,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/add-device/add-device.module').then(m => m.AddDeviceModule)
   },
   {
-    path: 'calendar',
+    path: PagesEnum2RoutingMapping.CALENDAR,
     loadChildren: () => import('./pages/calendar/calendar.module').then(m => m.CalendarPageModule)
   },
   {
@@ -102,7 +102,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/meal-planner/meal-planner.module').then( m => m.MealPlannerPageModule)
   },
   {
-    path: 'my-bookings',
+    path: PagesEnum2RoutingMapping.MY_BOOKINGS,
     loadChildren: () => import('./pages/my-bookings/my-bookings.module').then( m => m.MyBookingsPageModule)
   },
   {

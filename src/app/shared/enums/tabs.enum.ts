@@ -1,17 +1,23 @@
 import {PagesEnum2RoutingMapping} from './pages.enum';
 
 export enum TabsEnum {
+    CLUB = 'CLUB',
+    CALENDAR = 'CALENDAR',
     VIDEO = 'VIDEO',
     STATS = 'STATS',
     MEALS = 'MEALS',
 }
 
 export const TabsEnum2IconMapping: Record<TabsEnum, string> = {
+    CLUB: 'club.svg',
+    CALENDAR: 'calendar.svg',
     STATS: 'stat.svg',
     MEALS: 'food.svg',
     VIDEO: 'video.svg',
 };
 export const TabsEnum2IconActiveMapping: Record<TabsEnum, string> = {
+    CLUB: 'club-active.svg',
+    CALENDAR: 'calendar-active.svg',
     STATS: 'stat-active.svg',
     MEALS: 'food-active.svg',
     VIDEO: 'video-active.svg',
@@ -19,13 +25,16 @@ export const TabsEnum2IconActiveMapping: Record<TabsEnum, string> = {
 
 
 export const TabsEnum2RoutingMapping: Record<TabsEnum, string> = {
+    CLUB: PagesEnum2RoutingMapping.CLUB,
+    CALENDAR: PagesEnum2RoutingMapping.CALENDAR,
     STATS: PagesEnum2RoutingMapping.ADD_DEVICE,
     MEALS: PagesEnum2RoutingMapping.MEALS,
     VIDEO: PagesEnum2RoutingMapping.VIDEOS,
 };
 
 export const TabsEnum2ActivePagesMapping: Record<TabsEnum, string[]> = {
-    //NEWS: ['news-feed', 'members', 'members-connect'],
+    CLUB: [PagesEnum2RoutingMapping.CLUB],
+    CALENDAR: [PagesEnum2RoutingMapping.CALENDAR, PagesEnum2RoutingMapping.MY_BOOKINGS],
     STATS: [
         'stat-by-device',
         PagesEnum2RoutingMapping.ADD_DEVICE,

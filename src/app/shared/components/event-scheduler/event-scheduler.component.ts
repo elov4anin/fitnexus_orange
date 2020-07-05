@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {ModalController} from '@ionic/angular';
+import {ModalSpinClassComponent} from '../../modals/modal-spin-class/modal-spin-class.component';
 
 @Component({
   selector: 'app-event-scheduler',
@@ -12,15 +14,15 @@ import {Router} from "@angular/router";
 export class EventSchedulerComponent implements OnInit {
   @Input() type: 'info' | 'cancel' = 'cancel';
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _modalController: ModalController) { }
 
   ngOnInit() {}
 
-  onClick() {
-    console.log('type', this.type);
-    if (this.type === 'info') {
-      this._router.navigate(["/class"])
-    }
-
+  async onClick() {
+    const modal = await this._modalController.create({
+      component: ModalSpinClassComponent,
+      cssClass: 'modal-spin-class'
+    });
+    return await modal.present();
   }
 }

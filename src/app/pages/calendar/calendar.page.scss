@@ -1,10 +1,14 @@
 @import "variables";
+@import "mixins";
 
 :host {
     ::ng-deep {
         app-button-layout .layout-content {
             height: inherit;
             min-height: 100%;
+        }
+        .event-detail-container {
+            border-top: 0!important;
         }
 
         calendar {
@@ -17,26 +21,27 @@
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 16px;
-                color: $blue;
+                color: var(--ion-color-warning);
                 small {
                     font-size: 14px;
                 }
             }
             td {
+                @include textMonserat12();
                 border: 0!important;
-                font-family: $font-family-oswald;
-                font-weight: 300;
-                font-size: 14px;
-                line-height: 16px;
-                color: $dark-gray1;
+                width: 46px;
+                height: 46px;
+                vertical-align: middle!important;
             }
 
             td.monthview-selected {
-                border-radius: 2px;
-                background: $dark-gray1;
-                color: $white;
-                font-weight: 400;
-                box-shadow: 0 3px 6px 0 $light-gray1;
+                border-radius: 50%;
+                background: var(--ion-color-warning);
+                color: var(--white);
+                font-weight: 600;
+            }
+            td.monthview-current {
+                border-radius: 50%;
             }
         }
 
@@ -61,7 +66,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 22px 32px;
+        padding: 6px 32px;
         border-bottom: 0.5px solid $gray;
 
         &--calendar {
@@ -71,13 +76,9 @@
     }
 
     &__day-title {
-        align-self: flex-start;
-        margin-bottom: 25px;
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 18px;
-        color: $blue2;
+        @include mb24;
+        @include btnTextMonserat12(var(--ion-color-warning));
+        margin: 18px;
     }
 }
 .control {
@@ -87,11 +88,7 @@
     align-items: center;
 
     &__title {
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 15px;
-        color: $dark-gray1;
+       @include titleSemi16()
     }
 
     ion-button {

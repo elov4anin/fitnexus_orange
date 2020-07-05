@@ -213,3 +213,13 @@ input::placeholder {
     @include textMonserat12;
     opacity: 1;
 }
+
+
+.modal-spin-class {
+    .modal-wrapper {
+        position: absolute;
+        width: 100% !important;
+        height: 375px !important;
+        top: calc(100% - (375px));
+    }
+}

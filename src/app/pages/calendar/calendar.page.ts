@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
+import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 
 @Component({
     selector: 'app-calendar',
@@ -8,7 +9,7 @@ import {PageBaseComponent} from "../../shared/components/page-base/page-base.com
 })
 export class CalendarPage extends PageBaseComponent implements OnInit {
 
-    pageTitle: string = 'Classes - Upcoming';
+    pageTitle: string = PagesEnum2NamesMapping.CALENDAR;
     eventSource: any;
     viewTitle;
     isToday:boolean;

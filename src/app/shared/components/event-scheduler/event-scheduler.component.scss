@@ -1,64 +1,54 @@
-@import "variables";
+@import "mixins";
 
 :host {
     width: 100%;
 }
 
 ion-card.event-card {
+    @include border-radius-8;
     margin: 0 0 12px;
-    border: 0.5px solid $gray;
-    border-radius: 2px;
+    border: 1px solid var(--light-gray2);
+    box-shadow: none;
 }
+
 .event {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 29px;
+    padding: 22px;
+
+    .col {
+        display: flex;
+        align-items: center;
+    }
+
     &__desc {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
 
     }
 
     &__name {
-        font-family: $font-family-oswald;
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 24px;
-        text-align: center;
-        color: $dark-gray1;
-        margin-bottom: 3px;
+        @include titleSemi16()
     }
 
     &__time {
-        font-family: $font-family-helvetica;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 18px;
-        text-align: center;
-        color: $blue2;
+        @include textMonserat12()
     }
 
 
     &__btn {
-        // margin-top: auto;
-        // margin-bottom: 28px;
-        // margin-top: 45px;
-        width: 114px;
-        height: 40px;
-        --border-radius: 2px;
-        border-radius: 2px;
-        box-shadow: 0 3px 6px 0 $light-gray1;
+        --background: transparent !important;
+        background: transparent !important;
     }
 
-    &__btn-text {
-        font-family: $font-family-oswald;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-left: 10px;
+    ion-icon {
+        font-size: 18px;
+    }
+
+    ion-radio {
+        @include mr8;
+        height: 16px;
+        width: 16px;
     }
 }
