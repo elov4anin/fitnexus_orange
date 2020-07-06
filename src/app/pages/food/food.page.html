@@ -3,90 +3,50 @@
 >
     <app-button-layout [listBtnForLayout]="listBtnForLayout.MEALS">
 
-      <div class="library">
-        <div class="library__header">
-          <ion-item lines="none" class="select-filter-item">
-            <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedType">Any type</ion-label>
-            <ion-select placeholder="" [(ngModel)]="selectedType">
-              <ion-select-option value="f">type</ion-select-option>
-              <ion-select-option value="m">type 1</ion-select-option>
-              <ion-select-option value="s">type 2</ion-select-option>
-            </ion-select>
-              <span class="material-icons"  slot="end">
-              arrow_drop_down
-              </span>
-           <!-- <ion-icon color="dark" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>-->
-          </ion-item>
-          <ion-item lines="none" class="select-filter-item">
-            <ion-label class="select-white-placeholder" slot="start" *ngIf="!selectedMeal">Any meal</ion-label>
-            <ion-select placeholder="" [(ngModel)]="selectedMeal">
-              <ion-select-option value="f">meal</ion-select-option>
-              <ion-select-option value="m">meal 1</ion-select-option>
-              <ion-select-option value="s">meal 2</ion-select-option>
-            </ion-select>
-
-            <span class="material-icons"  slot="end">
-              arrow_drop_down
-              </span>
-  <!--          <ion-icon color="dark" name="arrow-down" mode="ios" slot="end" size="small"></ion-icon>-->
-          </ion-item>
-        </div>
-        <div class="library__header library__header--no-bordrer-bottom ">
+      <!--<div class="library">
+        <div class="library__header library__header&#45;&#45;no-bordrer-bottom ">
           <ion-searchbar color="light" class="meal_search"></ion-searchbar>
+          <ion-button (click)="openFilter()" expand="block" color="light" size="small"
+          >
+            <ion-icon src="/assets/images/svg-icons/ios-funnel.svg" color="warning" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </div>-->
+      <div class="videos">
+        <div class="videos__header">
+          <ion-searchbar color="light" class="meal_search"></ion-searchbar>
+          <ion-button (click)="openFilter()" expand="block" color="light" size="small"
+          >
+            <ion-icon src="/assets/images/svg-icons/ios-funnel-orange.svg"  slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="d-flex ion-justify-content-between mb24 video__row">
+          <div class="videos__title">What's new</div>
+          <a class="d-flex ion-align-items-center">
+            <span class="brn-text-more">see all</span>
+            <ion-icon color="warning" name="arrow-forward"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="videos ion-margin-start">
+
+        <div class="mb40 video__row pos-relative">
+
+          <app-popular-cuisines></app-popular-cuisines>
+
+        </div>
+      </div>
+
+      <div class="videos ion-margin-start ion-margin-end">
+
+        <div class="d-flex ion-justify-content-between mb24 video__row">
+          <div class="videos__title">Popular diets</div>
+
         </div>
 
-
-        <div class="library__list">
-          <ion-card>
-            <div class="card-program">
-              <ion-img src="/assets/images/food@2x.png" class="card-program__img"></ion-img>
-              <div class="card-program__wrapper">
-                <span class="card-program__title">Mediterranean</span>
-                <span class="card-program__text">Full of healthy fats, fruits & veggies </span>
-              </div>
-            </div>
-          </ion-card>
-
-          <ion-card>
-            <div class="card-program">
-              <ion-img src="/assets/images/food@2x.png" class="card-program__img"></ion-img>
-              <div class="card-program__wrapper">
-                <span class="card-program__title">Mediterranean</span>
-                <span class="card-program__text">Full of healthy fats, fruits & veggies </span>
-              </div>
-            </div>
-          </ion-card>
-
-          <ion-card>
-            <div class="card-program">
-              <ion-img src="/assets/images/food@2x.png" class="card-program__img"></ion-img>
-              <div class="card-program__wrapper">
-                <span class="card-program__title">Mediterranean</span>
-                <span class="card-program__text">Full of healthy fats, fruits & veggies </span>
-              </div>
-            </div>
-          </ion-card>
-
-          <ion-card>
-            <div class="card-program">
-              <ion-img src="/assets/images/food@2x.png" class="card-program__img"></ion-img>
-              <div class="card-program__wrapper">
-                <span class="card-program__title">Mediterranean</span>
-                <span class="card-program__text">Full of healthy fats, fruits & veggies </span>
-              </div>
-            </div>
-          </ion-card>
-
-          <ion-card>
-            <div class="card-program">
-              <ion-img src="/assets/images/food@2x.png" class="card-program__img"></ion-img>
-              <div class="card-program__wrapper">
-                <span class="card-program__title">Mediterranean</span>
-                <span class="card-program__text">Full of healthy fats, fruits & veggies </span>
-              </div>
-            </div>
-          </ion-card>
-
+        <div class="mb40 video__row">
+          <app-popular-diets></app-popular-diets>
         </div>
       </div>
 

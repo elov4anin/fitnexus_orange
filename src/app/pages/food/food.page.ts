@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PageBaseComponent} from "../../shared/components/page-base/page-base.component";
 import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {FilterComponent} from '../../shared/modals/filter/filter.component';
+import {ModalController} from '@ionic/angular';
 
 @Component({
     selector: 'app-food',
@@ -9,10 +11,8 @@ import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
 })
 export class FoodPage extends PageBaseComponent implements OnInit {
     pageTitle: string = PagesEnum2NamesMapping.MEALS;
-    selectedType: any;
-    selectedMeal: any;
 
-    constructor() {
+    constructor(private _modalController: ModalController) {
         super();
     }
 
@@ -27,6 +27,13 @@ export class FoodPage extends PageBaseComponent implements OnInit {
                 selectIconInner.setAttribute('style', 'display: none !important');
             }
         });
+    }
+
+    async openFilter() {
+        const modal = await this._modalController.create({
+            component: FilterComponent
+        });
+        return await modal.present();
     }
 
 }

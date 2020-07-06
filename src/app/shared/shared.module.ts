@@ -19,6 +19,7 @@ import {ModalDayStatComponent} from './modals/modal-day-stat/modal-day-stat.comp
 import {DurationComponent} from './components/duration/duration.component';
 import {DifficultyComponent} from './components/difficulty/difficulty.component';
 import {ModalSpinClassComponent} from './modals/modal-spin-class/modal-spin-class.component';
+import {FilterComponent} from './modals/filter/filter.component';
 
 const ANGULAR_MODULES = [
     CommonModule,
@@ -50,7 +51,8 @@ const MODALS = [
     ModalQrcodeComponent,
     ModalConnectDevicesComponent,
     ModalDayStatComponent,
-    ModalSpinClassComponent
+    ModalSpinClassComponent,
+    FilterComponent
 ];
 
 

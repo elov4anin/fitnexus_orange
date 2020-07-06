@@ -1,5 +1,11 @@
 @import "mixins";
 
+:host {
+    app-button-layout ::ng-deep .layout-content {
+        height: auto;
+    }
+}
+
 .library {
     display: flex;
     flex-direction: column;
@@ -17,20 +23,6 @@
             padding-bottom: 0;
             border-bottom: 0;
         }
-
-        ion-searchbar {
-            height: 50px;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-        ion-button {
-            height: 36px;
-            width: 44px;
-        }
-        ion-icon {
-            font-size: 14px;
-        }
-
 
         ion-item {
             height: 40px;
@@ -77,7 +69,7 @@
 
     }
 
-    &__list {
+   /* &__list {
         padding-left: 32px;
         padding-right: 32px;
 
@@ -89,10 +81,55 @@
             box-shadow: none;
             border: 1px solid var(--gray);
         }
+    }*/
+
+}
+
+.videos {
+    @include ml24;
+    @include mr24;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+}
+
+.videos__header {
+    @include mb32;
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ion-searchbar {
+        height: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    ion-button {
+        @include ml16;
+        width: 44px;
+        height: 44px;
+    }
+
+    ion-icon {
+        font-size: 16px;
+        color: var(--ion-color-warning);
     }
 
 }
 
+.video__row {
+}
+
+.videos__title {
+    @include titleSemi20;
+}
+
+.brn-text-more {
+    @include btnTextSemi13;
+}
+/*
 .card-program {
     display: flex;
 
@@ -118,4 +155,4 @@
         @include textMonserat12();
     }
 
-}
+}*/

@@ -1,0 +1,12 @@
+<div class="list">
+  <div class="list__item" *ngFor="let c of list">
+      <div class="category"
+           [ngStyle]="{'background-image':'url('+c.imgSrc+')'}" (click)="redirectTo()">
+
+      </div>
+      <div class="category__header">
+        <span class="category__title">{{c.title}}</span>
+        <span class="category__text">{{c.text}}</span>
+      </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ import {
 } from "../../enums/tabs.enum";
 import {ModalController} from '@ionic/angular';
 import {ModalQrcodeComponent} from '../../modals/modal-qrcode/modal-qrcode.component';
-import {FilterComponent} from '../../../pages/videos/modals/filter/filter.component';
+import {FilterComponent} from '../../modals/filter/filter.component';
 
 
 @Component({
