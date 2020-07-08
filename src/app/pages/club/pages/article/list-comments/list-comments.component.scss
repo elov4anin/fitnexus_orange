@@ -42,6 +42,7 @@
 
     }
     &__text {
+        @include mt4;
         @include textMonserat12();
     }
 }
