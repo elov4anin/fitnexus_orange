@@ -1,0 +1,36 @@
+@import "mixins";
+
+.video__wrapper {
+    position: relative;
+
+    height: 264px;
+    width: 100%;
+
+    background: url("/assets/images/club/1c34d74f0fa58956605c31539e3d0c91.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.video__title {
+    @include titleSemi16();
+    @include mb16;
+    @include mt16;
+}
+
+
+.video__text {
+    @include textMonserat14;
+}
+
+.video__text-wrap {
+    padding-top: 0;
+}
+
+.divisor {
+    height: 1px;
+    background: var(--light-gray);
+    width: 100%;
+    @include mb16;
+    @include mt16;
+}

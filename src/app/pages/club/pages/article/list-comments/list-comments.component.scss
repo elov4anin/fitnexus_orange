@@ -1,0 +1,79 @@
+@import "mixins";
+
+.comments {
+    @include ml24;
+    @include mr24;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        @include mb8;
+        @include textMonserat12(var(--light-gray2))
+    }
+}
+
+.comment {
+    @include mb24;
+    display: flex;
+    justify-content: space-between;
+    &__avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: url("/assets/images/comments/avatar@2x.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__col {
+        &:nth-child(2) {
+
+            width: 100%;
+            margin-left: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__author {
+        @include btnTextMonserat12(var(--dark-gray));
+
+    }
+    &__text {
+        @include textMonserat12();
+    }
+}
+
+.add-comment {
+    @include border-radius-8;
+    padding-left: 16px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    background: var(--light-gray);
+    ion-input {
+        width: 100%;
+        height: 44px;
+        @include textMonserat12();
+        padding: 5px;
+        resize: none;
+        background: transparent;
+        border: 0;
+
+        &:focus {
+            outline: 0;
+            border: 0;
+        }
+    }
+
+    ion-icon {
+        margin-right: 12px;
+        cursor: pointer;
+        font-size: 21px;
+    }
+
+}

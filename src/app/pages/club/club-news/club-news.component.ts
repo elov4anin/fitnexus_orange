@@ -58,7 +58,7 @@ export class ClubNewsComponent implements OnInit {
     }
 
     openSlide() {
-        // this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEOS, PagesEnum2RoutingMapping.VIDEO_ITEM])
+        this._router.navigate(['/', PagesEnum2RoutingMapping.CLUB, PagesEnum2RoutingMapping.ARTICLE])
     }
 
 }
