@@ -20,6 +20,7 @@ import {DurationComponent} from './components/duration/duration.component';
 import {DifficultyComponent} from './components/difficulty/difficulty.component';
 import {ModalSpinClassComponent} from './modals/modal-spin-class/modal-spin-class.component';
 import {FilterComponent} from './modals/filter/filter.component';
+import {OverflowDotsPipe} from './pipes/overflow-dots.pipe';
 
 const ANGULAR_MODULES = [
     CommonModule,
@@ -55,18 +56,25 @@ const MODALS = [
     FilterComponent
 ];
 
+const PIPES = [
+    OverflowDotsPipe
+]
+
 
 @NgModule({
     imports: [
         ...ANGULAR_MODULES,
+
     ],
     exports: [
         ...ANGULAR_MODULES,
-        ...COMPONENTS
+        ...COMPONENTS,
+        ...PIPES,
     ],
     declarations: [
         ...COMPONENTS,
-        ...MODALS
+        ...MODALS,
+        ...PIPES,
     ],
     entryComponents: [
         ...MODALS

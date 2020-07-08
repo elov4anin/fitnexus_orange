@@ -1,0 +1,77 @@
+@import "mixins";
+
+/*:host {
+    app-button-layout ::ng-deep .layout-content {
+        height: auto;
+    }
+}*/
+
+.videos {
+    @include ml24;
+    @include mr24;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+}
+
+.videos__header {
+    @include mb32;
+    @include mt24;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.video__row {
+}
+
+.videos__title {
+    @include titleSemi20;
+}
+
+.brn-text-more {
+    @include btnTextSemi13;
+}
+
+.upgrade {
+    @include border-radius-12;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    background: var(--light-gray);
+
+    &__title {
+        @include btnTextSemi13(var(--dark-gray))
+    }
+
+    &__text {
+        @include mt4;
+        @include textMonserat12()
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        img {
+            width: 39px;
+            height: 39px;
+            min-width: 36px;
+            margin-right: 12px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        cursor: pointer;
+
+        ion-icon {
+            color: var(--light-gray2);
+            font-size: 28px;
+        }
+
+    }
+}

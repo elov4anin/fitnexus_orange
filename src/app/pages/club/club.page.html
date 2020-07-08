@@ -1,0 +1,86 @@
+<app-main-layout
+        [isNeedLogo]="true"
+        [isNeedBgWhite]="true"
+>
+
+    <!--<div class="library">
+      <div class="library__header library__header&#45;&#45;no-bordrer-bottom ">
+        <ion-searchbar color="light" class="meal_search"></ion-searchbar>
+        <ion-button (click)="openFilter()" expand="block" color="light" size="small"
+        >
+          <ion-icon src="/assets/images/svg-icons/ios-funnel.svg" color="warning" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+    </div>-->
+    <div class="videos">
+      <div class="videos__header">
+        <div class="upgrade">
+            <div class="upgrade__close">
+                <ion-icon name="close"></ion-icon>
+            </div>
+          <div class="upgrade__col">
+            <img src="/assets/images//club/star@2x.png" alt="">
+          </div>
+          <div class="upgrade__col">
+            <span class="upgrade__title">Upgrade to pro!</span>
+            <span class="upgrade__text">Gain access to our premium workout library, as well as our incredible diet library and meal planner!</span>
+          </div>
+        </div>
+       <!-- <ion-searchbar color="light" class="meal_search"></ion-searchbar>
+        <ion-button (click)="openFilter()" expand="block" color="light" size="small"
+        >
+          <ion-icon src="/assets/images/svg-icons/ios-funnel-orange.svg"  slot="icon-only"></ion-icon>
+        </ion-button>-->
+      </div>
+      <div class="d-flex ion-justify-content-between mb24 video__row">
+        <div class="videos__title">Club news</div>
+        <a class="d-flex ion-align-items-center">
+          <span class="brn-text-more">see all</span>
+          <ion-icon color="warning" name="arrow-forward"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="videos ion-margin-start">
+
+      <div class="mb40 video__row pos-relative">
+          <app-club-news></app-club-news>
+      </div>
+    </div>
+    <div class="videos ion-margin-start ion-margin-end">
+
+        <div class="mb40 video__row">
+            <app-month-free></app-month-free>
+        </div>
+    </div>
+
+    <div class="videos ion-margin-start ion-margin-end">
+
+      <div class="d-flex ion-justify-content-between mb24 video__row">
+        <div class="videos__title">latest Articles</div>
+        <a class="d-flex ion-align-items-center">
+          <span class="brn-text-more">see all</span>
+          <ion-icon color="warning" name="arrow-forward"></ion-icon>
+        </a>
+
+      </div>
+
+      <div class="mb40 video__row">
+          <app-small-slider [list]="latestArticles" [imgHeight]="96" [slideMinWidth] = '209'></app-small-slider>
+      </div>
+    </div>
+    <div class="videos ion-margin-start ion-margin-end">
+      <div class="d-flex ion-justify-content-between mb24 video__row">
+        <div class="videos__title">Special offers</div>
+        <a class="d-flex ion-align-items-center">
+          <span class="brn-text-more">see all</span>
+          <ion-icon color="warning" name="arrow-forward"></ion-icon>
+        </a>
+      </div>
+
+      <div class="mb24 video__row">
+          <app-small-slider [list]="specialOffers" [imgHeight]="141" [slideMinWidth] = '209'></app-small-slider>
+      </div>
+    </div>
+
+</app-main-layout>

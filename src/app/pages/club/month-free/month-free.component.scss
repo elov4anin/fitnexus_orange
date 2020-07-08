@@ -1,0 +1,52 @@
+@import "mixins";
+
+.month {
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        @include border-radius-12;
+        background: url("/assets/images/club/month_free@2x.png") ,
+                    var(--ion-color-warning);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        width: 100%;
+        height: 165px;
+    }
+
+    &__wrapper {
+        @include mt16;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:nth-child(2) {
+            width: 100px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__title {
+        @include btnTextMonserat12(var(--dark-gray));
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include mt4;
+        @include textMonserat12();
+        text-align: left;
+    }
+
+    &__btn-text {
+        @include btnTextMonserat12();
+    }
+
+    ion-button {
+        @include bthHeight;
+    }
+}

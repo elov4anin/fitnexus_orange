@@ -1,0 +1,20 @@
+<ion-slides #slider pager="false" [options]="slideOpts" class="custom-slides">
+  <ion-slide *ngFor =" let slide of list">
+    <div class="slide"
+         [ngStyle]="{'min-width': slideMinWidth + 'px'}"
+         (click)="openSlide()"
+    >
+      <div class="slide__img"
+           [ngStyle]="{'background-image':'url('+slide.imgSrc+')', 'height': imgHeight + 'px'}"></div>
+      <!--  <img src="{{slide.imgSrc}}">-->
+      <div class="slide__wrap">
+              <span class="slide__title">
+                {{slide.title}}
+              </span>
+        <span class="slide__text">
+                {{slide.text | appOverflowDots: 83}}
+              </span>
+      </div>
+    </div>
+  </ion-slide>
+</ion-slides>

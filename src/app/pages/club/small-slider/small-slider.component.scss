@@ -1,0 +1,57 @@
+@import "mixins";
+
+.slide {
+    /*@include border-radius-12;
+    @include box-shadow;*/
+
+    position: relative;
+    //width: 162px!important;
+    min-width: 209px;
+    // margin: auto 10px;
+    background-repeat: no-repeat;
+
+    /* &:before {
+         @include border-radius-12;
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 0.7;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 33%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 0.7) 65%, #000000 100%);
+     }*/
+
+    &__img {
+        @include border-radius-12;
+        height: 96px;
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: var(--gray);
+    }
+
+    &__wrap {
+        @include mt16;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        @include btnTextMonserat12(var(--dark-gray));
+        text-align: left;
+    }
+
+    &__text {
+        @include mt4;
+        @include textMonserat12();
+        text-align: left;
+    }
+}

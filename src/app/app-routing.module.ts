@@ -157,6 +157,10 @@ const routes: Routes = [
     path: PagesEnum2RoutingMapping.BEFORE_AFTER_LIST,
     loadChildren: () => import('./pages/before-after-list-photo/before-after-list-photo.module').then( m => m.BeforeAfterListPhotoPageModule)
   },
+  {
+    path: PagesEnum2RoutingMapping.CLUB,
+    loadChildren: () => import('./pages/club/club.module').then( m => m.ClubPageModule)
+  },
 
 ];
 
