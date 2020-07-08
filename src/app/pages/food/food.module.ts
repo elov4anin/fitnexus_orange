@@ -7,6 +7,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {VideosPageModule} from '../videos/videos.module';
 import {PopularCuisinesComponent} from './popular-cuisines/popular-cuisines.component';
 import {PopularDietsComponent} from './popular-diets/popular-diets.component';
+import {IntolerancesComponent} from './intolerances/intolerances.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import {PopularDietsComponent} from './popular-diets/popular-diets.component';
   declarations: [
       FoodPage,
       PopularCuisinesComponent,
-      PopularDietsComponent
+      PopularDietsComponent,
+      IntolerancesComponent
   ]
 })
 export class FoodPageModule {}

@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixins";
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    @include border-radius-12;
+    @include p12;
+    @include mb16;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 87px;
+    min-width: 98px;
+
+    background-color: $light-gray;
+
+}
+
+img {
+    @include mb8;
+
+    width: 40px;
+    height: 40px;
+}
+
+.text {
+    @include btnTextMonserat12(var(--dark-gray));
+}
