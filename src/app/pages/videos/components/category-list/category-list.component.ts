@@ -13,43 +13,43 @@ export class CategoryListComponent implements OnInit {
     list: ISlideInfo[] = [
         {
             title: "Cardio",
-            imgSrc: "/assets/images/categories/cardio.png"
-        },
-        {
-            title: "Core",
-            imgSrc: "/assets/images/categories/core.png"
-        },
-        {
-            title: "Cycling",
-            imgSrc: "/assets/images/categories/cycling.png"
-        },
-        {
-            title: "Dance",
-            imgSrc: "/assets/images/categories/dance.png"
-        },
-        {
-            title: "Martial Arts",
-            imgSrc: "/assets/images/categories/martial_arts.png"
+            imgSrc: "/assets/images/categories/cardio@2x.png"
         },
         {
             title: "Strength",
-            imgSrc: "/assets/images/categories/strength.png"
+            imgSrc: "/assets/images/categories/strength@2x.png"
+        },
+        {
+            title: "Cycling",
+            imgSrc: "/assets/images/categories/cycling@2x.png"
+        },
+        {
+            title: "Dance",
+            imgSrc: "/assets/images/categories/dance@2x.png"
+        },
+        {
+            title: "Martial Arts",
+            imgSrc: "/assets/images/categories/martial_arts@2x.png"
         },
         {
             title: "Mind & Body",
-            imgSrc: "/assets/images/categories/mind_body.png"
+            imgSrc: "/assets/images/categories/mind_body@2x.png"
         },
         {
             title: "Hiit",
-            imgSrc: "/assets/images/categories/hiit.png"
+            imgSrc: "/assets/images/categories/hiit@2x.png"
+        },
+        {
+            title: "Core",
+            imgSrc: "/assets/images/categories/core@2x.png"
         },
         {
             title: "Target Zone",
-            imgSrc: "/assets/images/categories/target_zone.png"
+            imgSrc: "/assets/images/categories/target_zone@2x.png"
         },
         {
             title: "Other",
-            imgSrc: "/assets/images/categories/other.png"
+            imgSrc: "/assets/images/categories/other@2x.png"
         },
     ];
 

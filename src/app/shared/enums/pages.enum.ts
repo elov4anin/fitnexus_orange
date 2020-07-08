@@ -69,7 +69,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
 
 
 export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
-    VIDEOS: '',
+    VIDEOS: 'On-demand workouts',
     GET_STARTED: 'Welcome to fitnexus',
     VIDEO_ITEM: 'Core yoga for beginners',
     CHALLENGE: 'Challenge - run 5.5k',
