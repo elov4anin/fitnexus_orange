@@ -1,0 +1,8 @@
+<app-main-layout
+        [titlePage]="titlePage"
+        [isNeedBgWhite]="true"
+>
+  <div class="blog">
+    <app-card-news *ngFor="let n of news" [article]="n"  [imgHeight]="192" (click)="openNewsPage()"></app-card-news>
+  </div>
+</app-main-layout>

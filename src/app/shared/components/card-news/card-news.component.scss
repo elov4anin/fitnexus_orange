@@ -1,14 +1,14 @@
 @import "variables";
+@import "mixins";
 
 ion-card.card__wrapper {
     margin: 0;
-    background: $white;
-    box-shadow: 0 3px 6px 1px #00000029;
+    background: var(--white);
+    box-shadow: none;
     border-radius: 0;
 
     ion-card-content {
-        padding-left: 46px;
-        padding-right: 46px;
+        padding: 16px 0;
     }
 
 }
@@ -17,8 +17,10 @@ ion-card.card__wrapper {
 .card {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     &__img {
+        @include border-radius-12;
         height: 153px;
         width: auto;
         background-image: url("/assets/images/news.png");
@@ -28,21 +30,12 @@ ion-card.card__wrapper {
     }
 
     &__title {
-        font-family: $font-family-oswald;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: $ligth-black;
-        margin-bottom: 4px;
+        @include btnTextMonserat12(var(--dark-gray));
     }
 
     &__text {
-        font-family: $font-family-helvetica;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 15px;
-        color: $dark-gray;
-        margin-bottom: 8px;
+        @include mt4;
+        @include textMonserat12();
     }
 
     &__more {

@@ -1,13 +1,13 @@
 <ion-card class="card__wrapper">
-  <div class="card__img">
+  <div class="card__img" [ngStyle]="{'background-image': 'url('+article.imgSrc+')', 'height': imgHeight + 'px'}">
   </div>
   <ion-card-content>
     <div class="card">
-      <span class="card__title">This is news</span>
+      <span class="card__title">{{article.title}}</span>
       <span class="card__text">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+       {{article.text}}
         </span>
-      <a class="card__more">Read more</a>
+      <a class="card__more" *ngIf="isNeedReadMore">Read more</a>
     </div>
 
   </ion-card-content>

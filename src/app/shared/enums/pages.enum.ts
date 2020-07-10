@@ -25,7 +25,8 @@ export enum PagesEnum {
     CLUB = 'CLUB',
     CALENDAR = 'CALENDAR',
     MY_BOOKINGS = 'MY_BOOKINGS',
-    ARTICLE = 'ARTICLE'
+    ARTICLE = 'ARTICLE',
+    SPECIAL_OFFERS = 'SPECIAL_OFFERS',
 }
 
 /*export const PagesEnum2IconActiveMapping: Record<PagesEnum, string> = {
@@ -67,6 +68,7 @@ export const PagesEnum2RoutingMapping: Record<PagesEnum, string> = {
     CALENDAR: 'calendar',
     MY_BOOKINGS: 'my-bookings',
     ARTICLE: 'article',
+    SPECIAL_OFFERS: 'special-offers',
 };
 
 
@@ -97,5 +99,6 @@ export const PagesEnum2NamesMapping: Record<PagesEnum, string> = {
     CLUB: '',
     CALENDAR: 'Classes – upcoming',
     MY_BOOKINGS: 'Classes – upcoming',
-    ARTICLE: 'Article'
+    ARTICLE: 'Article',
+    SPECIAL_OFFERS: 'Special Offers'
 };

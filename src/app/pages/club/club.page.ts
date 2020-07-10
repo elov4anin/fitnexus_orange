@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {PagesEnum2NamesMapping} from '../../shared/enums/pages.enum';
+import {PagesEnum2NamesMapping, PagesEnum2RoutingMapping} from '../../shared/enums/pages.enum';
 import {PageBaseComponent} from '../../shared/components/page-base/page-base.component';
 import {ISlideInfo} from '../get-started/get-started.page';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-club',
@@ -35,11 +36,14 @@ export class ClubPage extends PageBaseComponent implements OnInit {
         },
     ];
 
-    constructor() {
+    constructor(private _router: Router) {
         super();
     }
 
     ngOnInit() {
     }
 
+    openSpecialOffers() {
+        this._router.navigate(['/', PagesEnum2RoutingMapping.CLUB, PagesEnum2RoutingMapping.SPECIAL_OFFERS]);
+    }
 }
