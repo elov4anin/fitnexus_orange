@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: PagesEnum2RoutingMapping.CLUB_NEWS,
     loadChildren: () => import('./pages/list-club-news/list-club-news.module').then( m => m.ListClubNewsPageModule)
+  },
+  {
+    path: PagesEnum2RoutingMapping.REFERRAL,
+    loadChildren: () => import('./pages/referral/referral.module').then(m => m.ReferalPageModule)
   }
 ];
 

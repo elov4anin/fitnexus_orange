@@ -1,0 +1,14 @@
+@import "mixins";
+
+.blog {
+    @include mt24;
+    @include ml24;
+    @include mr24;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+}
+
+app-card-news {
+    @include mb24;
+}
