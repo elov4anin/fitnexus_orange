@@ -46,4 +46,8 @@ export class ClubPage extends PageBaseComponent implements OnInit {
     openSpecialOffers() {
         this._router.navigate(['/', PagesEnum2RoutingMapping.CLUB, PagesEnum2RoutingMapping.SPECIAL_OFFERS]);
     }
+
+    openArticles() {
+        this._router.navigate(['/', PagesEnum2RoutingMapping.CLUB, PagesEnum2RoutingMapping.ARTICLES]);
+    }
 }

@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: PagesEnum2RoutingMapping.SPECIAL_OFFERS,
     loadChildren: () => import('./pages/special-offers/special-offers.module').then( m => m.SpecialOffersPageModule)
+  },
+  {
+    path: PagesEnum2RoutingMapping.ARTICLES,
+    loadChildren: () => import('./pages/articles/articles.module').then( m => m.ArticlesPageModule)
   }
 ];
 
