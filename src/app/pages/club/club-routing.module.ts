@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: PagesEnum2RoutingMapping.ARTICLES,
     loadChildren: () => import('./pages/articles/articles.module').then( m => m.ArticlesPageModule)
+  },
+  {
+    path: PagesEnum2RoutingMapping.CLUB_NEWS,
+    loadChildren: () => import('./pages/list-club-news/list-club-news.module').then( m => m.ListClubNewsPageModule)
   }
 ];
 
