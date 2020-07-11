@@ -11,10 +11,14 @@
       <div class="slide__img"  [ngStyle]="{'background-image':'url('+slide.imgSrc+')'}"></div>
       <!--  <img src="{{slide.imgSrc}}">-->
       <div class="slide__wrap">
-              <span class="slide__title">
+        <div>
+            <span class="slide__title">
                 {{slide.title}}
               </span>
-        <app-duration></app-duration>
+          <app-duration></app-duration>
+        </div>
+
+        <app-difficulty></app-difficulty>
       </div>
     </div>
   </ion-slide>

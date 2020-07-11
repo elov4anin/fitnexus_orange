@@ -47,6 +47,7 @@
     }
 
     ion-button {
+        @include ml24;
         @include bthHeight;
     }
 }

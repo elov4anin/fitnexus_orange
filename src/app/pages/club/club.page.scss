@@ -8,7 +8,7 @@
 
 .videos {
     @include ml24;
-    @include mr24;
+    // @include mr24;
     display: flex;
     flex-direction: column;
     background: var(--white);

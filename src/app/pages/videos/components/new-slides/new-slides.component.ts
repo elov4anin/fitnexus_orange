@@ -25,23 +25,23 @@ export class NewSlidesComponent implements OnInit {
       imgSrc: "/assets/images/new_video@2x.png"
     },
     {
-      title: "easy yoga routine 2",
+      title: "easy yoga routine",
       imgSrc: "/assets/images/new_video@2x.png"
     },
     {
-      title: "easy yoga routine 3",
+      title: "easy yoga routine",
       imgSrc: "/assets/images/new_video@2x.png"
     },
     {
-      title: "easy yoga routine 4",
+      title: "easy yoga routine",
       imgSrc: "/assets/images/new_video@2x.png"
     },
     {
-      title: "easy yoga routine 5",
+      title: "easy yoga routine",
       imgSrc: "/assets/images/new_video@2x.png"
     },
     {
-      title: "easy yoga routine 6",
+      title: "easy yoga routine",
       imgSrc: "/assets/images/new_video@2x.png"
     }
   ];

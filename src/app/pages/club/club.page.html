@@ -12,7 +12,7 @@
         </ion-button>
       </div>
     </div>-->
-    <div class="videos">
+    <div class="videos mr24">
       <div class="videos__header">
         <div class="upgrade">
             <div class="upgrade__close">
@@ -41,20 +41,20 @@
       </div>
     </div>
 
-    <div class="videos ion-margin-start">
+    <div class="videos">
 
       <div class="mb40 video__row pos-relative">
           <app-club-news></app-club-news>
       </div>
     </div>
-    <div class="videos ion-margin-start ion-margin-end">
+    <div class="videos mr24">
 
         <div class="mb40 video__row">
             <app-month-free (click)="openMonthFree()"></app-month-free>
         </div>
     </div>
 
-    <div class="videos ion-margin-start ion-margin-end">
+    <div class="videos mr24">
 
       <div class="d-flex ion-justify-content-between mb24 video__row">
         <div class="videos__title">latest Articles</div>
@@ -64,12 +64,13 @@
         </a>
 
       </div>
-
+    </div>
+    <div class="videos">
       <div class="mb40 video__row">
           <app-small-slider [list]="latestArticles" [imgHeight]="96" [slideMinWidth] = '209'></app-small-slider>
       </div>
     </div>
-    <div class="videos ion-margin-start ion-margin-end">
+    <div class="videos mr24">
       <div class="d-flex ion-justify-content-between mb24 video__row">
         <div class="videos__title">Special offers</div>
         <a class="d-flex ion-align-items-center cursor-pointer" (click)="openSpecialOffers()">
@@ -77,7 +78,8 @@
           <ion-icon color="warning" name="arrow-forward"></ion-icon>
         </a>
       </div>
-
+    </div>
+    <div class="videos">
       <div class="mb24 video__row">
           <app-small-slider [list]="specialOffers" [imgHeight]="141" [slideMinWidth] = '209'></app-small-slider>
       </div>

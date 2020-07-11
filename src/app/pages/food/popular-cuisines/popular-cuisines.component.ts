@@ -21,35 +21,34 @@ export class PopularCuisinesComponent implements OnInit {
   };
   sliders: ISlideInfo[] = [
     {
-      title: "easy yoga routine",
+      title: "Mediteranian",
       imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
       text: "Full of healthy fats, fruits & veggies"
     },
     {
-      title: "easy yoga routine 2",
+      title: "Thai",
+      imgSrc: "/assets/images/meals/48c0ea7231f90782ffc0845a2a92bce3@2x.png",
+      text: "Full of healthy fats, fruits & veggies"
+    },
+    {
+      title: "Mediteranian",
       imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
       text: "Full of healthy fats, fruits & veggies"
     },
     {
-      title: "easy yoga routine 3",
+      title: "Thai",
+      imgSrc: "/assets/images/meals/48c0ea7231f90782ffc0845a2a92bce3@2x.png",
+      text: "Full of healthy fats, fruits & veggies"
+    },  {
+      title: "Mediteranian",
       imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
       text: "Full of healthy fats, fruits & veggies"
     },
     {
-      title: "easy yoga routine 4",
-      imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
+      title: "Thai",
+      imgSrc: "/assets/images/meals/48c0ea7231f90782ffc0845a2a92bce3@2x.png",
       text: "Full of healthy fats, fruits & veggies"
     },
-    {
-      title: "easy yoga routine 5",
-      imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
-      text: "Full of healthy fats, fruits & veggies"
-    },
-    {
-      title: "easy yoga routine 6",
-      imgSrc: "/assets/images/meals/dd99d46a8c49b1eb61df5a12c23f7812@2x.png",
-      text: "Full of healthy fats, fruits & veggies"
-    }
   ];
   constructor(private _router: Router) { }
 
