@@ -16,7 +16,7 @@ export class PremiumSlideComponent implements OnInit {
     }
 
     openPage() {
-        this._router.navigate(['/', PagesEnum2RoutingMapping.VIDEOS])
+        this._router.navigate(['/', PagesEnum2RoutingMapping.CLUB])
 
     }
 }
